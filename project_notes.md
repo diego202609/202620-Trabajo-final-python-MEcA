@@ -1,65 +1,85 @@
 # Project Notes — Bitácora Viva (*A contra(luz)*)
 
-Este archivo mantiene la memoria operativa del proyecto entre conversaciones y entre los 3 integrantes del Grupo 3. Actualizar al cierre de cada fase con **hechos verificados** (nunca supuestos).
+Este archivo mantiene la memoria operativa del proyecto entre conversaciones y entre los 3 integrantes del Grupo 3. Todo lo registrado aquí corresponde a **hechos verificados**.
 
 ---
 
 ## Contexto General y Meta
 - **Proyecto:** *A contra(luz): análisis y veeduría de la contratación pública en Colombia*.
+- **Repositorio GitHub:** `https://github.com/diego202609/202620-Trabajo-final-python-MEcA.git`
 - **Entregable oficial:** Archivo `.zip` autocontenido con `A_contraluz_tutorial.ipynb`, módulos `src/`, datos congelados en `data/`, `requirements.txt` y `app_streamlit.py`.
-- **Ventana de sprint:** Miércoles 25 – Viernes 27 de noviembre de 2026 (sábado 28 colchón; límite oficial en Bloque Neón: sábado 28, 23:59 COT).
-- **Objetivo de evaluación:** 20/20 puntos (5,0) cumpliendo los 5 rubros de la rúbrica y las 8 recomendaciones (`R1–R8`) de la evaluación de la propuesta (`3.75` → `4.3`).
+- **Ventana de sprint:** Miércoles 25 – Viernes 27 de noviembre de 2026 (sábado 28 colchón; límite oficial: sábado 28, 23:59 COT).
+- **Plan completo dentro del repo:** `docs/plan.md`.
 
 ---
 
-## Fase 1 — Reglas `.md` y Andamiaje (Completada)
-- **Fecha:** 2026-11-24 (preparación lista para arrancar miércoles 25).
-- **Archivos creados:**
-  - Gobernanza y documentación: `AGENTS.md`, `README.md`, `project_notes.md`, `docs/decisiones.md`, `data/README.md`.
-  - Subagentes y skills: `.agents/agents/{data-worker.md, viz-worker.md, rubric-auditor.md}`, `.agents/skills/{acontraluz-charts/SKILL.md, rubrica-notebook/SKILL.md}`.
-  - Configuración técnica: `.gitignore`, `.env.example`, `requirements.txt`, `pytest.ini` y estructura de carpetas `data/`, `src/`, `tests/`.
-- **Estado Git:** Repositorio inicializado localmente, listo para vincular con el remoto en GitHub (`git remote add origin <URL>`).
+## Fase 1 — Reglas `.md` y Andamiaje (Completada — 2026-11-24)
+- Creados 21 archivos base (`AGENTS.md`, `README.md`, `project_notes.md`, `docs/decisiones.md`, `data/README.md`, `.agents/agents/`, `.agents/skills/`, configuración Python/pytest).
+- Commit inicial en `main`: `ad2b18f`, conectado y sincronizado con `origin/main`.
+- Entorno `.venv` creado con Python 3.14.6 (Anaconda) e instaladas todas las dependencias (`pandas 3.1.1`, `plotly 6.9.0`, `streamlit 1.67.0`, `pytest 9.2.0`, `xlrd 2.0.2`).
 
 ---
 
-## Fase 2 — Descubrimiento de APIs `datos.gov.co` y Congelación de Alcance *(Pendiente — Mié 25 mañana)*
-- **Objetivo:** Inspeccionar metadata y consultas agregadas SoQL de PAA, Contratos SECOP II y Clasificador UNSPSC **sin descarga masiva**.
-- **Por registrar al cerrar Fase 2:**
-  - Dataset IDs verificados en `datos.gov.co` y URL del Clasificador UNSPSC.
-  - Esquema real de columnas y grano (qué representa una fila) en `data/README.md`.
-  - Diagnóstico de entidades candidatas bajo los 5 filtros "sin complicaciones".
-  - 3 entidades piloto + pool de 5–6 entidades definitivas (NITs verificados).
-  - Regla exacta de cruce UNSPSC (código y nivel: segmento/familia/clase).
-  - Pregunta única congelada en `docs/decisiones.md`.
+## Fase 2 — Descubrimiento de APIs y Congelación de Alcance (Completada — 2026-11-25)
+- **Endpoints Socrata verificados en vivo (`datos.gov.co`):**
+  - `b6m4-qgqv`: SECOP II — PAA Encabezado (1 fila por entidad-año, última versión publicada).
+  - `9sue-ezhx`: SECOP II — PAA Detalle (ítems de la última versión publicada; suma de `valor_total_esperado` cuadra al peso con `b6m4-qgqv`).
+  - `jbjy-vk9h`: SECOP II — Contratos Electrónicos (100% cobertura UNSPSC en entidades seleccionadas; 31 columnas analíticas seleccionadas excluyendo datos personales sensibles).
+  - Clasificador UNSPSC v14.1: `clasificador_de_bienes_y_servicios_v14_1.xls` (hoja `'Clasificador'`, `header=3`, `49.022` productos, `3.818` clases, `420` familias, `56` segmentos).
+- **Muestra aprobada (`2022–2025`, orden Nacional, nivel central, `Publicado` los 4 años):**
+  - **Piloto (3):** ANCP (`700037070`), MinHacienda (`700065089`), MinAmbiente (`700209018`).
+  - **Escala (+3 → 6 totales):** MinEducación (`700066053`), MinCulturas (`700637010`), DNP (`700220049`).
+- **Hallazgo empírico R6 (UNSPSC):** Cruce a 8 dígitos (Producto) solo empata 17,4% (PAA) y 16,1% (Contratos); cruce a **Clase (6 dígitos) / Familia (4) / Segmento (2)** alcanza **99,99%** en PAA y **99,67%** en Contratos.
+- **Documentado en:** `docs/plan.md`, `docs/decisiones.md` y `data/README.md`.
 
 ---
 
-## Fase 3 — Ingesta, Limpieza y Cruce Piloto (3 Entidades) *(Pendiente — Mié 25 tarde/noche)*
-- **Por registrar:** comandos de ejecución, conteo de filas por entidad/año, resultados de auditoría de tipos/faltantes/duplicados/atípicos y estado de `pytest`.
+## Fase 3 — Ingesta, Limpieza y Cruce Piloto (En curso — 2026-11-25)
+### 3A. Ingesta API Piloto (Completada en rama `feat/ingesta-api`)
+- Implementados `src/config.py`, `src/ingesta.py` y `tests/test_ingesta.py` + fixtures reales en `tests/fixtures/`.
+- Extracción piloto ejecutada en < 30 segundos:
+  - `data/raw/paa_encabezado.csv`: `12` filas (`2,7 KB`)
+  - `data/raw/paa_detalle.csv`: `9.877` filas (`6,4 MB`)
+  - `data/raw/contratos_secop2.csv`: `9.290` filas (`4,6 MB`)
+  - `data/raw/clasificador_unspsc.csv`: `49.022` filas (`8,4 MB`)
+- **Verificación:** `.\.venv\Scripts\python.exe -m pytest -v` → **5 passed in 0.95s**.
+- **Hallazgos reales de calidad detectados para 3B (`src/limpieza_cruce.py`):**
+  - `808` contratos con `valor_del_contrato <= 0` (`559` Acuerdos Marco de Precios de ANCP + `160` convenios/otros sin cuantía).
+  - `31` contratos con código UNSPSC `"UNSPECIFIED"` (`0,33%`).
+  - `626` ítems PAA con múltiples códigos UNSPSC separados por delimitador.
+  - Posible doble registro atípico de `$333,5 MM` en MinAmbiente 2023 (*Fondo para la Vida y la Biodiversidad*, dos `id` distintos con igual texto y monto).
+  - Diferencia significativa entre `valor_total_esperado` (`3.546 MM`) y `valor_esperado_de_presupuesto` (`2.914 MM`) por vigencias futuras.
+
+### 3B. Limpieza y Cruce Piloto (`src/limpieza_cruce.py`) *(Siguiente paso hoy Mié 25 tarde)*
+- Construir `src/limpieza_cruce.py` + pruebas offline para generar tablas limpias y cruzadas en `data/processed/` y reporte de auditoría de calidad.
 
 ---
 
-## Fase 4 — Escalamiento (5–6 Entidades) e Indicadores R5 *(Pendiente — Jue 26 mañana)*
-- **Por registrar:** NITs añadidos en `src/config.py`, inventario de CSVs generados en `data/dashboard_data/` con su proveniencia y hallazgos clave.
+## Fase 4 — Escalamiento (6 Entidades) e Indicadores R5 *(Pendiente — Jue 26 mañana)*
+- Correr `python -m src.ingesta --modo completo --actualizar-api`, re-ejecutar `src/limpieza_cruce.py` y generar `src/indicadores.py` + CSVs en `data/dashboard_data/`.
 
 ---
 
 ## Fase 5 — Uso de IA para Ir Más Allá de la Metodología (Rubro 5) *(Pendiente — Jue 26 tarde)*
-- **Por registrar:** resumen del prompt estructurado, sugerencias de la IA que van más allá de lo recomendado por los profesores, mejora(s) implementada(s) en código, efecto cuantitativo *antes vs. después* y sugerencias descartadas con su justificación.
+- Formular prompt estructurado con resultados reales de las 6 entidades, implementar al menos 1 mejora en código (*antes vs. después*) y redactar evaluación crítica de descartes.
 
 ---
 
 ## Fase 6 — Visualizaciones Plotly, Streamlit y Notebook Tutorial *(Pendiente — Jue 26 noche / Vie 27 mañana)*
-- **Por registrar:** lista de figuras en `src/visualizacion.py`, validación de `app_streamlit.py`, y corrida limpia de `nbconvert --execute` sobre `A_contraluz_tutorial.ipynb`.
+- Construir `src/visualizacion.py`, `app_streamlit.py`, `A_contraluz_tutorial.ipynb` y `tests/test_rubrica_notebook.py`.
 
 ---
 
 ## Fase 7 — Auditoría 20/20, PR `fix/auditoria` y Empaquetado `.zip` *(Pendiente — Vie 27 tarde/noche)*
-- **Por registrar:** hallazgos del agente `rubric-auditor`, correcciones aplicadas, tamaño final de `entrega_grupo3_acontraluz.zip` y verificación en carpeta limpia sin internet.
+- Correr `rubric-auditor` (solo lectura), cerrar PR `fix/auditoria`, generar `entrega_grupo3_acontraluz.zip` y validar en carpeta limpia sin internet.
 
 ---
 
-## Problemas Abiertos / Riesgos a Monitorear
-1. Verificar el miércoles 25 a primera hora qué dataset exacto de PAA de SECOP II está activo y actualizado en `datos.gov.co` (y si conserva versiones/actualizaciones o última versión por vigencia).
-2. Validar cómo vienen formateados los códigos UNSPSC en PAA vs. Contratos SECOP II (ej. prefijos `V1.`, múltiples códigos separados por `;` o `,`, o longitud de 8 dígitos).
-3. Vigilar el tamaño final de los CSVs en `data/raw/` para que el `.zip` de entrega sea ágil de subir y ejecutar.
+## Comandos Clave de Re-ejecución
+```powershell
+# Desde Trabajo Final\a-contraluz-secop con .venv activo:
+python -m pytest -v
+python -m src.ingesta                                  # Verifica lectura offline desde caché
+python -m src.ingesta --modo piloto --actualizar-api   # Regenera piloto desde datos.gov.co
+python -m src.ingesta --modo completo --actualizar-api # Escala a 6 entidades desde datos.gov.co
+```

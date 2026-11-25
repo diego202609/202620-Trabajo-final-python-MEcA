@@ -102,7 +102,7 @@ a-contraluz-secop/
 | Ejecutar pruebas automáticas offline | `python -m pytest -v` |
 | Ejecutar el notebook de principio a fin (*Restart & Run All*) | `python -m jupyter nbconvert --to notebook --execute --inplace A_contraluz_tutorial.ipynb` |
 | Abrir el tablero interactivo en Streamlit | `streamlit run app_streamlit.py` |
-| Regenerar los datos desde la API de `datos.gov.co` | `python src/ingesta.py --actualizar-api` *(opcional; el notebook usa caché local por defecto)* |
+| Regenerar los datos desde la API de `datos.gov.co` | `python -m src.ingesta --modo completo --actualizar-api` *(opcional; el notebook usa caché local por defecto)* |
 | Generar el `.zip` limpio de entrega | `python empaquetar_entrega.py` |
 
 *(Nota: si se cuenta con un token de aplicación de Socrata para mayor límite de consultas al regenerar desde API, puede configurarse en `.env` siguiendo `.env.example`. No es necesario para ejecutar el notebook en modo caché local).*

@@ -1,0 +1,48 @@
+{
+  "fecha_extraccion_utc": "2026-11-25T18:23:42.193251+00:00",
+  "modo_muestra": "piloto",
+  "anios_estudio": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "entidades": {
+    "700037070": {
+      "nombre_corto": "ANCP (Colombia Compra Eficiente)",
+      "sigla": "ANCP",
+      "nit": "900514813",
+      "sector_analisis": "Rectoría de Compras Públicas"
+    },
+    "700065089": {
+      "nombre_corto": "Ministerio de Hacienda y Crédito Público",
+      "sigla": "MinHacienda",
+      "nit": "899999090",
+      "sector_analisis": "Hacienda y Política Fiscal"
+    },
+    "700209018": {
+      "nombre_corto": "Ministerio de Ambiente y Desarrollo Sostenible",
+      "sigla": "MinAmbiente",
+      "nit": "830115395",
+      "sector_analisis": "Ambiente y Desarrollo Sostenible"
+    }
+  },
+  "datasets_socrata": {
+    "paa_encabezado": "b6m4-qgqv",
+    "paa_detalle": "9sue-ezhx",
+    "contratos": "jbjy-vk9h"
+  },
+  "url_unspsc": "https://operaciones.colombiacompra.gov.co/sites/cce_public/files/cce_clasificador/clasificador_de_bienes_y_servicios_v14_1.xls",
+  "conteos": {
+    "paa_encabezado": 12,
+    "paa_detalle": 9877,
+    "contratos": 9290,
+    "unspsc": 49022
+  },
+  "sha256": {
+    "paa_encabezado.csv": "536175df7b3a43be89fd296900c48e3a2b136a879387b03e4740d1c06202275a",
+    "paa_detalle.csv": "d45004e14aa8baf9de667b44dd2ef5be1d3d7463d5c521106ef383d7fc9cd956",
+    "contratos_secop2.csv": "4d299cc47126a1c4c64f1bf8164dda5b9ace93916f19daf6536e8a5884517f07",
+    "clasificador_unspsc.csv": "6360c962e4e92eb4650786e9d2c185705c8185e07054b34d6e3602311ad4af58"
+  }
+}

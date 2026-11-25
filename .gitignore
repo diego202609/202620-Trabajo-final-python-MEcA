@@ -28,3 +28,6 @@ Thumbs.db
 # Salidas temporales de pruebas (mantener carpeta con .gitkeep)
 data/pruebas/*
 !data/pruebas/.gitkeep
+
+# Archivo binario legado .xls (se convierte a data/raw/clasificador_unspsc.csv)
+data/raw/*.xls
