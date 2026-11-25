@@ -175,6 +175,7 @@ ARCHIVO_CONTRATOS_LIMPIO = PROCESSED_DIR / "contratos_limpio.csv"
 ARCHIVO_CRUCE_ENTIDAD_ANIO = PROCESSED_DIR / "cruce_entidad_anio.csv"
 ARCHIVO_CRUCE_SEGMENTO = PROCESSED_DIR / "cruce_entidad_anio_segmento.csv"
 ARCHIVO_AUDITORIA_CALIDAD = PROCESSED_DIR / "auditoria_calidad.json"
+ARCHIVO_HALLAZGOS_PILOTO_MD = PROJECT_ROOT / "docs" / "hallazgos_piloto.md"
 
 # Umbral para marcar posibles registros duplicados administrativos gigantes en PAA (50 mil millones COP)
 UMBRAL_DUPLICADO_ATIPICO_PAA_COP = 50_000_000_000
