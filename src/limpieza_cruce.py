@@ -66,6 +66,45 @@ def homologar_modalidad(modalidad_cruda: Any) -> str:
     return "Otra modalidad"
 
 
+def homologar_modalidad_desde_causal_paa(causal_cruda: Any) -> str:
+    """Rescata la macro-modalidad a partir del código CCE de causal_de_contratacion en el PAA."""
+    limpia = quitar_tildes_y_espacios(causal_cruda).replace("_", " ").replace("-", " ")
+    if not limpia or limpia in {"no definido", "sin definir", "na", "n/a"}:
+        return "No definido"
+    # Ley 1150 de 2007, art. 2 num. 4: servicios profesionales/apoyo a la gestión y demás causales directas
+    terminos_directa = (
+        "contratacion directa",
+        "servicios profesionales",
+        "urgencia manifiesta",
+        "interadministrativo",
+        "arrendamiento",
+        "inexistencia de pluralidad",
+        "bienes y servicios sector defensa",
+    )
+    if any(t in limpia for t in terminos_directa):
+        return "Contratación directa"
+    if "minima cuantia" in limpia:
+        return "Mínima cuantía"
+    if "concurso" in limpia and "meritos" in limpia:
+        return "Concurso de méritos"
+    if "seleccion abreviada" in limpia or "subasta" in limpia:
+        return "Selección abreviada"
+    if "licitacion publica" in limpia or "obra publica" in limpia or "acuerdo marco" in limpia:
+        return "Licitación pública y AMP"
+    if "regimen especial" in limpia or "procedimiento publicidad" in limpia:
+        return "Régimen especial"
+    return "No definido"
+
+
+def homologar_modalidad_paa(modalidad_cruda: Any, causal_cruda: Any) -> tuple[str, bool]:
+    """Homologa la modalidad del PAA rescatando desde causal_de_contratacion cuando viene 'No Definido'."""
+    base = homologar_modalidad(modalidad_cruda)
+    if base != "No definido":
+        return base, False
+    rescatada = homologar_modalidad_desde_causal_paa(causal_cruda)
+    return rescatada, (rescatada != "No definido")
+
+
 def homologar_estado_contrato(estado_crudo: Any) -> str:
     """Estandariza la capitalización de estado_contrato en SECOP II."""
     limpio = quitar_tildes_y_espacios(estado_crudo)
@@ -223,7 +262,17 @@ def limpiar_paa_detalle(
     df["es_valor_no_positivo"] = (df["valor_total_esperado"] <= 0) | (
         df["valor_esperado_de_presupuesto"] <= 0
     )
-    df["modalidad_homologada"] = df["modalidad"].map(homologar_modalidad)
+    mod_cruda_nd = df["modalidad"].map(homologar_modalidad) == "No definido"
+    causales = (
+        df["causal_de_contratacion"]
+        if "causal_de_contratacion" in df.columns
+        else pd.Series(["No definido"] * len(df), index=df.index)
+    )
+    pares_mod = [
+        homologar_modalidad_paa(m, c) for m, c in zip(df["modalidad"], causales)
+    ]
+    df["modalidad_homologada"] = [p[0] for p in pares_mod]
+    df["modalidad_recuperada_de_causal"] = [p[1] for p in pares_mod]
 
     df = enriquecer_con_unspsc(df, "categorias_unspsc", catalogos_unspsc)
 
@@ -271,6 +320,11 @@ def limpiar_paa_detalle(
         ),
         "tasa_match_unspsc_producto_8d_pct": round(100.0 * match_prod_8d / max(len(df), 1), 2),
         "tasa_match_unspsc_clase_segmento_pct": round(100.0 * df["unspsc_emparejado"].mean(), 2),
+        "items_modalidad_cruda_no_definida": int(mod_cruda_nd.sum()),
+        "items_modalidad_recuperada_de_causal": int(df["modalidad_recuperada_de_causal"].sum()),
+        "valor_modalidad_recuperada_de_causal_cop": float(
+            df.loc[df["modalidad_recuperada_de_causal"], "valor_esperado_de_presupuesto"].sum()
+        ),
         "items_modalidad_no_definida": int((df["modalidad_homologada"] == "No definido").sum()),
     }
     return df, auditoria_paa
@@ -722,7 +776,7 @@ def generar_reporte_hallazgos_md(
         "  1. **La auditoría de calidad cambia las conclusiones económicas:** en `MinAmbiente 2023` encontramos dos líneas de **$333,54 MM** para constituir el patrimonio autónomo *Fondo para la Vida y la Biodiversidad* (solo varió una cita de artículos de la Ley 2294 de 2023 sin borrar la fila previa). Al corregir ese doble conteo, su ejecución de 2023 sube de **32,9% a 50,9% (+18,0 puntos porcentuales)**.",
         "  2. **La contratación directa domina en número de contratos, pero no siempre en valor:** aunque representa la gran mayoría de contratos firmados (prestación de servicios profesionales), en `MinHacienda` las grandes licitaciones y selecciones abreviadas (seguros previsionales/FONPET) reducen drásticamente su peso en dinero, mientras en `MinAmbiente` el régimen especial concentra convenios de gran cuantía (ej. PNUD).",
         f"  3. **Demostración empírica del nivel UNSPSC (respuesta directa a la observación R6):** cruzar por código de Producto (`8` dígitos) pierde más del 82% de los datos (`{_fmt_pct(ap['tasa_match_unspsc_producto_8d_pct'])}` en PAA y `{_fmt_pct(ac['tasa_match_unspsc_producto_8d_pct'])}` en Contratos), porque las entidades planean y contratan usando códigos terminados en `00` (nivel Clase). Al cruzar por **Clase (`6` dígitos) y Segmento (`2` dígitos)**, el emparejamiento sube a **{_fmt_pct(ap['tasa_match_unspsc_clase_segmento_pct'])}** en PAA y **{_fmt_pct(ac['tasa_match_unspsc_clase_segmento_pct'])}** en Contratos.",
-        f"  4. **Opacidad en la planeación de modalidad y efecto de vigencias futuras:** en el PAA piloto existen `{_fmt_int(ap['items_modalidad_no_definida'])}` ítems marcados como `\"No definido\"` y una diferencia de **{_fmt_mm(total_paa_tot - total_paa_vig)} MM** entre el valor total proyectado y el presupuesto de la vigencia actual por vigencias futuras.",
+        f"  4. **Rescate de modalidades desde `causal_de_contratacion` y efecto de vigencias futuras:** en la columna cruda `modalidad` del PAA venían `{_fmt_int(ap['items_modalidad_cruda_no_definida'])}` ítems como `\"No Definido\"`, pero al cruzar con `causal_de_contratacion` rescatamos la modalidad legal exacta de **`{_fmt_int(ap['items_modalidad_recuperada_de_causal'])}` ítems ({_fmt_mm(ap['valor_modalidad_recuperada_de_causal_cop'])} MM)**, dejando solo `{_fmt_int(ap['items_modalidad_no_definida'])}` omisiones reales. Además, las vigencias futuras explican **{_fmt_mm(total_paa_tot - total_paa_vig)} MM** de diferencia entre valor total y presupuesto anual.",
         "",
         "---",
         "",
@@ -745,7 +799,7 @@ def generar_reporte_hallazgos_md(
         "|---|---:|---:|---:|---:|---:|---:|",
         *filas_t2,
         "",
-        "**Lectura rápida:** Mirar solo el *número* de contratos lleva a creer que casi todo es contratación directa (`> 80%` de los contratos), pero al ponderar por *valor en pesos* aparecen diferencias estructurales enormes entre entidades (además del alto porcentaje del PAA de MinHacienda reportado como `\"No definido\"`).",
+        "**Lectura rápida:** Mirar solo el *número* de contratos lleva a creer que casi todo es contratación directa (`> 88%` de los contratos), pero al ponderar por *valor en pesos* aparecen diferencias estructurales enormes entre entidades. Además, rescatar la modalidad desde `causal_de_contratacion` redujo el peso «No definido» de MinHacienda de `56,2%` a solo `4,1%` (mientras en ANCP aún persiste un `25,5%` sin definir ni en modalidad ni en causal).",
         "",
         "---",
         "",
@@ -775,6 +829,7 @@ def generar_reporte_hallazgos_md(
         f"| **Duplicados de llave primaria** | `0` en `paa_detalle` (`id`) y `0` en `contratos` (`id_contrato`) | No hay duplicación técnica de llaves en la extracción paginada. |",
         f"| **Cuasi-duplicado administrativo PAA** | `{_fmt_int(ap['posibles_duplicados_atipicos_50mm'])}` caso (`{_fmt_mm(ap['valor_duplicados_atipicos_cop'])} MM` en MinAmbiente 2023) | Se conserva en `paa_limpio.csv` con bandera `es_posible_duplicado_atipico` y se reportan indicadores con y sin dicho registro. |",
         f"| **Contratos en `$0` (sin cuantía)** | `{_fmt_int(ac['contratos_sin_cuantia_cero'])}` contratos (`{_fmt_int(ac['contratos_sin_cuantia_acuerdo_marco'])}` son Acuerdos Marco de ANCP) | Se marcan con `es_contrato_sin_cuantia` y se excluyen del denominador de montos/HHI para no sesgar indicadores financieros. |",
+        f"| **Modalidades «No definido» en PAA** | `{_fmt_int(ap['items_modalidad_cruda_no_definida'])}` crudos → se rescataron **`{_fmt_int(ap['items_modalidad_recuperada_de_causal'])}` ({_fmt_mm(ap['valor_modalidad_recuperada_de_causal_cop'])} MM)** desde `causal_de_contratacion` | Solo quedan `{_fmt_int(ap['items_modalidad_no_definida'])}` ítems donde ambas columnas venían sin diligenciar. |",
         f"| **Vigencias futuras en PAA** | `{_fmt_int(ap['items_con_vigencias_futuras'])}` ítems requieren vigencias futuras | Se usa `valor_esperado_de_presupuesto` (vigencia actual) como denominador principal y `valor_total_esperado` como análisis de sensibilidad. |",
         f"| **Emparejamiento UNSPSC** | Producto 8d: `{_fmt_pct(ap['tasa_match_unspsc_producto_8d_pct'])}` / `{_fmt_pct(ac['tasa_match_unspsc_producto_8d_pct'])}` vs. Clase 6d / Segmento 2d: `{_fmt_pct(ap['tasa_match_unspsc_clase_segmento_pct'])}` / `{_fmt_pct(ac['tasa_match_unspsc_clase_segmento_pct'])}` | Se cruza a nivel Clase (`6d`) y se agrega por Segmento (`2d`) y Familia (`4d`), etiquetando los `{_fmt_int(ac['contratos_unspsc_no_especificado'])}` `UNSPECIFIED` como `\"Sin clasificar\"`. |",
         "",

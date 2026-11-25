@@ -12,8 +12,33 @@ from src.limpieza_cruce import (
     enriquecer_con_unspsc,
     extraer_codigos_unspsc,
     homologar_modalidad,
+    homologar_modalidad_paa,
     limpiar_paa_detalle,
 )
+
+
+def test_homologar_modalidad_paa_rescata_desde_causal() -> None:
+    assert homologar_modalidad_paa("No Definido", "CCE-16-Servicios_profesionales_gestion") == (
+        "Contratación directa",
+        True,
+    )
+    assert homologar_modalidad_paa("No Definido", "CCE-02-Licitacion_Publica") == (
+        "Licitación pública y AMP",
+        True,
+    )
+    assert homologar_modalidad_paa("No Definido", "CCE-06-Seleccion_Abreviada_Menor_Cuantia") == (
+        "Selección abreviada",
+        True,
+    )
+    assert homologar_modalidad_paa("No Definido", "CCE-11-Procedimiento_Publicidad") == (
+        "Régimen especial",
+        True,
+    )
+    assert homologar_modalidad_paa("No Definido", "No definido") == ("No definido", False)
+    assert homologar_modalidad_paa("CONTRATACION DIRECTA", "CCE-16-Servicios_profesionales_gestion") == (
+        "Contratación directa",
+        False,
+    )
 
 
 def test_homologar_modalidad_unifica_paa_y_secop() -> None:

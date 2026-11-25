@@ -12,7 +12,7 @@
   1. **La auditoría de calidad cambia las conclusiones económicas:** en `MinAmbiente 2023` encontramos dos líneas de **$333,54 MM** para constituir el patrimonio autónomo *Fondo para la Vida y la Biodiversidad* (solo varió una cita de artículos de la Ley 2294 de 2023 sin borrar la fila previa). Al corregir ese doble conteo, su ejecución de 2023 sube de **32,9% a 50,9% (+18,0 puntos porcentuales)**.
   2. **La contratación directa domina en número de contratos, pero no siempre en valor:** aunque representa la gran mayoría de contratos firmados (prestación de servicios profesionales), en `MinHacienda` las grandes licitaciones y selecciones abreviadas (seguros previsionales/FONPET) reducen drásticamente su peso en dinero, mientras en `MinAmbiente` el régimen especial concentra convenios de gran cuantía (ej. PNUD).
   3. **Demostración empírica del nivel UNSPSC (respuesta directa a la observación R6):** cruzar por código de Producto (`8` dígitos) pierde más del 82% de los datos (`17,4%` en PAA y `16,1%` en Contratos), porque las entidades planean y contratan usando códigos terminados en `00` (nivel Clase). Al cruzar por **Clase (`6` dígitos) y Segmento (`2` dígitos)**, el emparejamiento sube a **100,0%** en PAA y **99,7%** en Contratos.
-  4. **Opacidad en la planeación de modalidad y efecto de vigencias futuras:** en el PAA piloto existen `1.561` ítems marcados como `"No definido"` y una diferencia de **$632,17 MM** entre el valor total proyectado y el presupuesto de la vigencia actual por vigencias futuras.
+  4. **Rescate de modalidades desde `causal_de_contratacion` y efecto de vigencias futuras:** en la columna cruda `modalidad` del PAA venían `1.561` ítems como `"No Definido"`, pero al cruzar con `causal_de_contratacion` rescatamos la modalidad legal exacta de **`1.378` ítems ($727,42 MM)**, dejando solo `183` omisiones reales. Además, las vigencias futuras explican **$632,17 MM** de diferencia entre valor total y presupuesto anual.
 
 ---
 
@@ -44,11 +44,11 @@
 
 | Entidad | PAA Ajustado (`$ MM`) | % PAA en Contratación Directa | % PAA con Modalidad «No definido» | Ejecutado SECOP II (`$ MM`) | % Valor Ejecutado en Contratación Directa | % # Contratos en Contratación Directa |
 |---|---:|---:|---:|---:|---:|---:|
-| **ANCP** | $331,02 | 48,1% | 40,0% | $174,27 | **91,4%** | 93,2% |
-| **MinAmbiente** | $977,11 | 57,6% | 3,4% | $635,14 | **61,5%** | 97,6% |
-| **MinHacienda** | $1.272,37 | 7,6% | 56,2% | $741,27 | **37,2%** | 88,8% |
+| **ANCP** | $331,02 | 53,3% | 25,5% | $174,27 | **91,4%** | 93,2% |
+| **MinAmbiente** | $977,11 | 58,2% | 1,7% | $635,14 | **61,5%** | 97,6% |
+| **MinHacienda** | $1.272,37 | 17,3% | 4,1% | $741,27 | **37,2%** | 88,8% |
 
-**Lectura rápida:** Mirar solo el *número* de contratos lleva a creer que casi todo es contratación directa (`> 80%` de los contratos), pero al ponderar por *valor en pesos* aparecen diferencias estructurales enormes entre entidades (además del alto porcentaje del PAA de MinHacienda reportado como `"No definido"`).
+**Lectura rápida:** Mirar solo el *número* de contratos lleva a creer que casi todo es contratación directa (`> 88%` de los contratos), pero al ponderar por *valor en pesos* aparecen diferencias estructurales enormes entre entidades. Además, rescatar la modalidad desde `causal_de_contratacion` redujo el peso «No definido» de MinHacienda de `56,2%` a solo `4,1%` (mientras en ANCP aún persiste un `25,5%` sin definir ni en modalidad ni en causal).
 
 ---
 
@@ -96,6 +96,7 @@
 | **Duplicados de llave primaria** | `0` en `paa_detalle` (`id`) y `0` en `contratos` (`id_contrato`) | No hay duplicación técnica de llaves en la extracción paginada. |
 | **Cuasi-duplicado administrativo PAA** | `1` caso (`$333,54 MM` en MinAmbiente 2023) | Se conserva en `paa_limpio.csv` con bandera `es_posible_duplicado_atipico` y se reportan indicadores con y sin dicho registro. |
 | **Contratos en `$0` (sin cuantía)** | `808` contratos (`559` son Acuerdos Marco de ANCP) | Se marcan con `es_contrato_sin_cuantia` y se excluyen del denominador de montos/HHI para no sesgar indicadores financieros. |
+| **Modalidades «No definido» en PAA** | `1.561` crudos → se rescataron **`1.378` ($727,42 MM)** desde `causal_de_contratacion` | Solo quedan `183` ítems donde ambas columnas venían sin diligenciar. |
 | **Vigencias futuras en PAA** | `744` ítems requieren vigencias futuras | Se usa `valor_esperado_de_presupuesto` (vigencia actual) como denominador principal y `valor_total_esperado` como análisis de sensibilidad. |
 | **Emparejamiento UNSPSC** | Producto 8d: `17,4%` / `16,1%` vs. Clase 6d / Segmento 2d: `100,0%` / `99,7%` | Se cruza a nivel Clase (`6d`) y se agrega por Segmento (`2d`) y Familia (`4d`), etiquetando los `31` `UNSPECIFIED` como `"Sin clasificar"`. |
 

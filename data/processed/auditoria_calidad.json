@@ -22,7 +22,10 @@
     "valor_duplicados_atipicos_cop": 333535000000.0,
     "tasa_match_unspsc_producto_8d_pct": 17.4,
     "tasa_match_unspsc_clase_segmento_pct": 99.99,
-    "items_modalidad_no_definida": 1561
+    "items_modalidad_cruda_no_definida": 1561,
+    "items_modalidad_recuperada_de_causal": 1378,
+    "valor_modalidad_recuperada_de_causal_cop": 727423843026.0,
+    "items_modalidad_no_definida": 183
   },
   "contratos_secop2": {
     "filas_iniciales": 9290,
