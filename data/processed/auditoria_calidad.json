@@ -1,0 +1,47 @@
+{
+  "modo_muestra": "piloto",
+  "entidades_procesadas": [
+    "ANCP",
+    "MinAmbiente",
+    "MinHacienda"
+  ],
+  "anios_procesados": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "paa_detalle": {
+    "filas_iniciales": 9877,
+    "duplicados_id_eliminados": 0,
+    "filas_finales": 9877,
+    "items_valor_no_positivo": 31,
+    "items_con_vigencias_futuras": 744,
+    "items_multiples_codigos_unspsc": 625,
+    "posibles_duplicados_atipicos_50mm": 1,
+    "valor_duplicados_atipicos_cop": 333535000000.0,
+    "tasa_match_unspsc_producto_8d_pct": 17.4,
+    "tasa_match_unspsc_clase_segmento_pct": 99.99,
+    "items_modalidad_no_definida": 1561
+  },
+  "contratos_secop2": {
+    "filas_iniciales": 9290,
+    "duplicados_id_contrato_eliminados": 0,
+    "filas_sin_fecha_firma_eliminadas": 0,
+    "filas_finales": 9290,
+    "contratos_estado_invalido": 0,
+    "contratos_sin_cuantia_cero": 808,
+    "contratos_sin_cuantia_acuerdo_marco": 559,
+    "contratos_validos_con_cuantia": 8482,
+    "contratos_unspsc_no_especificado": 31,
+    "tasa_match_unspsc_producto_8d_pct": 16.14,
+    "tasa_match_unspsc_clase_segmento_pct": 99.67
+  },
+  "cuadre_exacto_paa_encabezado_max_diff_cop": 0.0001220703125,
+  "archivos_generados": {
+    "paa_limpio.csv": 9877,
+    "contratos_limpio.csv": 9290,
+    "cruce_entidad_anio.csv": 12,
+    "cruce_entidad_anio_segmento.csv": 302
+  }
+}

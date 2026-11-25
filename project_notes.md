@@ -50,8 +50,12 @@ Este archivo mantiene la memoria operativa del proyecto entre conversaciones y e
   - Posible doble registro atípico de `$333,5 MM` en MinAmbiente 2023 (*Fondo para la Vida y la Biodiversidad*, dos `id` distintos con igual texto y monto).
   - Diferencia significativa entre `valor_total_esperado` (`3.546 MM`) y `valor_esperado_de_presupuesto` (`2.914 MM`) por vigencias futuras.
 
-### 3B. Limpieza y Cruce Piloto (`src/limpieza_cruce.py`) *(Siguiente paso hoy Mié 25 tarde)*
-- Construir `src/limpieza_cruce.py` + pruebas offline para generar tablas limpias y cruzadas en `data/processed/` y reporte de auditoría de calidad.
+### 3B. Limpieza y Cruce Piloto (`src/limpieza_cruce.py`) (Completada en rama `feat/cruce-indicadores`)
+- Implementados `src/limpieza_cruce.py`, `data/processed/README.md` y `tests/test_limpieza_cruce.py`.
+- Archivos generados en `data/processed/`:
+  - `paa_limpio.csv` (`9.877` filas), `contratos_limpio.csv` (`9.290` filas), `cruce_entidad_anio.csv` (`12` filas), `cruce_entidad_anio_segmento.csv` (`302` filas) y `auditoria_calidad.json`.
+- **Hallazgo clave verificado:** en MinAmbiente 2023 existen dos ítems cuasi-idénticos de `$333,535 MM` (*Fondo para la Vida y la Biodiversidad*, donde solo varió la cita de artículos de la Ley 2294 de 2023 sin borrar la fila previa). Al controlar por ese duplicado administrativo atípico, la ejecución 2023 de MinAmbiente pasa de **32,9% a 50,9% (+18,0 pp)**.
+- Cuadre entre suma de `paa_detalle` y `paa_encabezado`: diferencia máxima `< 0,001 COP`.
 
 ---
 

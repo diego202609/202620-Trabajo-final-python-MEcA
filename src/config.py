@@ -169,6 +169,16 @@ ARCHIVO_UNSPSC_RAW_XLS = RAW_DIR / "clasificador_unspsc_v14_1.xls"
 ARCHIVO_UNSPSC_CSV = RAW_DIR / "clasificador_unspsc.csv"
 ARCHIVO_METADATA_EXTRACCION = RAW_DIR / "metadata_extraccion.json"
 
+# Archivos limpios e integrados en data/processed/
+ARCHIVO_PAA_LIMPIO = PROCESSED_DIR / "paa_limpio.csv"
+ARCHIVO_CONTRATOS_LIMPIO = PROCESSED_DIR / "contratos_limpio.csv"
+ARCHIVO_CRUCE_ENTIDAD_ANIO = PROCESSED_DIR / "cruce_entidad_anio.csv"
+ARCHIVO_CRUCE_SEGMENTO = PROCESSED_DIR / "cruce_entidad_anio_segmento.csv"
+ARCHIVO_AUDITORIA_CALIDAD = PROCESSED_DIR / "auditoria_calidad.json"
+
+# Umbral para marcar posibles registros duplicados administrativos gigantes en PAA (50 mil millones COP)
+UMBRAL_DUPLICADO_ATIPICO_PAA_COP = 50_000_000_000
+
 
 def obtener_entidades(modo: str = MODO_MUESTRA_DEFECTO) -> dict:
     """Retorna el diccionario de entidades según el modo ('piloto' o 'completo')."""

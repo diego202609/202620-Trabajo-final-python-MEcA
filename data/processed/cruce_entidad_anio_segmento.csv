@@ -1,0 +1,303 @@
+codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_segmento,items_paa,valor_paa_vigencia,valor_paa_total,n_contratos_con_cuantia,valor_ejecutado,brecha_ejecucion_vigencia_cop,pct_ejecucion_sobre_vigencia
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,00,Sin clasificar,0.0,0.0,0.0,3.0,4.0,4.0,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,14,Materiales y Productos de Papel,2.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,27200000.0,27200000.0,1.0,21890000.0,-5310000.0,80.4779411764706
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",3.0,33584000.0,33584000.0,1.0,19432583.0,-14151417.0,57.86262208194378
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,42,"Equipo Médico, Accesorios y Suministros",1.0,5000000.0,5000000.0,0.0,0.0,-5000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,17.0,2691672003.0,2691672003.0,5.0,384925649.77,-2306746353.23,14.300614983585724
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,44,"Equipos de Oficina, Accesorios y Suministros",2.0,5000000.0,5000000.0,0.0,0.0,-5000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,5000000.0,5000000.0,0.0,0.0,-5000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,2550000.0,2550000.0,1.0,1646960.0,-903040.0,64.58666666666667
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,1500000.0,1500000.0,0.0,0.0,-1500000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",4.0,68500000.0,68500000.0,1.0,52321450.0,-16178550.0,76.38167883211679
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",0.0,0.0,0.0,1.0,6199900.0,6199900.0,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,73,Servicios de Producción Industrial y Manufactura,1.0,90000000.0,90000000.0,0.0,0.0,-90000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",9.0,247083706.0,247083706.0,0.0,0.0,-247083706.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,77,Servicios Medioambientales,1.0,6000000.0,6000000.0,1.0,4397050.0,-1602950.0,73.28416666666666
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,78,"Servicios de Transporte, Almacenaje y Correo",7.0,120914000.0,120914000.0,4.0,86862667.99000001,-34051332.00999999,71.83838760606712
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",240.0,20999227139.0,20999227139.0,162.0,11294046541.09,-9705180597.91,53.78315338146217
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",137.0,35184659960.0,35184659960.0,87.0,20867020556.33,-14317639403.669998,59.307154254305324
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",9.0,425045162.0,425045162.0,7.0,382887357.0,-42157805.0,90.08157043791972
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,83,Servicios Públicos y Servicios Relacionados con el Sector Público,5.0,473546230.0,473546230.0,4.0,460000000.0,-13546230.0,97.13940706486038
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,84,Servicios Financieros y de Seguros,6.0,154580645.0,154580645.0,4.0,144580645.0,-10000000.0,93.53088480126344
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,85,Servicios de Salud,1.0,18000000.0,18000000.0,1.0,10992200.0,-7007800.0,61.06777777777778
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,86,Servicios Educativos y de Formación,33.0,1167423388.0,1167423388.0,22.0,1063169356.0,-104254032.0,91.06973244911553
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",6.0,483172127.0,483172127.0,3.0,63649587.87,-419522539.13,13.173273935563754
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,00,Sin clasificar,0.0,0.0,0.0,1.0,83277881.36,83277881.36,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,31,Componentes y Suministros de Manufactura,1.0,4000000.0,4000000.0,0.0,0.0,-4000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,1000000.0,1000000.0,0.0,0.0,-1000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,1.0,6000000.0,6000000.0,1.0,5500000.0,-500000.0,91.66666666666667
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,42,"Equipo Médico, Accesorios y Suministros",1.0,4500000.0,4500000.0,0.0,0.0,-4500000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,7.0,639065119.0,639065119.0,3.0,174278700.54,-464786418.46000004,27.270882944246562
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,1800000.0,1800000.0,1.0,1288175.0,-511825.0,71.56527777777778
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",0.0,0.0,0.0,1.0,2230356.8,2230356.8,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,960000.0,960000.0,0.0,0.0,-960000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,61000000.0,61000000.0,3.0,25912820.0,-35087180.0,42.480032786885246
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",0.0,0.0,0.0,3.0,38627776.03,38627776.03,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",8.0,341955479.0,542739061.0,0.0,0.0,-341955479.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,78,"Servicios de Transporte, Almacenaje y Correo",10.0,491942023.0,610907223.0,3.0,431854908.37,-60087114.629999995,87.78573250083984
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",315.0,19121606906.0,20647342287.0,246.0,18267941583.12,-853665322.8800011,95.53559840929407
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",133.0,39247602589.0,63551322289.0,89.0,23959644762.3,-15287957826.7,61.047409731506036
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",3.0,102649990.0,102649990.0,3.0,58432141.0,-44217849.0,56.92366945189181
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,29855875.0,29855875.0,2.0,20933500.0,-8922375.0,70.11517833592215
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,84,Servicios Financieros y de Seguros,13.0,674743227.0,674743227.0,12.0,412049964.0,-262693263.0,61.06766952400991
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,85,Servicios de Salud,2.0,54540000.0,54540000.0,2.0,47611000.0,-6929000.0,87.29556288962229
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,86,Servicios Educativos y de Formación,12.0,560430406.0,560430406.0,11.0,667601412.0,107171006.0,119.1229820603274
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,13200000.0,13200000.0,0.0,0.0,-13200000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,14,Materiales y Productos de Papel,1.0,8500000.0,8500000.0,0.0,0.0,-8500000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",0.0,0.0,0.0,5.0,1889948.0,1889948.0,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,6068697.0,6068697.0,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,6.0,665944104.0,665944104.0,5.0,41270100.0,-624674004.0,6.197231832538305
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,44,"Equipos de Oficina, Accesorios y Suministros",1.0,5165219.0,5165219.0,0.0,0.0,-5165219.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,9828000.0,9828000.0,1.0,791000.0,-9037000.0,8.048433048433049
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,681819.0,681819.0,0.0,0.0,-681819.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,104320700.0,104320700.0,2.0,100061000.0,-4259700.0,95.91672601890133
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",11.0,431192088.0,431192088.0,0.0,0.0,-431192088.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,77,Servicios Medioambientales,1.0,85000000.0,85000000.0,1.0,79800000.0,-5200000.0,93.88235294117646
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,78,"Servicios de Transporte, Almacenaje y Correo",16.0,601972991.0,601972991.0,2.0,497071092.44,-104901898.56,82.5736536143031
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",340.0,25118412642.0,25118412642.0,293.0,19710711830.5,-5407700811.5,78.47116818816055
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",103.0,49860006709.0,49860006709.0,70.0,16286306796.11,-33573699912.89,32.664068601439304
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",6.0,184538108.0,184538108.0,4.0,96760800.0,-87777308.0,52.43404793117311
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,1.0,29750000.0,29750000.0,1.0,28333330.0,-1416670.0,95.23808403361345
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,84,Servicios Financieros y de Seguros,10.0,879798045.0,879798045.0,11.0,987686678.0,107888633.0,112.26288619452434
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,85,Servicios de Salud,2.0,34968590.0,34968590.0,1.0,9900000.0,-25068590.0,28.311121495033113
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,86,Servicios Educativos y de Formación,18.0,953392202.0,953392202.0,11.0,512931975.0,-440460227.0,53.80073110772098
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",3.0,26378441.0,26378441.0,1.0,6119991.0,-20258450.0,23.20073047531505
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,93,Servicios Políticos y de Asuntos Cívicos,1.0,24570000.0,24570000.0,0.0,0.0,-24570000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,13,"Materiales de Resina, Colofonia, Caucho, Espuma, Película y Elastómericos",1.0,3180000.0,3180000.0,0.0,0.0,-3180000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,14,Materiales y Productos de Papel,1.0,6600000.0,6600000.0,0.0,0.0,-6600000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,8.0,1760399866.0,1760399866.0,3.0,326266376.69,-1434133489.31,18.533651529487223
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,44,"Equipos de Oficina, Accesorios y Suministros",1.0,4000000.0,4000000.0,0.0,0.0,-4000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,51600000.0,51600000.0,1.0,1256000.0,-50344000.0,2.434108527131783
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,800000.0,800000.0,0.0,0.0,-800000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,12000000.0,12000000.0,0.0,0.0,-12000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,56,"Muebles, Mobiliario y Decoración",1.0,25000000.0,25000000.0,1.0,0.01,-24999999.99,4e-08
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",1.0,5000000.0,5000000.0,2.0,11079932.0,6079932.0,221.59864
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",6.0,466019240.0,466019240.0,0.0,0.0,-466019240.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,78,"Servicios de Transporte, Almacenaje y Correo",6.0,480416433.0,480416433.0,0.0,0.0,-480416433.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",406.0,53902800707.0,53902800707.0,328.0,25042933047.0,-28859867660.0,46.459428301557324
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",85.0,70299402527.0,70299402527.0,69.0,30348240077.89,-39951162449.11,43.16998294008844
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",3.0,281903391.0,281903391.0,2.0,232507842.0,-49395549.0,82.47784504302042
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,84,Servicios Financieros y de Seguros,1.0,15000000.0,15000000.0,0.0,0.0,-15000000.0,0.0
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,85,Servicios de Salud,3.0,19970130.0,19970130.0,2.0,12612000.0,-7358130.0,63.154320978381215
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,86,Servicios Educativos y de Formación,12.0,1073378914.0,1073378914.0,11.0,860661049.0,-212717865.0,80.18240695568574
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,15500000.0,15500000.0,2.0,5026448.0,-10473552.0,32.42869677419355
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,14,Materiales y Productos de Papel,0.0,0.0,0.0,1.0,60000000.0,60000000.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,12000000.0,120901000.0,0.0,0.0,-12000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,137000000.0,137000000.0,0.0,0.0,-137000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,26,Maquinaria y Accesorios para Generación y Distribución de Energía,1.0,135036886.0,135036886.0,0.0,0.0,-135036886.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,42,"Equipo Médico, Accesorios y Suministros",2.0,12000000.0,12000000.0,0.0,0.0,-12000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,7.0,1801604779.0,1801604779.0,1.0,49581707.0,-1752023072.0,2.7520856726146596
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,44,"Equipos de Oficina, Accesorios y Suministros",1.0,60000000.0,60000000.0,0.0,0.0,-60000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,774180531.0,774180531.0,2.0,2345371253.37,1571190722.37,302.94888071397395
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,47,Equipos de Limpieza y Suministros,1.0,29474628.0,588775365.0,0.0,0.0,-29474628.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,20000000.0,20000000.0,0.0,0.0,-20000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,65000000.0,65000000.0,2.0,77500000.0,12500000.0,119.23076923076923
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,56,"Muebles, Mobiliario y Decoración",1.0,110000000.0,110000000.0,1.0,110000000.0,0.0,100.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",9.0,273107866.0,273107866.0,3.0,63693707.0,-209414159.0,23.321813440554656
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,1.0,43918140.0,43918140.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,36230618.0,36230618.0,1.0,23753229.5,-12477388.5,65.56120433827543
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,77,Servicios Medioambientales,35.0,40935066548.0,43559713301.0,21.0,39348943632.0,-1586122916.0,96.12527094797774
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,78,"Servicios de Transporte, Almacenaje y Correo",5.0,2640963790.0,4070883066.0,3.0,3252153509.38,611189719.3800001,123.14267699141759
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1054.0,72669282675.0,73874583443.0,993.0,61323395922.67,-11345886752.330002,84.38695644888585
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",6.0,2994414241.0,3122923302.0,2.0,689816101.0,-2304598140.0,23.036762634739286
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",1.0,40816824.0,40816824.0,2.0,43499748.0,2682924.0,106.57308368725602
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,84,Servicios Financieros y de Seguros,7.0,688004814.0,688004814.0,0.0,0.0,-688004814.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,85,Servicios de Salud,2.0,116284858.0,116284858.0,2.0,116284582.0,-276.0,99.9997626518149
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,86,Servicios Educativos y de Formación,1.0,45000000.0,45000000.0,1.0,35480000.0,-9520000.0,78.84444444444445
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",0.0,0.0,0.0,1.0,2250000000.0,2250000000.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,163459473.0,1781557704.0,1.0,1129527498.0,966068025.0,691.0137890876474
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,93,Servicios Políticos y de Asuntos Cívicos,3.0,1815911220.0,1815911220.0,0.0,0.0,-1815911220.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,14377254.0,344041946.0,0.0,0.0,-14377254.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,20,Maquinaria y Accesorios de Minería y Perforación de Pozos,1.0,175000000.0,175000000.0,0.0,0.0,-175000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",0.0,0.0,0.0,1.0,429698643.0,429698643.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,26,Maquinaria y Accesorios para Generación y Distribución de Energía,2.0,980000000.0,980000000.0,0.0,0.0,-980000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,2000000.0,2000000.0,1.0,459521970.0,457521970.0,22976.0985
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",1.0,3000000.0,3000000.0,0.0,0.0,-3000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,42,"Equipo Médico, Accesorios y Suministros",2.0,34000000.0,34000000.0,0.0,0.0,-34000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,15.0,17836090172.0,17836090172.0,6.0,7347970213.0,-10488119959.0,41.19720265002482
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,44,"Equipos de Oficina, Accesorios y Suministros",2.0,80000000.0,80000000.0,0.0,0.0,-80000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,17400000.0,17400000.0,2.0,5949784266.0,5932384266.0,34194.16244827586
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,25000000.0,25000000.0,1.0,24552128.79,-447871.2100000009,98.20851516
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",1.0,70000000.0,70000000.0,1.0,70000000.0,0.0,100.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,56,"Muebles, Mobiliario y Decoración",2.0,294000000.0,294000000.0,2.0,280374279.0,-13625721.0,95.36540102040816
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",0.0,0.0,0.0,1.0,40000000.0,40000000.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",11.0,1433600000.0,1433600000.0,6.0,426345087.57,-1007254912.4300001,29.739473184291295
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,28400000.0,28400000.0,1.0,16391117.0,-12008883.0,57.71520070422535
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,77,Servicios Medioambientales,45.0,113055626281.0,113755626281.0,25.0,169502826649.0,56447200368.0,149.92869636377085
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,78,"Servicios de Transporte, Almacenaje y Correo",9.0,4291068993.0,8264462517.0,5.0,10511783633.0,6220714640.0,244.9688795530396
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1361.0,98288110230.82,98804610230.82,1197.0,65227219436.5,-33060890794.320007,66.36328573549767
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",2.0,2176770928.0,2176770928.0,3.0,849721594.0,-1327049334.0,39.035875712504
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",7.0,4100393334.0,4100393334.0,5.0,3453308000.0,-647085334.0,84.21894483550051
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,0.0,0.0,0.0,1.0,23335935.0,23335935.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,84,Servicios Financieros y de Seguros,3.0,334163500000.0,334163500000.0,3.0,12653013351.0,-321510486649.0,3.7864737923202263
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,85,Servicios de Salud,4.0,251167802.0,251167802.0,2.0,109561136.0,-141606666.0,43.62069306956789
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,86,Servicios Educativos y de Formación,2.0,983000000.0,983000000.0,1.0,23687022.0,-959312978.0,2.409666531027467
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",6.0,6486200000.0,6958200000.0,2.0,3322464791.0,-3163735209.0,51.22359457001018
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,49183425.0,5411696054.0,0.0,0.0,-49183425.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2023,93,Servicios Políticos y de Asuntos Cívicos,16.0,22527557207.0,22527557207.0,11.0,28528543119.0,6000985912.0,126.63842269651549
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,00,Sin clasificar,0.0,0.0,0.0,16.0,1211565550.0,1211565550.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,20,Maquinaria y Accesorios de Minería y Perforación de Pozos,0.0,0.0,0.0,1.0,120000000.0,120000000.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,350000000.0,350000000.0,0.0,0.0,-350000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",1.0,22000000.0,22000000.0,0.0,0.0,-22000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,42,"Equipo Médico, Accesorios y Suministros",1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,4.0,918064000.0,918064000.0,6.0,3805110195.0,2887046195.0,414.4711256513707
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,44,"Equipos de Oficina, Accesorios y Suministros",2.0,100000000.0,100000000.0,0.0,0.0,-100000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",3.0,116584666.0,116584666.0,1.0,1748586.0,-114836080.0,1.4998421833622613
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,47,Equipos de Limpieza y Suministros,1.0,800000000.0,800000000.0,0.0,0.0,-800000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,35000000.0,35000000.0,2.0,42100030.0,7100030.0,120.2858
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,140000000.0,140000000.0,2.0,109979700.0,-30020300.0,78.55692857142857
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,56,"Muebles, Mobiliario y Decoración",1.0,20000000.0,20000000.0,0.0,0.0,-20000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",1.0,33543500.0,33543500.0,2.0,59730375.0,26186875.0,178.06840371457957
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",2.0,80000000.0,80000000.0,1.0,19177371.0,-60822629.0,23.97171375
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",9.0,2033821982.0,2033821982.0,7.0,771424415.0,-1262397567.0,37.92979040581537
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,66000000.0,66000000.0,0.0,0.0,-66000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,77,Servicios Medioambientales,17.0,10394675529.0,10394675529.0,7.0,10577956198.0,183280669.0,101.76321683624147
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,78,"Servicios de Transporte, Almacenaje y Correo",3.0,941000000.0,7455000000.0,1.0,10890000.0,-930110000.0,1.157279489904357
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1330.0,97262655876.0,97558138338.33,1205.0,82417957765.0,-14844698111.0,84.737515156973
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",8.0,10860508908.0,23075951013.0,8.0,2961032649.77,-7899476258.23,27.264216390346707
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",4.0,2707200000.0,2707200000.0,1.0,3900000000.0,1192800000.0,144.06028368794327
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,0.0,0.0,0.0,1.0,5294004.0,5294004.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,84,Servicios Financieros y de Seguros,4.0,766000000.0,766000000.0,2.0,565522037.0,-200477963.0,73.82794216710182
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,85,Servicios de Salud,1.0,50000000.0,50000000.0,1.0,50000000.0,0.0,100.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,86,Servicios Educativos y de Formación,1.0,52202000.0,52202000.0,1.0,21000000.0,-31202000.0,40.22834374161909
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2024,93,Servicios Políticos y de Asuntos Cívicos,3.0,1687628616.0,1687628616.0,2.0,422571300.0,-1265057316.0,25.039353800575753
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,11,"Material Mineral, Textil y  Vegetal y Animal No Comestible",1.0,0.0,0.0,0.0,0.0,0.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,13,"Materiales de Resina, Colofonia, Caucho, Espuma, Película y Elastómericos",2.0,255000000.0,255000000.0,0.0,0.0,-255000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,26,Maquinaria y Accesorios para Generación y Distribución de Energía,1.0,23000000.0,23000000.0,0.0,0.0,-23000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",0.0,0.0,0.0,1.0,70432074.0,70432074.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,31,Componentes y Suministros de Manufactura,1.0,60000000.0,60000000.0,1.0,71714420.0,11714420.0,119.52403333333334
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",0.0,0.0,0.0,1.0,49929770.0,49929770.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,9.0,3255431728.0,3255431728.0,7.0,3040889509.0,-214542219.0,93.40971530274402
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,44,"Equipos de Oficina, Accesorios y Suministros",1.0,41200000.0,41200000.0,1.0,41200000.0,0.0,100.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,10000000.0,10000000.0,1.0,6267996.0,-3732004.0,62.67996
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,47,Equipos de Limpieza y Suministros,2.0,946000000.0,1846000000.0,0.0,0.0,-946000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,48,"Maquinaria, Equipo y Suministros para la Industria de Servicios",1.0,0.0,0.0,0.0,0.0,0.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,36000000.0,36000000.0,1.0,30030000.0,-5970000.0,83.41666666666667
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,160000000.0,160000000.0,2.0,129882900.0,-30117100.0,81.1768125
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",1.0,85000000.0,85000000.0,2.0,92378466.0,7378466.0,108.68054823529411
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,50000000.0,50000000.0,1.0,14167610.0,-35832390.0,28.33522
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,77,Servicios Medioambientales,16.0,7612690664.0,7612690664.0,11.0,3441852801.0,-4170837863.0,45.21204069510318
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,78,"Servicios de Transporte, Almacenaje y Correo",1.0,3000000000.0,3000000000.0,1.0,4349265948.0,1349265948.0,144.9755316
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1312.0,91751437213.0,94440571712.0,1190.0,81893503887.0,-9857933326.0,89.25582680180267
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",3.0,663317000.0,663317000.0,1.0,17376000.0,-645941000.0,2.6195619892148096
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,4050000000.0,4050000000.0,2.0,3215540000.0,-834460000.0,79.39604938271604
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,83,Servicios Públicos y Servicios Relacionados con el Sector Público,0.0,0.0,0.0,1.0,8683600.0,8683600.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,84,Servicios Financieros y de Seguros,1.0,662000000.0,662000000.0,2.0,905573591.01,243573591.01,136.7935938081571
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,85,Servicios de Salud,1.0,50000000.0,50000000.0,0.0,0.0,-50000000.0,0.0
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,86,Servicios Educativos y de Formación,0.0,0.0,0.0,1.0,22610000.0,22610000.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",0.0,0.0,0.0,1.0,9926813650.0,9926813650.0,
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,93,Servicios Políticos y de Asuntos Cívicos,5.0,2015000000.0,2015000000.0,4.0,524200000.0,-1490800000.0,26.01488833746898
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",3.0,105000000.0,785000000.0,1.0,52500000.0,-52500000.0,50.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,1178441681.27,1178441681.27,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,32,Componentes y Suministros Electrónicos,0.0,0.0,0.0,1.0,1499868187.0,1499868187.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,395325646.0,395325646.0,1.0,356204426.59,-39121219.410000026,90.10405224001076
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,3.0,20391756.0,70333458.0,2.0,52095164.0,31703408.0,255.4716915992914
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,42,"Equipo Médico, Accesorios y Suministros",1.0,12000000.0,12000000.0,1.0,9314459.0,-2685541.0,77.62049166666667
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,9.0,7951363725.0,7951363725.0,9.0,6935973985.51,-1015389739.4899998,87.22999255715723
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,44,"Equipos de Oficina, Accesorios y Suministros",3.0,125945200.0,125945200.0,0.0,0.0,-125945200.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,12000000.0,12000000.0,1.0,9500900.0,-2499100.0,79.17416666666666
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,47,Equipos de Limpieza y Suministros,2.0,32760842.0,95485742.0,0.0,0.0,-32760842.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,54,"Productos para Relojería, Joyería y Piedras Preciosas",1.0,3209050.0,13224173.0,1.0,13185616.0,9976566.0,410.88845608513424
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,48227400.0,727688684.0,2.0,797705669.0,749478269.0,1654.0507450121715
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",1.0,17445244.0,218874341.0,1.0,26263649.0,8818405.0,150.54904935694793
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",8.0,5790509236.0,6742498393.0,4.0,591806584.0,-5198702652.0,10.220285641212644
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,2.0,114891222.0,114891222.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,1187846.0,29731653.0,0.0,0.0,-1187846.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,77,Servicios Medioambientales,1.0,14000000.0,14000000.0,0.0,0.0,-14000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,78,"Servicios de Transporte, Almacenaje y Correo",5.0,911868139.0,2252065345.0,2.0,2692588195.0,1780720056.0,295.2826269325328
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",315.0,22058070229.0,29512095473.0,271.0,25896243542.7,3838173313.700001,117.40031323616836
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",59.0,24134618820.0,58993512238.0,47.0,50650711903.66,26516093083.660004,209.8674616799272
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",4.0,117858048.0,177195748.0,3.0,43845167.0,-74012881.0,37.20167416993026
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,1259522214.0,1307987745.0,4.0,5280919986.0,4021397772.0,419.2796226458615
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,84,Servicios Financieros y de Seguros,7.0,8152995130.0,48713870617.0,7.0,17084941440.0,8931946310.0,209.554172026103
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,86,Servicios Educativos y de Formación,1.0,141266352.0,141266352.0,0.0,0.0,-141266352.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",2.0,1398713645.0,1398713645.0,0.0,0.0,-1398713645.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,91,Servicios Personales y Domésticos,2.0,248415595.0,248415595.0,2.0,242953422.0,-5462173.0,97.80119561334304
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,308528922.0,11255308512.0,2.0,1780262438.87,1471733516.87,577.0163870957939
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,14,Materiales y Productos de Papel,1.0,69817824.0,69817824.0,1.0,69817824.0,0.0,100.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,26,Maquinaria y Accesorios para Generación y Distribución de Energía,1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",1.0,47377747.0,47377747.0,0.0,0.0,-47377747.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,3.0,261240105.0,261240105.0,1.0,188174700.0,-73065405.0,72.03132153081933
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,18.0,18722514666.0,38016099034.0,11.0,29974286422.2,11251771756.2,160.09754542552537
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,420000000.0,420000000.0,1.0,77968800.0,-342031200.0,18.564
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,45858852.0,45858852.0,2.0,44994000.0,-864852.0,98.11410019596653
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,47,Equipos de Limpieza y Suministros,4.0,576450090.0,2076776431.0,3.0,2266267814.0,1689817724.0,393.1420695935705
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,60512000.0,60512000.0,1.0,54353000.0,-6159000.0,89.82185351665785
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",4.0,11014629.0,11014629.0,4.0,10864649.0,-149980.0,98.63835631685825
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",2.0,88803550.0,361241803.0,1.0,297270735.0,208467185.0,334.75095871730355
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",9.0,11257624838.0,19688076120.0,10.0,2031305587.0,-9226319251.0,18.04382022168076
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,1.0,10000000.0,10000000.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,15608317.0,50583706.0,1.0,13436120.0,-2172197.0,86.08307993744617
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,77,Servicios Medioambientales,2.0,67794077.0,177724769.0,2.0,150689002.72,82894925.72,222.27458413513028
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,78,"Servicios de Transporte, Almacenaje y Correo",7.0,92534829810.0,369762376150.0,4.0,297923441.0,-92236906369.0,0.32195816603512484
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",474.0,21756610865.07,28607199824.07,484.0,33314919151.87,11558308286.8,153.12549991578302
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",39.0,22737759573.0,39190654670.0,28.0,21912721220.12,-825038352.8800011,96.37150551165254
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,10709072.0,65254432.0,2.0,48412000.0,37702928.0,452.0653143428301
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,47529411.0,297208104.0,0.0,0.0,-47529411.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,84,Servicios Financieros y de Seguros,7.0,317763014968.0,325196545630.0,10.0,64530800391.2,-253232214576.8,20.307838656962172
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,86,Servicios Educativos y de Formación,3.0,208792444.0,208792444.0,2.0,155274000.0,-53518444.0,74.36763372528941
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",4.0,2236486357.0,6068645301.0,1.0,2124697008.0,-111789349.0,95.00156356196364
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,91,Servicios Personales y Domésticos,1.0,505740630.0,505740630.0,1.0,606647482.0,100906852.0,119.95229293719194
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,200158838.0,638398455.0,1.0,57309353.0,-142849485.0,28.631937301714352
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2023,93,Servicios Políticos y de Asuntos Cívicos,1.0,0.0,0.0,1.0,62445225270.43,62445225270.43,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,00,Sin clasificar,1.0,33800000.0,33800000.0,3.0,239455817.0,205655817.0,708.4491627218935
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,14,Materiales y Productos de Papel,1.0,113206545.0,113206545.0,0.0,0.0,-113206545.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,10510000.0,10510000.0,0.0,0.0,-10510000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,2800000000.0,2800000000.0,0.0,0.0,-2800000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,26,Maquinaria y Accesorios para Generación y Distribución de Energía,1.0,13565429.0,41334959.0,0.0,0.0,-13565429.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",1.0,49210174.0,49210174.0,1.0,60764600.0,11554426.0,123.47975034593456
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,31,Componentes y Suministros de Manufactura,1.0,164102454.0,492307362.0,0.0,0.0,-164102454.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,32,Componentes y Suministros Electrónicos,0.0,0.0,0.0,1.0,38600000.0,38600000.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,0.0,11463006155.0,0.0,0.0,0.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,3.0,206799499.0,255429614.0,2.0,206524554.0,-274945.0,99.86704755024576
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,11.0,13249484764.0,18913819176.0,9.0,10373731691.0,-2875753073.0,78.29535922171351
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,44,"Equipos de Oficina, Accesorios y Suministros",0.0,0.0,0.0,2.0,113181508.22,113181508.22,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",3.0,50039123.0,50039123.0,2.0,50604517.0,565394.0,101.129903895398
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,47,Equipos de Limpieza y Suministros,1.0,29075373.0,86142253.0,0.0,0.0,-29075373.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,121932961.0,121932961.0,0.0,0.0,-121932961.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,54,"Productos para Relojería, Joyería y Piedras Preciosas",1.0,3394556.0,13988627.0,1.0,17563465.0,14168909.0,517.4009502273641
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,17462450.0,17462450.0,1.0,22727800.0,5265350.0,130.15241274849748
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",11.0,2400259735.0,3957780472.0,8.0,23783804640.85,21383544905.85,990.8846236113693
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,3.0,109192318.0,109192318.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,0.0,0.0,1.0,0.1,0.1,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,77,Servicios Medioambientales,2.0,109236692.0,167275603.0,2.0,111332100.0,2095408.0,101.91822725646068
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,78,"Servicios de Transporte, Almacenaje y Correo",3.0,351661350.0,1895552756.0,3.0,83536699.0,-268124651.0,23.754870701599707
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",457.0,28194521186.0,42283895482.0,379.0,42529845703.14,14335324517.14,150.8443623588054
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",42.0,32596976119.0,60111949309.0,35.0,47661172266.9,15064196147.900002,146.21347726521
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,32307006.0,75342036.0,2.0,69099400.0,36792394.0,213.88363873767813
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,3.0,12464097.0,149261188.0,5.0,811366527.0,798902430.0,6509.629434045643
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,84,Servicios Financieros y de Seguros,8.0,515924354337.0,533574354337.0,6.0,92677237632.2,-423247116704.8,17.963338395082538
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,86,Servicios Educativos y de Formación,1.0,37499999.0,37499999.0,1.0,37500000.0,1.0,100.00000266666673
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,91,Servicios Personales y Domésticos,1.0,650971922.0,650971922.0,0.0,0.0,-650971922.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,336080798.0,10458179297.0,0.0,0.0,-336080798.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,93,Servicios Políticos y de Asuntos Cívicos,1.0,0.0,0.0,1.0,650971913.0,650971913.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,11056520.0,11056520.0,0.0,0.0,-11056520.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",0.0,0.0,0.0,1.0,34966480.0,34966480.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",2.0,33103937.0,33103937.0,0.0,0.0,-33103937.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,26,Maquinaria y Accesorios para Generación y Distribución de Energía,1.0,1300000000.0,1300000000.0,0.0,0.0,-1300000000.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",2.0,473878035.0,909181753.0,2.0,11387216736.0,10913338701.0,2402.9847123004974
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,472767636.15,472767636.15,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",0.0,0.0,0.0,1.0,99989999.98,99989999.98,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,1.0,145477800.92,145477800.92,0.0,0.0,-145477800.92,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,16.0,23009455055.06,25712786295.06,8.0,6865071642.17,-16144383412.890001,29.83587236526188
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,50892540.0,103337813.0,1.0,67868857.0,16976317.0,133.3571816222967
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,47,Equipos de Limpieza y Suministros,1.0,400582771.0,1034693071.0,0.0,0.0,-400582771.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,53,"Ropa, Maletas y Productos de Aseo Personal",0.0,0.0,0.0,1.0,147960000.0,147960000.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,1750000.0,1750000.0,3.0,1819400.0,69400.0,103.96571428571428
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",1.0,314541492.0,2516331933.0,0.0,0.0,-314541492.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",7.0,3797261535.0,3919995844.0,9.0,5702146313.23,1904884778.2299995,150.1646979190755
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,77,Servicios Medioambientales,0.0,0.0,0.0,1.0,13756400.0,13756400.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,78,"Servicios de Transporte, Almacenaje y Correo",1.0,10000000.0,10000000.0,1.0,9885912.0,-114088.0,98.85912
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",717.0,39314619922.87,58635931158.87,678.0,55148541800.54,15833921877.669998,140.27489495951895
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",26.0,26284492572.0,33095234690.0,23.0,24418999128.0,-1865493444.0,92.90268420099824
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",3.0,277100000.0,881900000.0,2.0,881900000.0,604800000.0,318.26055575604477
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,83,Servicios Públicos y Servicios Relacionados con el Sector Público,3.0,72193223.0,229215533.0,1.0,66283236.0,-5909987.0,91.81365403231824
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,84,Servicios Financieros y de Seguros,3.0,11642993587.0,11642993587.0,5.0,77267887172.0,65624893585.0,663.6427873521596
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,86,Servicios Educativos y de Formación,6.0,1389187511.0,2298187511.0,2.0,2106000000.0,716812489.0,151.59940492727335
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",2.0,1815470933.0,1815470933.0,0.0,0.0,-1815470933.0,0.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,91,Servicios Personales y Domésticos,2.0,1581971876.0,1581971876.0,1.0,790985938.0,-790985938.0,50.0
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",0.0,0.0,0.0,1.0,101390560.0,101390560.0,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2025,93,Servicios Políticos y de Asuntos Cívicos,0.0,0.0,0.0,1.0,45075887.0,45075887.0,

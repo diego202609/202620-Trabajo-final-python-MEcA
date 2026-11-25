@@ -90,7 +90,7 @@
 | Código | Recomendación registrada (`3.75` + correo `4.3`) | Evidencia en el repositorio / notebook | Estado |
 |---|---|---|---|
 | **R1** | Reformular la pregunta hacia el fenómeno (no la herramienta) | Sección 1 de este documento y del notebook | `DEFINIDA` |
-| **R2** | Cruzar PAA con contratos ejecutados de SECOP II | `src/limpieza_cruce.py` *(Fase 3)* | `EN CURSO` |
+| **R2** | Cruzar PAA con contratos ejecutados de SECOP II | `src/limpieza_cruce.py` + `tests/test_limpieza_cruce.py` | `PILOTO OK` |
 | **R3** | Descargar datos desde `datos.gov.co` vía API (`requests`/SODA) | `src/ingesta.py` + `tests/test_ingesta.py` (5/5 OK) | `IMPLEMENTADO` |
 | **R4** | Fijar muestra concreta (5–10 entidades nacionales, 2022–2025) | `src/config.py` (3 piloto cargadas → 6 definitivas en Fase 4) | `PILOTO OK` |
 | **R5** | Definir indicadores concretos desde el inicio | Sección 5 de este documento + `src/indicadores.py` *(Fase 4)* | `DEFINIDOS` |
