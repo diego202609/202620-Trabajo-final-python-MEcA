@@ -1,0 +1,21 @@
+# Dependencias del proyecto A contra(luz) — Grupo 3
+# Compatibles con Python 3.11+ en Windows y macOS
+
+# Manipulación de datos y lectura de Excel (Clasificador UNSPSC)
+pandas>=2.2,<4
+numpy>=2.0,<3
+openpyxl>=3.1,<4
+
+# Consulta a la API pública Socrata (datos.gov.co) y configuración
+requests>=2.32,<3
+python-dotenv>=1.0,<2
+
+# Visualización interactiva y tablero de control
+plotly>=5.24,<7
+streamlit>=1.40,<2
+
+# Ejecución reproducible del Jupyter Notebook y pruebas automáticas
+jupyter>=1.1,<2
+nbconvert>=7.16,<8
+ipykernel>=6.29,<8
+pytest>=8,<10

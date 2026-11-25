@@ -1,0 +1,30 @@
+# Entornos virtuales y Python
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[codz]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# Secretos y configuración local
+.env
+.env.local
+
+# Jupyter y pruebas
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Entregas empaquetadas y temporales
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+
+# Salidas temporales de pruebas (mantener carpeta con .gitkeep)
+data/pruebas/*
+!data/pruebas/.gitkeep
