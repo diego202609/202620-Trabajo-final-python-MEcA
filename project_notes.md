@@ -81,13 +81,17 @@ Este archivo mantiene la memoria operativa del proyecto entre conversaciones y e
 
 ---
 
-## Fase 6 — Visualizaciones Plotly, Streamlit y Notebook Tutorial *(Pendiente — Jue 26 noche / Vie 27 mañana)*
-- Construir `src/visualizacion.py`, `app_streamlit.py`, `A_contraluz_tutorial.ipynb` y `tests/test_rubrica_notebook.py`.
+## Fase 6 — Visualizaciones Plotly, Streamlit y Notebook Tutorial (Completada — 2026-11-26)
+- Construido `app_streamlit.py` con 6 pestañas interactivas, filtros por entidad y año, selector entre pesos constantes de 2025 (IPC DANE) y pesos corrientes, KPIs dinámicos y botones de descarga CSV.
+- Construido y ejecutado de principio a fin `A_contraluz_tutorial.ipynb` (`28` celdas, `RANDOM_SEED = 42`, única celda de imports sin paquetes sin usar, las 6 secciones con introducciones de `<= 3` líneas e hilo conductor explícito, demostración empírica R6, Rubro 5 íntegro con prompt + respuesta completa + *Antes vs. Después* + evaluación crítica, y limitaciones explícitas).
+- Implementada auditoría automática en `tests/test_rubrica_notebook.py`.
 
 ---
 
-## Fase 7 — Auditoría 20/20, PR `fix/auditoria` y Empaquetado `.zip` *(Pendiente — Vie 27 tarde/noche)*
-- Correr `rubric-auditor` (solo lectura), cerrar PR `fix/auditoria`, generar `entrega_grupo3_acontraluz.zip` y validar en carpeta limpia sin internet.
+## Fase 7 — Auditoría 20/20 y Empaquetado `.zip` Final (Completada — 2026-11-26)
+- Construido `empaquetar_entrega.py` generando `entrega_grupo3_acontraluz.zip` (`35` archivos limpios, `~9,44 MB` comprimido).
+- Aplicados ajustes de pulido de auditoría (`docs/decisiones.md` actualizado 100% a cifras finales de 6 entidades, encabezados de Sección 6 unificados en español, `width="stretch"` en `streamlit 1.67` sin advertencias de deprecación y estilos de línea accesibles en `HHI`).
+- Verificada ejecución aislada del `.zip` descomprimido en carpeta limpia (`exit code 0`) y suite completa `pytest` en verde (`23 passed`).
 
 ---
 

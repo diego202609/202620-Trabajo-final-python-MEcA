@@ -6,10 +6,12 @@ import ast
 import re
 from pathlib import Path
 
+import zipfile
 import nbformat
 
 import app_streamlit
-from src.config import PROJECT_ROOT
+from empaquetar_entrega import PATRONES_PROHIBIDOS, construir_zip_entrega
+from src.config import PROJECT_ROOT, PRUEBAS_DIR
 
 RUTA_NOTEBOOK = PROJECT_ROOT / "A_contraluz_tutorial.ipynb"
 RUTA_STREAMLIT = PROJECT_ROOT / "app_streamlit.py"
@@ -164,3 +166,22 @@ def test_seccion_rubro5_completa_y_streamlit_funcional() -> None:
     assert len(datos_app["resumen"]) == 24
     assert len(datos_app["rubro5_df"]) == 7
     assert app_streamlit.formatear_mm(1_500_000_000.0) == "$1.50 MM"
+
+
+def test_empaquetar_entrega_genera_zip_limpio_y_autocontenido() -> None:
+    PRUEBAS_DIR.mkdir(parents=True, exist_ok=True)
+    zip_prueba = PRUEBAS_DIR / "test_entrega.zip"
+    info = construir_zip_entrega(ruta_zip=zip_prueba)
+    assert zip_prueba.exists()
+    assert info["n_archivos"] >= 34
+
+    with zipfile.ZipFile(zip_prueba, "r") as zf:
+        nombres = zf.namelist()
+    assert "A_contraluz_tutorial.ipynb" in nombres
+    assert "app_streamlit.py" in nombres
+    assert "requirements.txt" in nombres
+    assert "data/raw/paa_detalle.csv" in nombres
+    assert "data/dashboard_data/rubro5_antes_despues.csv" in nombres
+    for nombre in nombres:
+        for patron in PATRONES_PROHIBIDOS:
+            assert patron not in nombre, f"Archivo prohibido dentro del .zip: {nombre}"

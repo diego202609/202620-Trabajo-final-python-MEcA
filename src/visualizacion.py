@@ -347,13 +347,14 @@ def graficar_concentracion_hhi(df_conc: pd.DataFrame) -> go.Figure:
         sub = df_conc[df_conc["sigla_entidad"] == sigla].sort_values("anio")
         color = COLORES_ENTIDADES[idx % len(COLORES_ENTIDADES)]
         simbolo = SIMBOLOS_ENTIDADES[idx % len(SIMBOLOS_ENTIDADES)]
+        estilo = ESTILOS_LINEA[idx % len(ESTILOS_LINEA)]
         fig.add_trace(
             go.Scatter(
                 x=sub["anio"],
                 y=sub["hhi_proveedores"],
                 mode="lines+markers",
                 name=sigla,
-                line=dict(color=color, width=3),
+                line=dict(color=color, width=3, dash=estilo),
                 marker=dict(symbol=simbolo, size=10, color=color, line=dict(color="white", width=1)),
                 customdata=np.stack([sub["cr5_pct"], sub["top1_proveedor"], sub["n_proveedores_unicos"]], axis=-1),
                 hovertemplate=(

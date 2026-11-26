@@ -1,6 +1,6 @@
 # Arquitectura y Decisiones Metodológicas — *A contra(luz)*
 
-> **Regla de integridad:** Todas las decisiones de entidades, formatos de códigos, tasas de emparejamiento y reglas de cruce consignadas aquí están respaldadas por evidencia verificada en `datos.gov.co` (Fase 2 y extracción piloto del 25 de noviembre de 2026).
+> **Regla de integridad:** Todas las decisiones de entidades, formatos de códigos, tasas de emparejamiento y reglas de cruce consignadas aquí están respaldadas por evidencia verificada en `datos.gov.co` sobre la muestra definitiva de 6 entidades nacionales (`2022–2025`).
 
 ---
 
@@ -40,27 +40,27 @@
 ## 3. Regla Exacta de Cruce PAA ↔ Contratos SECOP II ↔ Clasificador UNSPSC (R2 y R6)
 - **Clave entidad-año:** `codigo_entidad` (texto de 9 dígitos, verificado idéntico en las 3 APIs) + `anio` (`annio` en PAA; año extraído de `fecha_de_firma` en Contratos).
 - **Normalización del código UNSPSC:**
-  - En **PAA Detalle (`categorias_unspsc`):** texto de 8 dígitos sin prefijo (ej. `80121601`), con `626` filas en piloto que incluyen múltiples códigos separados por `;`, `,` o espacio → se extrae el **primer código de 8 dígitos** (categoría principal del ítem) con la expresión regular `\d{8}`.
-  - En **Contratos SECOP II (`codigo_de_categoria_principal`):** texto con prefijo de versión (ej. `V1.80121601`), y `31` registros `"UNSPECIFIED"` (`0,33%`) → se extrae el **código de 8 dígitos** tras el prefijo con `\d{8}`; los `"UNSPECIFIED"` se etiquetan explícitamente como `"Sin clasificar"`.
-  - En **Clasificador UNSPSC (`clasificador_unspsc.csv`):** 49.022 productos normalizados a texto de longitud fija: `codigo_segmento` (`2` dígitos), `codigo_familia` (`4` dígitos), `codigo_clase` (`6` dígitos), `codigo_producto` (`8` dígitos).
-- **Decisión de nivel jerárquico (justificada empíricamente):**
-  - El cruce por **Producto (8 dígitos)** falla en más del 82% de registros (solo **17,40%** en PAA y **16,14%** en Contratos) porque las entidades reportan códigos terminados en `00` correspondientes a nivel de **Clase**.
-  - Por tanto, el cruce oficial contra el Clasificador se realiza a nivel de **Clase (`6` dígitos: `codigo_clase`)** —que logra **99,99%** de emparejamiento en PAA y **99,67%** en Contratos— y las comparaciones sectoriales entre PAA y Contratos se agregan a nivel de **Segmento (`2` dígitos, 56 categorías)** y **Familia (`4` dígitos, 420 categorías)** para mantener legibilidad analítica sin pérdida de cobertura.
+  - En **PAA Detalle (`categorias_unspsc`):** texto de 8 dígitos sin prefijo (ej. `80121601`), con `1.462` filas en la muestra completa de 6 entidades que incluyen múltiples códigos separados por `;`, `,` o espacio → se extrae el **primer código de 8 dígitos** (categoría principal del ítem) con la expresión regular `\d{8}`.
+  - En **Contratos SECOP II (`codigo_de_categoria_principal`):** texto con prefijo de versión (ej. `V1.80121601`), y `51` registros `"UNSPECIFIED"` (`0,20%` sobre `25.317`) → se extrae el **código de 8 dígitos** tras el prefijo con `\d{8}`; los `"UNSPECIFIED"` se etiquetan explícitamente como `"Sin clasificar"`.
+  - En **Clasificador UNSPSC (`clasificador_unspsc.csv`):** `49.022` productos normalizados a texto de longitud fija: `codigo_segmento` (`2` dígitos), `codigo_familia` (`4` dígitos), `codigo_clase` (`6` dígitos), `codigo_producto` (`8` dígitos).
+- **Decisión de nivel jerárquico (justificada empíricamente en las 6 entidades):**
+  - El cruce por **Producto (8 dígitos)** falla en más del 60% de registros (solo **39,55%** en PAA y **36,37%** en Contratos) porque las entidades reportan códigos terminados en `00` correspondientes a nivel de **Clase**.
+  - Por tanto, el cruce oficial contra el Clasificador se realiza a nivel de **Clase (`6` dígitos: `codigo_clase`)** —que logra **99,99%** de emparejamiento en PAA y **99,80%** en Contratos— y las comparaciones sectoriales entre PAA y Contratos se agregan a nivel de **Segmento (`2` dígitos, 56 categorías)** para mantener legibilidad analítica sin pérdida de cobertura.
 
 ---
 
 ## 4. Normalización de Modalidades y Limpieza de Datos (Rubro 1 y R5)
-- **Homologación de modalidades PAA ↔ Contratos:** se construye un diccionario explícito en `src/limpieza_cruce.py` (quitando tildes y mayúsculas) hacia **7 macro-modalidades comparables**:
+- **Homologación de modalidades PAA ↔ Contratos:** se construye un diccionario explícito en `src/limpieza_cruce.py` (quitando tildes y mayúsculas) hacia **7 macro-modalidades comparables**, complementado con rescate desde `causal_de_contratacion` (Ley 1150 de 2007, art. 2):
   1. `Contratación directa` (agrupa `CONTRATACION DIRECTA`, `Contratación directa`, `Contratación Directa (con ofertas)`)
   2. `Licitación pública y AMP` (agrupa `Licitación pública`, `Obra pública` y `Acuerdo Marco de Precios`)
   3. `Selección abreviada` (subasta inversa y menor cuantía)
   4. `Mínima cuantía`
   5. `Concurso de méritos`
   6. `Régimen especial`
-  7. `No definido` (presente en `1.561` ítems del PAA piloto)
-- **Tratamiento explícito de valores `<= 0` y atípicos:**
-  - En Contratos, `808` registros piloto tienen `valor_del_contrato <= 0` (`559` son Acuerdos Marco de Precios de ANCP y `160` convenios/otros sin erogación). Se conservan marcados con bandera `es_contrato_sin_cuantia = True` para el conteo institucional, y se excluyen del cálculo de montos promedio/concentración por proveedor para evitar distorsiones.
-  - En PAA, se documentan ambas bases monetarias: **`valor_esperado_de_presupuesto`** (vigencia actual, base principal para comparar contra contratos firmados en el mismo año) y **`valor_total_esperado`** (incluye vigencias futuras), reportando explícitamente el efecto de la diferencia y señalando casos atípicos verificados (como la duplicación aparente de $333,5 MM en MinAmbiente 2023).
+  7. `No definido` (`2.733` ítems crudos en PAA → `2.251` rescatados desde causal legal por `$1.975,68 MM`, quedando solo `482` omisiones reales, `1,8%`)
+- **Tratamiento explícito de valores `<= $1.000 COP` y atípicos:**
+  - En Contratos (`25.317` totales, `0` negativos), `951` registros tienen `valor_del_contrato == $0` (`565` son Acuerdos Marco de Precios de ANCP + convenios/comodatos sin erogación) y `13` registros presentan cuantía simbólica de plataforma (`$0,01` a `$1.000 COP`). Los `964` se conservan marcados con bandera `es_contrato_sin_cuantia = True` para el conteo institucional y se excluyen del cálculo de medias e Índice `HHI` (calculados sobre los `24.353` contratos válidos `> $1.000 COP`).
+  - En PAA (`27.160` ítems), se documentan ambas bases monetarias: **`valor_esperado_de_presupuesto`** (vigencia actual, base principal) y **`valor_total_esperado`** (incluye vigencias futuras), y se controla el cuasi-duplicado administrativo de `$333,54 MM` en MinAmbiente 2023 (*Fondo para la Vida y la Biodiversidad*), corrigiendo su ejecución anual de `32,9%` a `50,9%` (`+18,0 pp`).
 
 ---
 
@@ -90,11 +90,11 @@
 
 | Código | Recomendación registrada (`3.75` + correo `4.3`) | Evidencia en el repositorio / notebook | Estado |
 |---|---|---|---|
-| **R1** | Reformular la pregunta hacia el fenómeno (no la herramienta) | Sección 1 de este documento y del notebook | `DEFINIDA` |
+| **R1** | Reformular la pregunta hacia el fenómeno (no la herramienta) | Encabezado y Sección 1 de `A_contraluz_tutorial.ipynb` | `COMPLETADO` |
 | **R2** | Cruzar PAA con contratos ejecutados de SECOP II | `src/limpieza_cruce.py` + `tests/test_limpieza_cruce.py` | `COMPLETADO (6 ENT.)` |
 | **R3** | Descargar datos desde `datos.gov.co` vía API (`requests`/SODA) | `src/ingesta.py` + `tests/test_ingesta.py` | `COMPLETADO (6 ENT.)` |
 | **R4** | Fijar muestra concreta (5–10 entidades nacionales, 2022–2025) | `src/config.py` (6 entidades: `27.160` PAA y `25.317` contratos) | `COMPLETADO (6 ENT.)` |
 | **R5** | Definir indicadores concretos desde el inicio | `src/indicadores.py` + `data/dashboard_data/*.csv` | `COMPLETADO (6 ENT.)` |
 | **R6** | Explicar método exacto de cruce UNSPSC (código y nivel) | `Clase 6d` / `Segmento 2d` (`99,99%` PAA y `99,80%` Contratos) | `COMPLETADO (6 ENT.)` |
-| **R7** | Especificar qué se calcula en cada paso de la secuencia | `docs/plan.md` + módulos `# %%` en `src/` | `EN CURSO` |
-| **R8** | Análisis económico sustantivo con Streamlit como resultado | `A_contraluz_tutorial.ipynb` + `app_streamlit.py` *(Fase 6)* | `PENDIENTE` |
+| **R7** | Especificar qué se calcula en cada paso de la secuencia | Introducciones de Secciones 1–6 en `A_contraluz_tutorial.ipynb` + `src/` | `COMPLETADO` |
+| **R8** | Análisis económico sustantivo con Streamlit como resultado | `A_contraluz_tutorial.ipynb` + `app_streamlit.py` | `COMPLETADO` |

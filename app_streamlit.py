@@ -226,12 +226,12 @@ def renderizar_app() -> None:
                     usar_base_ajustada=usar_base_ajustada,
                     usar_precios_constantes_2025=usar_constantes_2025,
                 ),
-                use_container_width=True,
+                width="stretch",
             )
         with c_der:
             st.plotly_chart(
                 graficar_evolucion_tasa_ejecucion(filtro_res, usar_base_ajustada=usar_base_ajustada),
-                use_container_width=True,
+                width="stretch",
             )
         st.caption(
             "Lectura económica: las tasas anuales > 100% obedecen al carácter indicativo y modificable del PAA "
@@ -246,7 +246,7 @@ def renderizar_app() -> None:
         )
 
     with tabs[1]:
-        st.plotly_chart(graficar_contratacion_directa_entidades(filtro_res), use_container_width=True)
+        st.plotly_chart(graficar_contratacion_directa_entidades(filtro_res), width="stretch")
         st.caption(
             "Hallazgo clave: la contratación directa concentra más del 90% del número de contratos por la "
             "contratación masiva de servicios profesionales, pero su peso en dinero cae sustancialmente en "
@@ -262,10 +262,10 @@ def renderizar_app() -> None:
             )
             .sort_values("ejecutado_mm", ascending=False)
         )
-        st.dataframe(resumen_mod, use_container_width=True, hide_index=True)
+        st.dataframe(resumen_mod, width="stretch", hide_index=True)
 
     with tabs[2]:
-        st.plotly_chart(graficar_concentracion_hhi(filtro_conc), use_container_width=True)
+        st.plotly_chart(graficar_concentracion_hhi(filtro_conc), width="stretch")
         st.caption(
             "Referencia estándar antimonopolio (DOJ/FTC y SIC): 22 de las 24 celdas entidad-año operan en baja "
             "concentración (< 1.500). Los dos picos > 2.500 (MinEducación 2023 con FINDETER y MinAmbiente 2023 "
@@ -289,7 +289,7 @@ def renderizar_app() -> None:
                     "modalidad_frecuente",
                 ]
             ],
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -301,7 +301,7 @@ def renderizar_app() -> None:
                 top_n=top_n_seg,
                 usar_precios_constantes_2025=usar_constantes_2025,
             ),
-            use_container_width=True,
+            width="stretch",
         )
         st.download_button(
             "⬇️ Descargar brechas por Segmento UNSPSC (CSV)",
@@ -339,14 +339,14 @@ def renderizar_app() -> None:
         )
         st.plotly_chart(
             graficar_distribucion_franjas_cuantia(df_franjas, sigla_entidad=alcance_franja),
-            use_container_width=True,
+            width="stretch",
         )
 
     with tabs[5]:
         st.subheader("Extensión metodológica sugerida por IA: Deflactación IPC DANE + Índice de Duncan")
-        st.plotly_chart(graficar_rubro5_antes_despues_ipc(df_rubro5), use_container_width=True)
-        st.plotly_chart(graficar_rubro5_ejecucion_vs_duncan(filtro_res), use_container_width=True)
-        st.dataframe(df_rubro5, use_container_width=True, hide_index=True)
+        st.plotly_chart(graficar_rubro5_antes_despues_ipc(df_rubro5), width="stretch")
+        st.plotly_chart(graficar_rubro5_ejecucion_vs_duncan(filtro_res), width="stretch")
+        st.dataframe(df_rubro5, width="stretch", hide_index=True)
 
         if rubro5_json:
             with st.expander("Ver Prompt literal enviado a la IA"):
