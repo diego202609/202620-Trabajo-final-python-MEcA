@@ -11,7 +11,7 @@
 ## 1. Descripción del Proyecto
 Tutorial autocontenido de ciencia de datos y economía en Jupyter Notebook (`A_contraluz_tutorial.ipynb`) acompañado de módulos reproducibles (`src/`), pruebas automáticas (`tests/`) y un tablero interactivo en **Streamlit (`app_streamlit.py`)**.
 
-El proyecto contrasta la **planeación contractual (Plan Anual de Adquisiciones — PAA)** frente a la **contratación ejecutada en SECOP II** e integrada con el **Clasificador de Bienes y Servicios (UNSPSC)** para una muestra concreta de **5 a 6 entidades del orden nacional (2022–2025)**, consultando la API pública Socrata (`datos.gov.co`) y conservando copia congelada local dentro del `.zip` para garantizar reproducibilidad total sin conexión.
+El proyecto contrasta la **planeación contractual (Plan Anual de Adquisiciones — PAA, `27.160` ítems)** frente a la **contratación ejecutada en SECOP II (`25.317` contratos)** e integrada al `99,8%+` con el **Clasificador de Bienes y Servicios (UNSPSC v14.1, `49.022` productos)** para una muestra concreta de **6 entidades nacionales del nivel central (2022–2025)**: `ANCP`, `MinHacienda`, `MinAmbiente`, `MinEducación`, `MinCulturas` y `DNP`. Consulta programáticamente la API pública Socrata (`datos.gov.co`) y conserva copia congelada local dentro del `.zip` para garantizar reproducibilidad total sin conexión.
 
 ---
 
@@ -53,13 +53,11 @@ a-contraluz-secop/
 
 ## 3. Reparto de Frentes del Equipo (Propiedad de Carpetas)
 
-> *Completar el nombre del responsable en cada frente al arrancar el miércoles 25 de noviembre.*
-
-| Frente | Responsable | Carpetas / archivos bajo su propiedad | Rama sugerida |
+| Frente | Responsable | Carpetas / archivos bajo su propiedad | Rama |
 |---|---|---|---|
-| **Frente 1 — Ingesta, API SODA y Calidad** | `[Por asignar]` | `src/config.py`, `src/ingesta.py`, `data/raw/`, `data/README.md`, `tests/test_ingesta.py` | `feat/ingesta-api` |
-| **Frente 2 — Limpieza, Cruce UNSPSC, Indicadores y Mejora IA (Rubro 5)** | `[Por asignar]` | `src/limpieza_cruce.py`, `src/indicadores.py`, `data/processed/`, `data/dashboard_data/`, `tests/test_indicadores.py` | `feat/cruce-indicadores` |
-| **Frente 3 — Visualización, Streamlit, Notebook y Empaquetado `.zip`** | `[Por asignar]` | `src/visualizacion.py`, `app_streamlit.py`, `A_contraluz_tutorial.ipynb`, `README.md`, `docs/decisiones.md`, `empaquetar_entrega.py` | `feat/viz-notebook` |
+| **Frente 1 — Ingesta, API SODA y Calidad** | Diego Andrés Niño Estupiñán | `src/config.py`, `src/ingesta.py`, `data/raw/`, `data/README.md`, `tests/test_ingesta.py` | `feat/ingesta-api` |
+| **Frente 2 — Limpieza, Cruce UNSPSC, Indicadores y Mejora IA (Rubro 5)** | Juan Sebastián Puerto Sanz | `src/limpieza_cruce.py`, `src/indicadores.py`, `data/processed/`, `data/dashboard_data/`, `tests/test_indicadores.py` | `feat/cruce-indicadores` |
+| **Frente 3 — Visualización, Streamlit, Notebook y Empaquetado `.zip`** | Nathalia Alexandra Acero Pérez | `src/visualizacion.py`, `app_streamlit.py`, `A_contraluz_tutorial.ipynb`, `README.md`, `docs/decisiones.md`, `empaquetar_entrega.py` | `feat/fase6-entregables` |
 
 ---
 
@@ -95,7 +93,7 @@ a-contraluz-secop/
    pip install -r requirements.txt
    ```
 
-### Comandos principales *(disponibles al completar Fases 3–7)*
+### Comandos principales
 
 | Acción | Comando |
 |---|---|
