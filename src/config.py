@@ -184,15 +184,36 @@ ARCHIVO_DASH_CONCENTRACION = DASHBOARD_DATA_DIR / "concentracion_proveedores.csv
 ARCHIVO_DASH_TOP_PROVEEDORES = DASHBOARD_DATA_DIR / "top_proveedores_entidad.csv"
 ARCHIVO_DASH_SEGMENTOS_UNSPSC = DASHBOARD_DATA_DIR / "brechas_segmento_unspsc.csv"
 ARCHIVO_DASH_FRANJAS_CUANTIA = DASHBOARD_DATA_DIR / "distribucion_franjas_cuantia.csv"
+ARCHIVO_DASH_RUBRO5_COMPARATIVA = DASHBOARD_DATA_DIR / "rubro5_antes_despues.csv"
+ARCHIVO_DASH_RUBRO5_JSON = DASHBOARD_DATA_DIR / "rubro5_registro_ia.json"
 ARCHIVO_DASH_README = DASHBOARD_DATA_DIR / "README.md"
 
 # Archivos de la Cartilla interna del equipo (excluidos del .zip final de entrega)
 ARCHIVO_CARTILLA_MD = PROJECT_ROOT / "docs" / "cartilla_equipo.md"
 ARCHIVO_CARTILLA_HTML = PROJECT_ROOT / "docs" / "cartilla_interactiva.html"
+ARCHIVO_RUBRO5_MD = PROJECT_ROOT / "docs" / "rubro5_uso_ia.md"
 
 # Umbrales metodológicos explícitos
 UMBRAL_DUPLICADO_ATIPICO_PAA_COP = 50_000_000_000
 UMBRAL_CUANTIA_SIMBOLICA_COP = 1_000
+
+# Serie oficial IPC DANE Colombia (variación anual cierre diciembre certificada por el DANE):
+# 2022: 13,12% | 2023: 9,28% | 2024: 5,20% | 2025: 5,10%
+IPC_INFLACION_ANUAL_DANE = {
+    2022: 0.1312,
+    2023: 0.0928,
+    2024: 0.0520,
+    2025: 0.0510,
+}
+
+# Factor multiplicador exacto d_t = I_2025 / I_t para expresar pesos corrientes del año t
+# en pesos constantes de cierre de 2025 (base 2025 = 1,000000):
+FACTOR_DEFLACTOR_IPC_2025 = {
+    2022: round(1.0928 * 1.0520 * 1.0510, 6),  # 1,208257 (+20,83% inflación acumulada 2023-2025)
+    2023: round(1.0520 * 1.0510, 6),           # 1,105652 (+10,57% inflación acumulada 2024-2025)
+    2024: round(1.0510, 6),                    # 1,051000 (+5,10% inflación 2025)
+    2025: 1.000000,                            # Año base 2025 = 100
+}
 
 
 def obtener_entidades(modo: str = MODO_MUESTRA_DEFECTO) -> dict:

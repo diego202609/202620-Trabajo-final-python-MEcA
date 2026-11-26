@@ -166,14 +166,27 @@ def graficar_distribucion_franjas_cuantia(
 def graficar_planeado_vs_ejecutado_entidad(
     df_resumen: pd.DataFrame,
     usar_base_ajustada: bool = True,
+    usar_precios_constantes_2025: bool = False,
 ) -> go.Figure:
     """Compara el monto total planeado vs. ejecutado (2022–2025) por entidad."""
-    col_paa = "valor_paa_vigencia_sin_dup_atipico" if usar_base_ajustada else "valor_paa_vigencia"
+    if usar_precios_constantes_2025 and "valor_ejecutado_real_2025_cop" in df_resumen.columns:
+        col_paa = (
+            "valor_paa_ajustado_real_2025_cop"
+            if usar_base_ajustada
+            else "valor_paa_vigencia_real_2025_cop"
+        )
+        col_ejec = "valor_ejecutado_real_2025_cop"
+        etiqueta_precios = "COP constantes de 2025 (IPC DANE)"
+    else:
+        col_paa = "valor_paa_vigencia_sin_dup_atipico" if usar_base_ajustada else "valor_paa_vigencia"
+        col_ejec = "valor_ejecutado"
+        etiqueta_precios = "COP corrientes"
+
     agg = (
         df_resumen.groupby(["sigla_entidad", "nombre_entidad_corto"], as_index=False)
         .agg(
             paa_cop=(col_paa, "sum"),
-            ejec_cop=("valor_ejecutado", "sum"),
+            ejec_cop=(col_ejec, "sum"),
             contratos=("n_contratos_con_cuantia", "sum"),
         )
     )
@@ -210,11 +223,11 @@ def graficar_planeado_vs_ejecutado_entidad(
     _aplicar_layout_estandar(
         fig,
         titulo="Brecha acumulada entre planeación (PAA) y contratación ejecutada (2022–2025)",
-        subtitulo=f"Miles de millones de COP corrientes por entidad ({etiqueta_base})",
+        subtitulo=f"Miles de millones de {etiqueta_precios} por entidad ({etiqueta_base})",
         altura=470,
     )
     fig.update_layout(barmode="group")
-    fig.update_yaxes(title_text="Miles de millones de COP ($ MM)", gridcolor=PALETA["grilla"], range=[0, agg[["paa_mm", "ejec_mm"]].to_numpy().max() * 1.18])
+    fig.update_yaxes(title_text=f"Miles de millones ({etiqueta_precios})", gridcolor=PALETA["grilla"], range=[0, agg[["paa_mm", "ejec_mm"]].to_numpy().max() * 1.18])
     fig.update_xaxes(title_text="Entidad del orden nacional")
     return fig
 
@@ -367,13 +380,26 @@ def graficar_concentracion_hhi(df_conc: pd.DataFrame) -> go.Figure:
     return fig
 
 
-def graficar_top_brechas_unspsc(df_seg: pd.DataFrame, top_n: int = 10) -> go.Figure:
+def graficar_top_brechas_unspsc(
+    df_seg: pd.DataFrame,
+    top_n: int = 10,
+    usar_precios_constantes_2025: bool = False,
+) -> go.Figure:
     """Muestra los Top N segmentos UNSPSC por volumen con su brecha Ejecutado − Planeado."""
+    if usar_precios_constantes_2025 and "valor_ejecutado_real_2025_cop" in df_seg.columns:
+        col_paa = "valor_paa_real_2025_cop"
+        col_ejec = "valor_ejecutado_real_2025_cop"
+        etiqueta_precios = "COP constantes de 2025 (IPC DANE)"
+    else:
+        col_paa = "valor_paa_vigencia"
+        col_ejec = "valor_ejecutado"
+        etiqueta_precios = "COP corrientes"
+
     agg = (
         df_seg.groupby(["codigo_segmento", "nombre_segmento"], as_index=False)
         .agg(
-            paa_cop=("valor_paa_vigencia", "sum"),
-            ejec_cop=("valor_ejecutado", "sum"),
+            paa_cop=(col_paa, "sum"),
+            ejec_cop=(col_ejec, "sum"),
         )
     )
     agg["volumen_total"] = agg["paa_cop"] + agg["ejec_cop"]
@@ -406,11 +432,191 @@ def graficar_top_brechas_unspsc(df_seg: pd.DataFrame, top_n: int = 10) -> go.Fig
     _aplicar_layout_estandar(
         fig,
         titulo=f"Brecha sectorial (Ejecutado − Planeado) en los {top_n} principales segmentos UNSPSC (2022–2025)",
-        subtitulo="Valores negativos (azul) = subejecución frente al PAA; positivos (cobre) = ejecución superior a lo planeado",
+        subtitulo=f"{etiqueta_precios}: valores negativos (azul) = subejecución; positivos (cobre) = sobreejecución",
         altura=500,
     )
     fig.update_layout(showlegend=False, margin=dict(l=275, r=85, t=90, b=80))
     rango_min = min(top["brecha_mm"].min() * 1.28, -50)
     rango_max = max(top["brecha_mm"].max() * 1.28, 50)
-    fig.update_xaxes(title_text="Brecha Ejecutado − Planeado ($ Miles de millones COP)", range=[rango_min, rango_max], gridcolor=PALETA["grilla"])
+    fig.update_xaxes(title_text=f"Brecha Ejecutado − Planeado ($ MM, {etiqueta_precios})", range=[rango_min, rango_max], gridcolor=PALETA["grilla"])
+    return fig
+
+
+def graficar_rubro5_antes_despues_ipc(df_antes_despues: pd.DataFrame) -> go.Figure:
+    """Contrasta Antes (COP nominales) vs. Después (COP constantes 2025 IPC DANE) en brecha y crecimiento."""
+    sub = df_antes_despues[df_antes_despues["alcance"] == "Entidad"].copy()
+    sub = sub.sort_values("brecha_real_2025_mm", ascending=True)
+
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        shared_yaxes=True,
+        horizontal_spacing=0.10,
+        subplot_titles=(
+            "A. Brecha acumulada 2022–2025 ($ MM: Ejecutado − PAA)",
+            "B. Crecimiento del gasto ejecutado 2022 → 2025 (%)",
+        ),
+    )
+
+    fig.add_trace(
+        go.Bar(
+            y=sub["sigla_entidad"],
+            x=sub["brecha_nominal_mm"],
+            orientation="h",
+            name="Antes: COP corrientes (nominal)",
+            marker=dict(color=PALETA["gris_claro"], line=dict(color=PALETA["gris_neutro"], width=1)),
+            text=[f"{v:+,.0f} MM" for v in sub["brecha_nominal_mm"]],
+            textposition="outside",
+            cliponaxis=False,
+            hovertemplate="<b>%{y}</b><br>Brecha nominal (Antes): $%{x:+,.2f} MM<extra></extra>",
+        ),
+        row=1,
+        col=1,
+    )
+    fig.add_trace(
+        go.Bar(
+            y=sub["sigla_entidad"],
+            x=sub["brecha_real_2025_mm"],
+            orientation="h",
+            name="Después: COP constantes 2025 (IPC DANE)",
+            marker=dict(color=PALETA["azul_planeado"], line=dict(color="white", width=1)),
+            text=[f"{v:+,.0f} MM" for v in sub["brecha_real_2025_mm"]],
+            textposition="outside",
+            cliponaxis=False,
+            customdata=sub["cambio_brecha_real_vs_nominal_mm"],
+            hovertemplate=(
+                "<b>%{y}</b><br>"
+                "Brecha real 2025 (Después): $%{x:+,.2f} MM<br>"
+                "Ajuste por poder adquisitivo: $%{customdata:+,.2f} MM<extra></extra>"
+            ),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Bar(
+            y=sub["sigla_entidad"],
+            x=sub["crecimiento_ejec_nominal_2022_2025_pct"],
+            orientation="h",
+            name="Antes: Crecimiento nominal",
+            showlegend=False,
+            marker=dict(color=PALETA["gris_claro"], line=dict(color=PALETA["gris_neutro"], width=1)),
+            text=[f"{v:+.1f}%" for v in sub["crecimiento_ejec_nominal_2022_2025_pct"]],
+            textposition="outside",
+            cliponaxis=False,
+            hovertemplate="<b>%{y}</b><br>Crecimiento nominal 2022→2025: %{x:+.1f}%<extra></extra>",
+        ),
+        row=1,
+        col=2,
+    )
+    fig.add_trace(
+        go.Bar(
+            y=sub["sigla_entidad"],
+            x=sub["crecimiento_ejec_real_2022_2025_pct"],
+            orientation="h",
+            name="Después: Crecimiento real (IPC 2025)",
+            showlegend=False,
+            marker=dict(color=PALETA["cobre_ejecutado"], line=dict(color="white", width=1)),
+            text=[f"{v:+.1f}%" for v in sub["crecimiento_ejec_real_2022_2025_pct"]],
+            textposition="outside",
+            cliponaxis=False,
+            customdata=sub["sesgo_inflacionario_crecimiento_pp"],
+            hovertemplate=(
+                "<b>%{y}</b><br>"
+                "Crecimiento real 2022→2025: %{x:+.1f}%<br>"
+                "Ilusión monetaria corregida: %{customdata:+.1f} pp<extra></extra>"
+            ),
+        ),
+        row=1,
+        col=2,
+    )
+
+    fig.add_vline(x=0, line_color="#1A202C", line_width=1.2, row=1, col=1)
+    fig.add_vline(x=0, line_color="#1A202C", line_width=1.2, row=1, col=2)
+
+    _aplicar_layout_estandar(
+        fig,
+        titulo="Efecto de la Mejora IA #1 (Deflactación IPC DANE base 2025 = 100): Antes vs. Después",
+        subtitulo="Deflactar revela una subejecución real más profunda y corrige ~20,8% de inflación acumulada entre 2022 y 2025",
+        altura=490,
+    )
+    fig.update_layout(barmode="group", margin=dict(l=120, r=80, t=100, b=85))
+
+    min_b = min(float(sub[["brecha_nominal_mm", "brecha_real_2025_mm"]].to_numpy().min()) * 1.32, -100.0)
+    max_b = max(float(sub[["brecha_nominal_mm", "brecha_real_2025_mm"]].to_numpy().max()) * 1.32, 60.0)
+    min_c = min(float(sub[["crecimiento_ejec_nominal_2022_2025_pct", "crecimiento_ejec_real_2022_2025_pct"]].to_numpy().min()) * 1.32, -35.0)
+    max_c = max(float(sub[["crecimiento_ejec_nominal_2022_2025_pct", "crecimiento_ejec_real_2022_2025_pct"]].to_numpy().max()) * 1.32, 50.0)
+
+    fig.update_xaxes(title_text="Brecha ($ Miles de millones)", range=[min_b, max_b], gridcolor=PALETA["grilla"], row=1, col=1)
+    fig.update_xaxes(title_text="Variación 2022 → 2025 (%)", range=[min_c, max_c], ticksuffix="%", gridcolor=PALETA["grilla"], row=1, col=2)
+    return fig
+
+
+def graficar_rubro5_ejecucion_vs_duncan(df_resumen: pd.DataFrame) -> go.Figure:
+    """Plano cartesiano Tasa de Ejecución Agregada (%) vs. Índice de Disimilitud de Duncan (%)."""
+    fig = go.Figure()
+    entidades = sorted(df_resumen["sigla_entidad"].unique())
+
+    for idx, sigla in enumerate(entidades):
+        sub = df_resumen[df_resumen["sigla_entidad"] == sigla].sort_values("anio")
+        color = COLORES_ENTIDADES[idx % len(COLORES_ENTIDADES)]
+        simbolo = SIMBOLOS_ENTIDADES[idx % len(SIMBOLOS_ENTIDADES)]
+        fig.add_trace(
+            go.Scatter(
+                x=sub["pct_ejecucion_sobre_vigencia_sin_dup"],
+                y=sub["duncan_pct"],
+                mode="markers+text",
+                name=sigla,
+                text=[str(a)[2:] for a in sub["anio"]],
+                textposition="top center",
+                textfont=dict(size=10, color=color),
+                marker=dict(symbol=simbolo, size=12, color=color, line=dict(color="white", width=1.2)),
+                customdata=np.stack(
+                    [
+                        sub["anio"],
+                        sub["segmento_mayor_desvio"].fillna("—"),
+                        sub["contribucion_max_duncan_pp"].fillna(0.0),
+                        sub["valor_ejecutado_real_2025_cop"] / 1e9,
+                    ],
+                    axis=-1,
+                ),
+                hovertemplate=(
+                    f"<b>{sigla} (20%{{text}})</b><br>"
+                    "Ejecución agregada sobre PAA: %{x:.1f}%<br>"
+                    "Índice de Duncan (reasignación UNSPSC): %{y:.1f}%<br>"
+                    "Principal desvío sectorial: %{customdata[1]} (%{customdata[2]:.1f} pp)<br>"
+                    "Ejecutado real (COP 2025): $%{customdata[3]:,.1f} MM<extra></extra>"
+                ),
+            )
+        )
+
+    fig.add_vline(
+        x=100,
+        line_dash="dot",
+        line_color=PALETA["gris_neutro"],
+        annotation_text="100% ejecución agregada",
+        annotation_position="top right",
+    )
+    fig.add_hline(
+        y=20,
+        line_dash="dash",
+        line_color=PALETA["rojo_alerta"],
+        annotation_text="Umbral 20% de reasignación composicional (Duncan)",
+        annotation_position="bottom right",
+    )
+
+    _aplicar_layout_estandar(
+        fig,
+        titulo="Efecto de la Mejora IA #2: Ejecución agregada vs. Reasignación sectorial de Duncan (2022–2025)",
+        subtitulo="Puntos cercanos a X = 100% pero con Y > 20% evidencian compensación entre rubros UNSPSC oculta en el indicador base",
+        altura=500,
+    )
+    fig.update_xaxes(title_text="Tasa de ejecución agregada sobre PAA ajustado (%)", ticksuffix="%", gridcolor=PALETA["grilla"])
+    fig.update_yaxes(
+        title_text="Índice de Disimilitud de Duncan (% reasignado entre segmentos)",
+        ticksuffix="%",
+        range=[0, max(float(df_resumen["duncan_pct"].max()) * 1.18, 35.0)],
+        gridcolor=PALETA["grilla"],
+    )
     return fig

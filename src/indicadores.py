@@ -8,6 +8,8 @@
 # %%
 from __future__ import annotations
 
+import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -23,10 +25,15 @@ from src.config import (
     ARCHIVO_DASH_MODALIDADES,
     ARCHIVO_DASH_README,
     ARCHIVO_DASH_RESUMEN_ANUAL,
+    ARCHIVO_DASH_RUBRO5_COMPARATIVA,
+    ARCHIVO_DASH_RUBRO5_JSON,
     ARCHIVO_DASH_SEGMENTOS_UNSPSC,
     ARCHIVO_DASH_TOP_PROVEEDORES,
     ARCHIVO_PAA_LIMPIO,
+    ARCHIVO_RUBRO5_MD,
     DASHBOARD_DATA_DIR,
+    FACTOR_DEFLACTOR_IPC_2025,
+    IPC_INFLACION_ANUAL_DANE,
     PROCESSED_DIR,
 )
 
@@ -223,12 +230,99 @@ def calcular_modalidades_entidad_anio(
     )
 
 
+def calcular_brechas_segmento_unspsc(df_cruce_seg: pd.DataFrame) -> pd.DataFrame:
+    """Enriquece el cruce por Segmento UNSPSC con cuotas, contribuciones de Duncan y deflactación IPC 2025."""
+    seg = df_cruce_seg.copy()
+    seg["codigo_entidad"] = seg["codigo_entidad"].astype(str)
+    seg["anio"] = seg["anio"].astype(int)
+
+    tot_paa = seg.groupby(["codigo_entidad", "anio"])["valor_paa_vigencia"].transform("sum")
+    tot_ejec = seg.groupby(["codigo_entidad", "anio"])["valor_ejecutado"].transform("sum")
+
+    w_paa = np.where(tot_paa > 0, seg["valor_paa_vigencia"] / tot_paa, 0.0)
+    w_ejec = np.where(tot_ejec > 0, seg["valor_ejecutado"] / tot_ejec, 0.0)
+
+    seg["participacion_paa_pct"] = 100.0 * w_paa
+    seg["participacion_ejecutado_pct"] = 100.0 * w_ejec
+    seg["brecha_participacion_pp"] = (
+        seg["participacion_ejecutado_pct"] - seg["participacion_paa_pct"]
+    ).round(3)
+
+    # Contribución aditiva al Índice de Disimilitud de Duncan: c_ist = 0.5 * |w_E - w_P|
+    ambos_positivos = (tot_paa > 0) & (tot_ejec > 0)
+    seg["contribucion_duncan"] = np.where(ambos_positivos, 0.5 * np.abs(w_ejec - w_paa), np.nan)
+    seg["contribucion_duncan_pp"] = (100.0 * seg["contribucion_duncan"]).round(3)
+
+    # Deflactación a pesos constantes de 2025 (IPC oficial DANE, base 2025 = 1,000000)
+    seg["factor_ipc_2025"] = seg["anio"].map(FACTOR_DEFLACTOR_IPC_2025).fillna(1.0)
+    seg["valor_paa_real_2025_cop"] = seg["valor_paa_vigencia"] * seg["factor_ipc_2025"]
+    seg["valor_ejecutado_real_2025_cop"] = seg["valor_ejecutado"] * seg["factor_ipc_2025"]
+    seg["brecha_real_2025_cop"] = (
+        seg["valor_ejecutado_real_2025_cop"] - seg["valor_paa_real_2025_cop"]
+    )
+    return seg.sort_values(["sigla_entidad", "anio", "codigo_segmento"]).reset_index(drop=True)
+
+
+def calcular_indice_duncan_unspsc(df_brechas_seg: pd.DataFrame) -> pd.DataFrame:
+    """Calcula el Índice de Disimilitud Estructural de Duncan (D_it en [0, 1]) por Entidad × Año.
+
+    D_it = 0.5 * sum_s |w_ist^E - w_ist^P| mide la fracción exacta del gasto ejecutado (0% a 100%)
+    que tendría que reasignarse entre segmentos UNSPSC para replicar la composición planeada en el PAA.
+    """
+    seg = df_brechas_seg.copy()
+    seg["codigo_entidad"] = seg["codigo_entidad"].astype(str)
+    seg["anio"] = seg["anio"].astype(int)
+
+    filas = []
+    for (cod, sigla, anio), grp in seg.groupby(["codigo_entidad", "sigla_entidad", "anio"]):
+        tot_p = float(grp["valor_paa_vigencia"].sum())
+        tot_e = float(grp["valor_ejecutado"].sum())
+        if tot_p <= 0 or tot_e <= 0:
+            filas.append(
+                {
+                    "codigo_entidad": str(cod),
+                    "sigla_entidad": str(sigla),
+                    "anio": int(anio),
+                    "indice_duncan": np.nan,
+                    "duncan_pct": np.nan,
+                    "codigo_segmento_mayor_desvio": "",
+                    "segmento_mayor_desvio": "Sin datos comparables",
+                    "contribucion_max_duncan_pp": np.nan,
+                }
+            )
+            continue
+
+        w_p = grp["valor_paa_vigencia"] / tot_p
+        w_e = grp["valor_ejecutado"] / tot_e
+        contrib = 0.5 * np.abs(w_e - w_p)
+        d_it = float(contrib.sum())
+        idx_max = contrib.idxmax()
+        fila_max = grp.loc[idx_max]
+        etiqueta_max = f"{fila_max['codigo_segmento']} - {str(fila_max['nombre_segmento'])[:48]}"
+
+        filas.append(
+            {
+                "codigo_entidad": str(cod),
+                "sigla_entidad": str(sigla),
+                "anio": int(anio),
+                "indice_duncan": round(d_it, 6),
+                "duncan_pct": round(100.0 * d_it, 2),
+                "codigo_segmento_mayor_desvio": str(fila_max["codigo_segmento"]),
+                "segmento_mayor_desvio": etiqueta_max,
+                "contribucion_max_duncan_pp": round(100.0 * float(contrib.loc[idx_max]), 2),
+            }
+        )
+
+    return pd.DataFrame(filas).sort_values(["sigla_entidad", "anio"]).reset_index(drop=True)
+
+
 def calcular_resumen_entidad_anio(
     df_cruce_anual: pd.DataFrame,
     df_cont: pd.DataFrame,
     df_conc: pd.DataFrame,
+    df_duncan: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
-    """Consolida todos los KPIs principales en una tabla maestra Entidad × Año."""
+    """Consolida KPIs base y mejoras metodológicas Rubro 5 (IPC DANE 2025 + Duncan) por Entidad × Año."""
     validos = df_cont[df_cont["es_contrato_valido_con_cuantia"]].copy()
     directa = (
         validos.groupby(["codigo_entidad", "anio"], as_index=False)
@@ -245,6 +339,7 @@ def calcular_resumen_entidad_anio(
 
     base = df_cruce_anual.copy()
     base["codigo_entidad"] = base["codigo_entidad"].astype(str)
+    base["anio"] = base["anio"].astype(int)
     resumen = base.merge(directa, on=["codigo_entidad", "anio"], how="left").merge(
         df_conc[
             [
@@ -274,25 +369,171 @@ def calcular_resumen_entidad_anio(
     resumen["brecha_ajustada_cop"] = (
         resumen["valor_ejecutado"] - resumen["valor_paa_vigencia_sin_dup_atipico"]
     )
+
+    # Mejora IA #1: Deflactación intertemporal a precios constantes de 2025 (IPC oficial DANE)
+    resumen["inflacion_anual_dane_pct"] = (
+        100.0 * resumen["anio"].map(IPC_INFLACION_ANUAL_DANE).fillna(0.0)
+    ).round(2)
+    resumen["factor_ipc_2025"] = resumen["anio"].map(FACTOR_DEFLACTOR_IPC_2025).fillna(1.0)
+    resumen["valor_paa_vigencia_real_2025_cop"] = (
+        resumen["valor_paa_vigencia"] * resumen["factor_ipc_2025"]
+    )
+    resumen["valor_paa_ajustado_real_2025_cop"] = (
+        resumen["valor_paa_vigencia_sin_dup_atipico"] * resumen["factor_ipc_2025"]
+    )
+    resumen["valor_ejecutado_real_2025_cop"] = (
+        resumen["valor_ejecutado"] * resumen["factor_ipc_2025"]
+    )
+    resumen["brecha_ajustada_real_2025_cop"] = (
+        resumen["valor_ejecutado_real_2025_cop"] - resumen["valor_paa_ajustado_real_2025_cop"]
+    )
+
+    # Mejora IA #2: Índice de Disimilitud Estructural de Duncan sobre segmentos UNSPSC
+    if df_duncan is not None and not df_duncan.empty:
+        resumen = resumen.merge(
+            df_duncan[
+                [
+                    "codigo_entidad",
+                    "anio",
+                    "indice_duncan",
+                    "duncan_pct",
+                    "segmento_mayor_desvio",
+                    "contribucion_max_duncan_pp",
+                ]
+            ],
+            on=["codigo_entidad", "anio"],
+            how="left",
+        )
+
     return resumen.sort_values(["sigla_entidad", "anio"]).reset_index(drop=True)
 
 
-def calcular_brechas_segmento_unspsc(df_cruce_seg: pd.DataFrame) -> pd.DataFrame:
-    """Enriquece el cruce por Segmento UNSPSC con participaciones y brechas en puntos porcentuales."""
-    seg = df_cruce_seg.copy()
-    tot_paa = seg.groupby(["codigo_entidad", "anio"])["valor_paa_vigencia"].transform("sum")
-    tot_ejec = seg.groupby(["codigo_entidad", "anio"])["valor_ejecutado"].transform("sum")
+def calcular_comparativa_rubro5_antes_despues(df_resumen: pd.DataFrame) -> pd.DataFrame:
+    """Construye la tabla Antes (nominal) vs. Después (IPC 2025 + Duncan) por entidad y muestra total."""
+    filas = []
+    grupos: list[tuple[str, str, str, str, pd.DataFrame]] = []
+    for (cod, sigla, nom_ent), grp in df_resumen.groupby(
+        ["codigo_entidad", "sigla_entidad", "nombre_entidad_corto"]
+    ):
+        grupos.append(("Entidad", str(cod), str(sigla), str(nom_ent), grp.sort_values("anio")))
+    grupos.append(
+        (
+            "Total 6 entidades",
+            "TODAS",
+            "TOTAL_MUESTRA",
+            "Total muestra 6 entidades (2022–2025)",
+            df_resumen.copy(),
+        )
+    )
 
-    seg["participacion_paa_pct"] = np.where(
-        tot_paa > 0, 100.0 * seg["valor_paa_vigencia"] / tot_paa, 0.0
+    for alcance, cod, sigla, nom_ent, sub in grupos:
+        paa_nom_mm = float(sub["valor_paa_vigencia_sin_dup_atipico"].sum()) / 1e9
+        ejec_nom_mm = float(sub["valor_ejecutado"].sum()) / 1e9
+        brecha_nom_mm = ejec_nom_mm - paa_nom_mm
+        tasa_nom_pct = 100.0 * ejec_nom_mm / paa_nom_mm if paa_nom_mm > 0 else np.nan
+
+        paa_real_mm = float(sub["valor_paa_ajustado_real_2025_cop"].sum()) / 1e9
+        ejec_real_mm = float(sub["valor_ejecutado_real_2025_cop"].sum()) / 1e9
+        brecha_real_mm = ejec_real_mm - paa_real_mm
+        tasa_real_pct = 100.0 * ejec_real_mm / paa_real_mm if paa_real_mm > 0 else np.nan
+
+        ejec_2022_nom = float(sub.loc[sub["anio"] == 2022, "valor_ejecutado"].sum())
+        ejec_2025_nom = float(sub.loc[sub["anio"] == 2025, "valor_ejecutado"].sum())
+        ejec_2022_real = float(sub.loc[sub["anio"] == 2022, "valor_ejecutado_real_2025_cop"].sum())
+        ejec_2025_real = float(sub.loc[sub["anio"] == 2025, "valor_ejecutado_real_2025_cop"].sum())
+
+        crec_nom = (
+            100.0 * (ejec_2025_nom / ejec_2022_nom - 1.0) if ejec_2022_nom > 0 else np.nan
+        )
+        crec_real = (
+            100.0 * (ejec_2025_real / ejec_2022_real - 1.0) if ejec_2022_real > 0 else np.nan
+        )
+
+        duncan_prom = (
+            float(sub["duncan_pct"].mean())
+            if "duncan_pct" in sub.columns and sub["duncan_pct"].notna().any()
+            else np.nan
+        )
+        duncan_max = (
+            float(sub["duncan_pct"].max())
+            if "duncan_pct" in sub.columns and sub["duncan_pct"].notna().any()
+            else np.nan
+        )
+        seg_moda = (
+            str(sub["segmento_mayor_desvio"].mode().iloc[0])
+            if "segmento_mayor_desvio" in sub.columns and not sub["segmento_mayor_desvio"].dropna().empty
+            else "—"
+        )
+
+        filas.append(
+            {
+                "alcance": alcance,
+                "codigo_entidad": cod,
+                "sigla_entidad": sigla,
+                "nombre_entidad_corto": nom_ent,
+                "paa_ajustado_nominal_mm": round(paa_nom_mm, 2),
+                "ejecutado_nominal_mm": round(ejec_nom_mm, 2),
+                "brecha_nominal_mm": round(brecha_nom_mm, 2),
+                "tasa_ejecucion_nominal_pct": round(tasa_nom_pct, 2),
+                "crecimiento_ejec_nominal_2022_2025_pct": round(crec_nom, 2) if pd.notna(crec_nom) else np.nan,
+                "paa_ajustado_real_2025_mm": round(paa_real_mm, 2),
+                "ejecutado_real_2025_mm": round(ejec_real_mm, 2),
+                "brecha_real_2025_mm": round(brecha_real_mm, 2),
+                "cambio_brecha_real_vs_nominal_mm": round(brecha_real_mm - brecha_nom_mm, 2),
+                "tasa_ejecucion_real_acumulada_pct": round(tasa_real_pct, 2),
+                "crecimiento_ejec_real_2022_2025_pct": round(crec_real, 2) if pd.notna(crec_real) else np.nan,
+                "sesgo_inflacionario_crecimiento_pp": (
+                    round(crec_nom - crec_real, 2) if pd.notna(crec_nom) and pd.notna(crec_real) else np.nan
+                ),
+                "duncan_promedio_pct": round(duncan_prom, 2) if pd.notna(duncan_prom) else np.nan,
+                "duncan_max_pct": round(duncan_max, 2) if pd.notna(duncan_max) else np.nan,
+                "segmento_desvio_frecuente": seg_moda,
+            }
+        )
+
+    return pd.DataFrame(filas)
+
+
+def construir_registro_ia_rubro5(ruta_md: Path = ARCHIVO_RUBRO5_MD) -> dict[str, Any]:
+    """Extrae el prompt literal, la respuesta íntegra de la IA y la evaluación crítica desde docs/rubro5_uso_ia.md."""
+    if not ruta_md.exists():
+        return {}
+    texto = ruta_md.read_text(encoding="utf-8")
+
+    match_prompt = re.search(r"## 1\. Prompt.*?\n```text\n(.*?)\n```", texto, flags=re.DOTALL)
+    match_resp = re.search(
+        r"## 2\. Respuesta Completa de la IA.*?\n\n(.*?)\n---\n\n## 3\.",
+        texto,
+        flags=re.DOTALL,
     )
-    seg["participacion_ejecutado_pct"] = np.where(
-        tot_ejec > 0, 100.0 * seg["valor_ejecutado"] / tot_ejec, 0.0
+    match_mas_alla = re.search(
+        r"## 3\. Qué Va Más Allá.*?\n\n(.*?)\n---\n\n## 4\.",
+        texto,
+        flags=re.DOTALL,
     )
-    seg["brecha_participacion_pp"] = (
-        seg["participacion_ejecutado_pct"] - seg["participacion_paa_pct"]
-    ).round(3)
-    return seg.sort_values(["sigla_entidad", "anio", "codigo_segmento"]).reset_index(drop=True)
+    match_eval = re.search(
+        r"## 4\. Evaluación Crítica del Equipo.*?\n\n(.*)$",
+        texto,
+        flags=re.DOTALL,
+    )
+
+    return {
+        "fuente_documento": "docs/rubro5_uso_ia.md",
+        "prompt_enviado": match_prompt.group(1).strip() if match_prompt else "",
+        "respuesta_ia_completa": match_resp.group(1).strip() if match_resp else "",
+        "mas_alla_profesores": match_mas_alla.group(1).strip() if match_mas_alla else "",
+        "evaluacion_critica_equipo": match_eval.group(1).strip() if match_eval else "",
+        "ipc_inflacion_anual_dane": {str(k): v for k, v in IPC_INFLACION_ANUAL_DANE.items()},
+        "factor_deflactor_ipc_2025": {str(k): v for k, v in FACTOR_DEFLACTOR_IPC_2025.items()},
+        "mejoras_implementadas": [
+            "1. Deflactación intertemporal a precios constantes con IPC oficial DANE (base 2025 = 100)",
+            "2. Índice de Disimilitud Estructural de Duncan (D_it) sobre composición de Segmentos UNSPSC",
+        ],
+        "mejoras_descartadas": [
+            "4. Emparejamiento micro bipartito 1:1 PAA–Contrato (descartada por bolsas pluripersonales 1:M y consolidación por lotes M:1 que fabricarían falsos no ejecutados)",
+            "3. Concentración estacional intra-anual Kullback-Leibler y RIC-Q4 (descartada por ausencia de cronograma mensual de desembolsos en el PAA y estacionalidad operativa legítima en enero)",
+        ],
+    }
 
 
 def calcular_distribucion_franjas_cuantia(df_cont: pd.DataFrame) -> pd.DataFrame:
@@ -353,7 +594,7 @@ def escribir_readme_dashboard_data(directorio: Path, conteos: dict[str, int]) ->
     lineas = [
         "# Contratos de Datos para Visualización (`data/dashboard_data/README.md`)",
         "",
-        "Archivos CSV generados automáticamente por `src/indicadores.py` a partir de `data/processed/`. Tanto `A_contraluz_tutorial.ipynb` como `app_streamlit.py` leen exclusivamente estos archivos ya validados.",
+        "Archivos generados automáticamente por `src/indicadores.py` a partir de `data/processed/`. Tanto `A_contraluz_tutorial.ipynb` como `app_streamlit.py` leen exclusivamente estos archivos ya validados.",
         "",
         "## Cómo regenerar",
         "```powershell",
@@ -363,14 +604,16 @@ def escribir_readme_dashboard_data(directorio: Path, conteos: dict[str, int]) ->
         "",
         "## Inventario y Proveniencia",
         "",
-        "| Archivo CSV | Filas actuales | Grano (qué representa una fila) | Función generadora (`src/indicadores.py`) |",
+        "| Archivo | Filas actuales | Grano (qué representa una fila) | Función generadora (`src/indicadores.py`) |",
         "|---|---:|---|---|",
-        f"| `resumen_entidad_anio.csv` | `{conteos['resumen_entidad_anio.csv']}` | 1 entidad × 1 año (`2022–2025`) | `calcular_resumen_entidad_anio` |",
+        f"| `resumen_entidad_anio.csv` | `{conteos['resumen_entidad_anio.csv']}` | 1 entidad × 1 año (`2022–2025`) con KPIs nominales, reales IPC 2025 e Índice de Duncan | `calcular_resumen_entidad_anio` |",
         f"| `modalidades_entidad_anio.csv` | `{conteos['modalidades_entidad_anio.csv']}` | 1 entidad × 1 año × 1 macro-modalidad | `calcular_modalidades_entidad_anio` |",
         f"| `concentracion_proveedores.csv` | `{conteos['concentracion_proveedores.csv']}` | 1 entidad × 1 año (`CR1`, `CR5`, `HHI`) | `calcular_concentracion_proveedores` |",
         f"| `top_proveedores_entidad.csv` | `{conteos['top_proveedores_entidad.csv']}` | Top 10 proveedores por entidad (`2022–2025`) | `calcular_top_proveedores_entidad` |",
-        f"| `brechas_segmento_unspsc.csv` | `{conteos['brechas_segmento_unspsc.csv']}` | 1 entidad × 1 año × 1 segmento UNSPSC (`2d`) | `calcular_brechas_segmento_unspsc` |",
+        f"| `brechas_segmento_unspsc.csv` | `{conteos['brechas_segmento_unspsc.csv']}` | 1 entidad × 1 año × 1 segmento UNSPSC (`2d`) con contribución a Duncan y valores reales 2025 | `calcular_brechas_segmento_unspsc` |",
         f"| `distribucion_franjas_cuantia.csv` | `{conteos['distribucion_franjas_cuantia.csv']}` | 1 alcance (`TODAS` o entidad) × 1 franja de valor (`7` franjas) | `calcular_distribucion_franjas_cuantia` |",
+        f"| `rubro5_antes_despues.csv` | `{conteos['rubro5_antes_despues.csv']}` | 1 entidad (más `TOTAL_MUESTRA`) contrastando Antes (nominal) vs. Después (IPC 2025 + Duncan) | `calcular_comparativa_rubro5_antes_despues` |",
+        "| `rubro5_registro_ia.json` | `JSON` | Prompt literal, respuesta completa de la IA y evaluación crítica del Rubro 5 | `construir_registro_ia_rubro5` |",
     ]
     (directorio / ARCHIVO_DASH_README.name).write_text("\n".join(lineas) + "\n", encoding="utf-8")
 
@@ -379,7 +622,7 @@ def ejecutar_calculo_indicadores(
     directorio_entrada: Path = PROCESSED_DIR,
     directorio_salida: Path = DASHBOARD_DATA_DIR,
 ) -> dict[str, pd.DataFrame]:
-    """Lee data/processed/, calcula todos los indicadores R5 y escribe data/dashboard_data/."""
+    """Lee data/processed/, calcula todos los indicadores R5 y Rubro 5 IA y escribe data/dashboard_data/."""
     df_paa = pd.read_csv(
         directorio_entrada / ARCHIVO_PAA_LIMPIO.name,
         dtype={"codigo_entidad": str, "codigo_segmento": str, "codigo_familia": str, "codigo_clase": str},
@@ -408,9 +651,12 @@ def ejecutar_calculo_indicadores(
     df_conc = calcular_concentracion_proveedores(df_cont)
     df_top_prov = calcular_top_proveedores_entidad(df_cont, top_n=10)
     df_mod = calcular_modalidades_entidad_anio(df_paa, df_cont)
-    df_resumen = calcular_resumen_entidad_anio(df_anual, df_cont, df_conc)
     df_brechas_seg = calcular_brechas_segmento_unspsc(df_seg)
+    df_duncan = calcular_indice_duncan_unspsc(df_brechas_seg)
+    df_resumen = calcular_resumen_entidad_anio(df_anual, df_cont, df_conc, df_duncan=df_duncan)
     df_franjas = calcular_distribucion_franjas_cuantia(df_cont)
+    df_rubro5 = calcular_comparativa_rubro5_antes_despues(df_resumen)
+    registro_ia = construir_registro_ia_rubro5()
 
     directorio_salida.mkdir(parents=True, exist_ok=True)
     salidas = {
@@ -420,11 +666,18 @@ def ejecutar_calculo_indicadores(
         ARCHIVO_DASH_TOP_PROVEEDORES.name: df_top_prov,
         ARCHIVO_DASH_SEGMENTOS_UNSPSC.name: df_brechas_seg,
         ARCHIVO_DASH_FRANJAS_CUANTIA.name: df_franjas,
+        ARCHIVO_DASH_RUBRO5_COMPARATIVA.name: df_rubro5,
     }
     conteos = {}
     for nombre_archivo, tabla in salidas.items():
         tabla.to_csv(directorio_salida / nombre_archivo, index=False, encoding="utf-8")
         conteos[nombre_archivo] = int(len(tabla))
+
+    if registro_ia:
+        (directorio_salida / ARCHIVO_DASH_RUBRO5_JSON.name).write_text(
+            json.dumps(registro_ia, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
     escribir_readme_dashboard_data(directorio_salida, conteos)
     return {
@@ -434,12 +687,13 @@ def ejecutar_calculo_indicadores(
         "top_proveedores": df_top_prov,
         "segmentos_unspsc": df_brechas_seg,
         "franjas_cuantia": df_franjas,
+        "rubro5_antes_despues": df_rubro5,
     }
 
 
 def main() -> None:
     tablas = ejecutar_calculo_indicadores()
-    print("=== Indicadores R5 generados en data/dashboard_data/ ===")
+    print("=== Indicadores R5 + Mejoras IA (Rubro 5) generados en data/dashboard_data/ ===")
     for nombre, df in tablas.items():
         print(f"  - {nombre}: {len(df):,} filas")
 

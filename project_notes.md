@@ -69,8 +69,15 @@ Este archivo mantiene la memoria operativa del proyecto entre conversaciones y e
 
 ---
 
-## Fase 5 — Uso de IA para Ir Más Allá de la Metodología (Rubro 5) *(Pendiente — Jue 26 tarde)*
-- Formular prompt estructurado con resultados reales de las 6 entidades, implementar al menos 1 mejora en código (*antes vs. después*) y redactar evaluación crítica de descartes.
+## Fase 5 — Uso de IA para Ir Más Allá de la Metodología (Rubro 5) (Completada — 2026-11-26)
+- Archivados de forma íntegra y literal el prompt y las 4 propuestas de la IA en `docs/rubro5_uso_ia.md` y `data/dashboard_data/rubro5_registro_ia.json`.
+- **Implementadas en código (`src/config.py`, `src/indicadores.py`, `src/visualizacion.py`):**
+  1. **Deflactación intertemporal a precios constantes de 2025 (IPC oficial DANE):** la brecha acumulada de las 6 entidades pasa de `-$1.563,73 MM` corrientes a `-$1.657,48 MM` constantes de 2025 (`-$93,75 MM` adicionales en poder adquisitivo real), y el crecimiento ejecutado `2022 → 2025` baja de `+131,66%` nominal a `+91,73%` real (`-39,93 pp` de ilusión monetaria).
+  2. **Índice de Disimilitud Estructural de Duncan ($D_{it}$) sobre segmentos UNSPSC:** promedio muestral de `23,60%`, revelando casos de compensación oculta como MinCulturas (`100,44%` de ejecución agregada aparente pero `32,07%` promedio de reasignación entre segmentos UNSPSC) y MinHacienda (`40,31%` promedio, máximo `55,88%`).
+- **Descartadas críticamente con sustento técnico e institucional:**
+  - *Propuesta #4 (Emparejamiento micro bipartito `1:1` PAA–Contrato):* descartada porque las bolsas globales pluripersonales (`1:M`) y licitaciones agrupadas por lotes (`M:1`) violan la cardinalidad `1:1` y la cota $|\ln E_k - \ln P_j| \le \ln(1,5)$, fabricando falsos "no ejecutados".
+  - *Propuesta #3 (Entropía estacional Kullback-Leibler y $\text{RIC}^{\text{Q4}}$):* descartada porque el PAA carece de cronograma mensual de desembolsos comparable y la concentración de firmas en enero obedece a operación anual ordinaria / Ley de Garantías 2022, desviando el foco de la pregunta única (Rubro 4).
+- **Verificación:** `17 passed` en `pytest` offline.
 
 ---
 
