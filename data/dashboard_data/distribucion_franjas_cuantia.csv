@@ -1,0 +1,50 @@
+sigla_entidad,orden_franja,franja_cuantia,regla_cop,tratamiento_limpieza,n_contratos,pct_contratos,valor_total_cop,pct_valor,modalidad_predominante
+TODAS,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,951,3.76,0.0,0.0,Licitación pública y AMP
+TODAS,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,13,0.05,11.24,0.0,Licitación pública y AMP
+TODAS,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,24,0.09,15573124.0,0.0,Contratación directa
+TODAS,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,755,2.98,5197296179.11,0.07,Contratación directa
+TODAS,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,17188,67.89,902445052428.89,11.6,Contratación directa
+TODAS,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,5678,22.43,1006118737528.88,12.93,Contratación directa
+TODAS,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,708,2.8,5866323784864.9795,75.4,Contratación directa
+ANCP,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,796,34.38,0.0,0.0,Licitación pública y AMP
+ANCP,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,7,0.3,10.01,0.0,Licitación pública y AMP
+ANCP,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,7,0.3,4019342.0,0.0,Contratación directa
+ANCP,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,110,4.75,713052571.34,0.41,Contratación directa
+ANCP,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,1065,46.0,54369555966.77,31.2,Contratación directa
+ANCP,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,315,13.61,47067167793.78,27.01,Contratación directa
+ANCP,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,15,0.65,72113697815.31,41.38,Contratación directa
+DNP,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,8,0.13,0.0,0.0,Contratación directa
+DNP,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,1,0.02,0.01,0.0,Contratación directa
+DNP,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,9,0.14,5389562.0,0.0,Contratación directa
+DNP,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,152,2.38,1120540666.0,0.16,Contratación directa
+DNP,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,4300,67.36,224497673330.05,31.56,Contratación directa
+DNP,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,1855,29.06,281688254079.67,39.6,Contratación directa
+DNP,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,59,0.92,204109847353.91998,28.69,Concurso de méritos
+MinAmbiente,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,6,0.12,0.0,0.0,Contratación directa
+MinAmbiente,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,1,0.02,0.01,0.0,Concurso de méritos
+MinAmbiente,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,1,0.02,963900.0,0.0,Mínima cuantía
+MinAmbiente,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,164,3.4,1139897615.57,0.18,Contratación directa
+MinAmbiente,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,3911,81.14,217831038561.13,34.3,Contratación directa
+MinAmbiente,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,688,14.27,104365384472.48,16.43,Contratación directa
+MinAmbiente,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,49,1.02,311801109249.37,49.09,Contratación directa
+MinCulturas,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,61,1.18,0.0,0.0,Contratación directa
+MinCulturas,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,3,0.06,1.11,0.0,Régimen especial
+MinCulturas,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,1,0.02,950000.0,0.0,Contratación directa
+MinCulturas,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,225,4.36,1488442562.2,0.07,Contratación directa
+MinCulturas,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,3599,69.76,181361781792.3,9.06,Contratación directa
+MinCulturas,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,997,19.33,212947728640.91,10.64,Contratación directa
+MinCulturas,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,273,5.29,1606070838270.22,80.23,Contratación directa
+MinEducación,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,74,1.65,0.0,0.0,Contratación directa
+MinEducación,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,0,0.0,0.0,0.0,Sin registros
+MinEducación,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,1,0.02,711100.0,0.0,Mínima cuantía
+MinEducación,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,65,1.45,442574397.0,0.01,Contratación directa
+MinEducación,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,2812,62.71,149561576880.31,4.25,Contratación directa
+MinEducación,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,1312,29.26,254335205263.17,7.23,Contratación directa
+MinEducación,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,220,4.91,3111790741079.84,88.5,Contratación directa
+MinHacienda,1,Igual a $0 (AMP / sin erogación),valor == 0,Marcado sin cuantía,6,0.28,0.0,0.0,Contratación directa
+MinHacienda,2,"Simbólica ($0,01 – $1.000)",0 < valor <= 1.000,Marcado cuantía simbólica,1,0.05,0.1,0.0,Régimen especial
+MinHacienda,3,Micro-compra ($1.001 – $1M),1.000 < valor <= 1.000.000,Incluido en análisis,5,0.23,3539220.0,0.0,Contratación directa
+MinHacienda,4,Menor ($1M – $10M),1M < valor <= 10M,Incluido en análisis,39,1.81,292788367.0,0.04,Contratación directa
+MinHacienda,5,Estándar ($10M – $100M),10M < valor <= 100M,Incluido en análisis,1501,69.65,74823425898.33,10.09,Contratación directa
+MinHacienda,6,Intermedia ($100M – $1.000M),100M < valor <= 1.000M,Incluido en análisis,511,23.71,105714997278.87,14.26,Contratación directa
+MinHacienda,7,Gran cuantía (> $1.000M),valor > 1.000M,Incluido en análisis,92,4.27,560437551096.32,75.6,Selección abreviada

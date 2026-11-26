@@ -1,6 +1,6 @@
 {
-  "fecha_extraccion_utc": "2026-11-25T18:23:42.193251+00:00",
-  "modo_muestra": "piloto",
+  "fecha_extraccion_utc": "2026-11-26T02:05:44.831348+00:00",
+  "modo_muestra": "completo",
   "anios_estudio": [
     2022,
     2023,
@@ -25,6 +25,24 @@
       "sigla": "MinAmbiente",
       "nit": "830115395",
       "sector_analisis": "Ambiente y Desarrollo Sostenible"
+    },
+    "700066053": {
+      "nombre_corto": "Ministerio de Educación Nacional",
+      "sigla": "MinEducación",
+      "nit": "899999001",
+      "sector_analisis": "Educación"
+    },
+    "700637010": {
+      "nombre_corto": "Ministerio de las Culturas, las Artes y los Saberes",
+      "sigla": "MinCulturas",
+      "nit": "830034348",
+      "sector_analisis": "Cultura"
+    },
+    "700220049": {
+      "nombre_corto": "Departamento Nacional de Planeación",
+      "sigla": "DNP",
+      "nit": "899999011",
+      "sector_analisis": "Planeación Nacional"
     }
   },
   "datasets_socrata": {
@@ -34,15 +52,15 @@
   },
   "url_unspsc": "https://operaciones.colombiacompra.gov.co/sites/cce_public/files/cce_clasificador/clasificador_de_bienes_y_servicios_v14_1.xls",
   "conteos": {
-    "paa_encabezado": 12,
-    "paa_detalle": 9877,
-    "contratos": 9290,
+    "paa_encabezado": 24,
+    "paa_detalle": 27160,
+    "contratos": 25317,
     "unspsc": 49022
   },
   "sha256": {
-    "paa_encabezado.csv": "536175df7b3a43be89fd296900c48e3a2b136a879387b03e4740d1c06202275a",
-    "paa_detalle.csv": "d45004e14aa8baf9de667b44dd2ef5be1d3d7463d5c521106ef383d7fc9cd956",
-    "contratos_secop2.csv": "4d299cc47126a1c4c64f1bf8164dda5b9ace93916f19daf6536e8a5884517f07",
+    "paa_encabezado.csv": "eb7cb371495057157cf75bb0b4c2015820741398653842b0ebca34470a1d74a4",
+    "paa_detalle.csv": "5844484fa42f7474fd2068830fdc3a538274c5950bb9c3555e9fb3e8503c58bf",
+    "contratos_secop2.csv": "89290b41e895cc3a103b3fb7f1e0c9629ee5127d87a50318275588571652b399",
     "clasificador_unspsc.csv": "6360c962e4e92eb4650786e9d2c185705c8185e07054b34d6e3602311ad4af58"
   }
 }

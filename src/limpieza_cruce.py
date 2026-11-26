@@ -27,6 +27,7 @@ from src.config import (
     ARCHIVO_PAA_LIMPIO,
     ENTIDADES_COMPLETO,
     PROCESSED_DIR,
+    UMBRAL_CUANTIA_SIMBOLICA_COP,
     UMBRAL_DUPLICADO_ATIPICO_PAA_COP,
 )
 from src.ingesta import cargar_datos_crudos
@@ -366,7 +367,11 @@ def limpiar_contratos(
         lambda m: "acuerdo marco" in quitar_tildes_y_espacios(m)
     )
     df["es_contratacion_directa"] = df["modalidad_homologada"] == "Contratación directa"
-    df["es_contrato_sin_cuantia"] = df["valor_del_contrato"] <= 0
+    df["es_contrato_cero"] = df["valor_del_contrato"] <= 0
+    df["es_cuantia_simbolica"] = (df["valor_del_contrato"] > 0) & (
+        df["valor_del_contrato"] <= UMBRAL_CUANTIA_SIMBOLICA_COP
+    )
+    df["es_contrato_sin_cuantia"] = df["es_contrato_cero"] | df["es_cuantia_simbolica"]
     df["es_contrato_valido_con_cuantia"] = (~df["es_estado_invalido"]) & (~df["es_contrato_sin_cuantia"])
 
     # Identificador limpio de proveedor para cálculo de concentración (CR5 / HHI)
@@ -403,6 +408,8 @@ def limpiar_contratos(
         "filas_sin_fecha_firma_eliminadas": n_sin_fecha,
         "filas_finales": int(len(df)),
         "contratos_estado_invalido": int(df["es_estado_invalido"].sum()),
+        "contratos_valor_exacto_cero": int(df["es_contrato_cero"].sum()),
+        "contratos_cuantia_simbolica_hasta_1000": int(df["es_cuantia_simbolica"].sum()),
         "contratos_sin_cuantia_cero": int(df["es_contrato_sin_cuantia"].sum()),
         "contratos_sin_cuantia_acuerdo_marco": int(
             (df["es_contrato_sin_cuantia"] & df["es_acuerdo_marco"]).sum()

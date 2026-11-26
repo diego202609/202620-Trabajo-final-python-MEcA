@@ -1,5 +1,4 @@
 codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_segmento,items_paa,valor_paa_vigencia,valor_paa_total,n_contratos_con_cuantia,valor_ejecutado,brecha_ejecucion_vigencia_cop,pct_ejecucion_sobre_vigencia
-700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,00,Sin clasificar,0.0,0.0,0.0,3.0,4.0,4.0,
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,14,Materiales y Productos de Papel,2.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,27200000.0,27200000.0,1.0,21890000.0,-5310000.0,80.4779411764706
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2022,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",3.0,33584000.0,33584000.0,1.0,19432583.0,-14151417.0,57.86262208194378
@@ -45,7 +44,7 @@ codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_se
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,86,Servicios Educativos y de Formación,12.0,560430406.0,560430406.0,11.0,667601412.0,107171006.0,119.1229820603274
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2023,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,13200000.0,13200000.0,0.0,0.0,-13200000.0,0.0
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,14,Materiales y Productos de Papel,1.0,8500000.0,8500000.0,0.0,0.0,-8500000.0,0.0
-700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",0.0,0.0,0.0,5.0,1889948.0,1889948.0,
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",0.0,0.0,0.0,2.0,1889942.0,1889942.0,
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,6068697.0,6068697.0,
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,6.0,665944104.0,665944104.0,5.0,41270100.0,-624674004.0,6.197231832538305
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2024,44,"Equipos de Oficina, Accesorios y Suministros",1.0,5165219.0,5165219.0,0.0,0.0,-5165219.0,0.0
@@ -71,7 +70,7 @@ codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_se
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,51600000.0,51600000.0,1.0,1256000.0,-50344000.0,2.434108527131783
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,800000.0,800000.0,0.0,0.0,-800000.0,0.0
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,12000000.0,12000000.0,0.0,0.0,-12000000.0,0.0
-700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,56,"Muebles, Mobiliario y Decoración",1.0,25000000.0,25000000.0,1.0,0.01,-24999999.99,4e-08
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,56,"Muebles, Mobiliario y Decoración",1.0,25000000.0,25000000.0,0.0,0.0,-25000000.0,0.0
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",1.0,5000000.0,5000000.0,2.0,11079932.0,6079932.0,221.59864
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",6.0,466019240.0,466019240.0,0.0,0.0,-466019240.0,0.0
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,78,"Servicios de Transporte, Almacenaje y Correo",6.0,480416433.0,480416433.0,0.0,0.0,-480416433.0,0.0
@@ -82,6 +81,109 @@ codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_se
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,85,Servicios de Salud,3.0,19970130.0,19970130.0,2.0,12612000.0,-7358130.0,63.154320978381215
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,86,Servicios Educativos y de Formación,12.0,1073378914.0,1073378914.0,11.0,860661049.0,-212717865.0,80.18240695568574
 700037070,ANCP,ANCP (Colombia Compra Eficiente),2025,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,15500000.0,15500000.0,2.0,5026448.0,-10473552.0,32.42869677419355
+700220049,DNP,Departamento Nacional de Planeación,2022,00,Sin clasificar,1.0,0.0,0.0,0.0,0.0,0.0,
+700220049,DNP,Departamento Nacional de Planeación,2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,8248985.0,108061841.0,0.0,0.0,-8248985.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2022,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,694616.0,18392320.0,1.0,16867400.0,16172784.0,2428.3057113570662
+700220049,DNP,Departamento Nacional de Planeación,2022,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",1.0,7165700.0,85988400.0,0.0,0.0,-7165700.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2022,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,31994473.0,31994473.0,
+700220049,DNP,Departamento Nacional de Planeación,2022,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",2.0,193000000.0,258569280.0,0.0,0.0,-193000000.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,22.0,11492780609.0,11492780609.0,9.0,2419481140.0,-9073299469.0,21.052182429248703
+700220049,DNP,Departamento Nacional de Planeación,2022,44,"Equipos de Oficina, Accesorios y Suministros",3.0,259876352.0,259876352.0,1.0,16965345.0,-242911007.0,6.528237321108771
+700220049,DNP,Departamento Nacional de Planeación,2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",2.0,22817206.0,22817206.0,2.0,4720233.0,-18096973.0,20.687164765046166
+700220049,DNP,Departamento Nacional de Planeación,2022,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,98000000.0,98000000.0,1.0,84308000.0,-13692000.0,86.02857142857142
+700220049,DNP,Departamento Nacional de Planeación,2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",30.0,1917658209.0,1917658209.0,29.0,1885179073.0,-32479136.0,98.30631257188752
+700220049,DNP,Departamento Nacional de Planeación,2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",2.0,65199511.0,65199511.0,3.0,49637604.0,-15561907.0,76.13186546751861
+700220049,DNP,Departamento Nacional de Planeación,2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,501891478.0,501891478.0,1.0,92013945.0,-409877533.0,18.3334344242442
+700220049,DNP,Departamento Nacional de Planeación,2022,78,"Servicios de Transporte, Almacenaje y Correo",7.0,841812650.0,9301519537.0,5.0,13261149321.0,12419336671.0,1575.3088672402346
+700220049,DNP,Departamento Nacional de Planeación,2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",815.0,103214292090.0,118539657092.0,733.0,101964551366.5,-1249740723.5,98.78917861257987
+700220049,DNP,Departamento Nacional de Planeación,2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",160.0,21392574222.0,26101357784.0,183.0,30123727635.42,8731153413.419998,140.81394470255447
+700220049,DNP,Departamento Nacional de Planeación,2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",8.0,339610775.0,391392061.0,9.0,350451053.0,10840278.0,103.19197116169238
+700220049,DNP,Departamento Nacional de Planeación,2022,83,Servicios Públicos y Servicios Relacionados con el Sector Público,1.0,100000000.0,100000000.0,2.0,276579478.0,176579478.0,276.579478
+700220049,DNP,Departamento Nacional de Planeación,2022,84,Servicios Financieros y de Seguros,32.0,2221634618.0,2221634618.0,32.0,2437375966.0,215741348.0,109.71092844214944
+700220049,DNP,Departamento Nacional de Planeación,2022,85,Servicios de Salud,3.0,128675446.0,224971380.0,3.0,269903888.65999997,141228442.65999997,209.75554936875832
+700220049,DNP,Departamento Nacional de Planeación,2022,86,Servicios Educativos y de Formación,0.0,0.0,0.0,1.0,100000000.0,100000000.0,
+700220049,DNP,Departamento Nacional de Planeación,2022,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",6.0,11716007011.0,14631113659.0,1.0,17000000.0,-11699007011.0,0.14510063013822824
+700220049,DNP,Departamento Nacional de Planeación,2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,158372519.0,3026126098.0,1.0,36987982.67,-121384536.33,23.355051055290723
+700220049,DNP,Departamento Nacional de Planeación,2022,93,Servicios Políticos y de Asuntos Cívicos,82.0,45509869962.0,45509869962.0,116.0,13274600482.0,-32235269480.0,29.16861879210834
+700220049,DNP,Departamento Nacional de Planeación,2022,94,Organizaciones y Clubes,0.0,0.0,0.0,1.0,750000000.0,750000000.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,00,Sin clasificar,1.0,112938000.0,112938000.0,1.0,96704460.0,-16233540.0,85.6261488604367
+700220049,DNP,Departamento Nacional de Planeación,2023,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,4111120.0,296292259.0,0.0,0.0,-4111120.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2023,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",3.0,701952566.0,701952566.0,1.0,10000000.0,-691952566.0,1.4245976842828436
+700220049,DNP,Departamento Nacional de Planeación,2023,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,106057437.0,106057437.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,32,Componentes y Suministros Electrónicos,0.0,0.0,0.0,1.0,919257318.0,919257318.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2023,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,1.0,12563312.0,12563312.0,1.0,9143960.0,-3419352.0,72.78303682977864
+700220049,DNP,Departamento Nacional de Planeación,2023,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",2.0,82628460.0,82628460.0,2.0,66690442.0,-15938018.0,80.711224679729
+700220049,DNP,Departamento Nacional de Planeación,2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,18.0,17975034323.0,17975034323.0,9.0,5305118458.01,-12669915864.99,29.51381545470443
+700220049,DNP,Departamento Nacional de Planeación,2023,44,"Equipos de Oficina, Accesorios y Suministros",1.0,98411964.0,98411964.0,0.0,0.0,-98411964.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2023,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,23000000.0,23000000.0,1.0,5649000.0,-17351000.0,24.56086956521739
+700220049,DNP,Departamento Nacional de Planeación,2023,48,"Maquinaria, Equipo y Suministros para la Industria de Servicios",0.0,0.0,0.0,1.0,38073510.0,38073510.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",1.0,41129700.0,41129700.0,2.0,95860000.0,54730300.0,233.06758862816895
+700220049,DNP,Departamento Nacional de Planeación,2023,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,110857600.0,110857600.0,2.0,82558800.0,-28298800.0,74.4728372254135
+700220049,DNP,Departamento Nacional de Planeación,2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",49.0,2331772547.0,2331772547.0,62.0,2352807935.0,21035388.0,100.90212006428601
+700220049,DNP,Departamento Nacional de Planeación,2023,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",0.0,0.0,0.0,2.0,49998371.0,49998371.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",7.0,891606664.0,1182712537.0,4.0,66377615.0,-825229049.0,7.444719480023985
+700220049,DNP,Departamento Nacional de Planeación,2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,175611956.0,1509462843.0,0.0,0.0,-175611956.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2023,77,Servicios Medioambientales,0.0,0.0,0.0,4.0,106777720.0,106777720.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,78,"Servicios de Transporte, Almacenaje y Correo",5.0,432133450.0,618733450.0,4.0,11437142251.0,11005008801.0,2646.669044250104
+700220049,DNP,Departamento Nacional de Planeación,2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",977.0,112151412967.0,132976566133.0,1372.0,100865585353.0,-11285827614.0,89.93697242377071
+700220049,DNP,Departamento Nacional de Planeación,2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",234.0,26078283728.0,26560829586.0,341.0,22347074006.0,-3731209722.0,85.6922726935675
+700220049,DNP,Departamento Nacional de Planeación,2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",22.0,768893802.0,768893802.0,26.0,681697204.0,-87196598.0,88.65947445886681
+700220049,DNP,Departamento Nacional de Planeación,2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,1.0,111965000.0,111965000.0,7.0,570484870.0,458519870.0,509.52071629527086
+700220049,DNP,Departamento Nacional de Planeación,2023,84,Servicios Financieros y de Seguros,9.0,2341304430.0,2719741521.0,15.0,3718184743.0,1376880313.0,158.80825642994233
+700220049,DNP,Departamento Nacional de Planeación,2023,85,Servicios de Salud,1.0,18000000.0,18000000.0,1.0,14220000.0,-3780000.0,79.0
+700220049,DNP,Departamento Nacional de Planeación,2023,86,Servicios Educativos y de Formación,1.0,0.0,0.0,1.0,80000000.0,80000000.0,
+700220049,DNP,Departamento Nacional de Planeación,2023,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",19.0,4344481826.0,9224518258.0,0.0,0.0,-4344481826.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2023,93,Servicios Políticos y de Asuntos Cívicos,112.0,11303534507.0,11303534507.0,214.0,11248262262.0,-55272245.0,99.51101803629855
+700220049,DNP,Departamento Nacional de Planeación,2024,00,Sin clasificar,0.0,0.0,0.0,5.0,525263162.0,525263162.0,
+700220049,DNP,Departamento Nacional de Planeación,2024,14,Materiales y Productos de Papel,2.0,80801761.0,80801761.0,0.0,0.0,-80801761.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,2.0,60303760.0,60303760.0,
+700220049,DNP,Departamento Nacional de Planeación,2024,32,Componentes y Suministros Electrónicos,1.0,82144064.0,82144064.0,1.0,21122500.0,-61021564.0,25.713970031967254
+700220049,DNP,Departamento Nacional de Planeación,2024,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,1.0,8652223.0,8652223.0,1.0,6900000.0,-1752223.0,79.74829127728215
+700220049,DNP,Departamento Nacional de Planeación,2024,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",2.0,11118330.0,11118330.0,0.0,0.0,-11118330.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,42,"Equipo Médico, Accesorios y Suministros",1.0,213878069.0,213878069.0,0.0,0.0,-213878069.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,15.0,17673904165.0,18202647506.0,3.0,1331180228.0,-16342723937.0,7.531896832597768
+700220049,DNP,Departamento Nacional de Planeación,2024,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,8000000.0,8000000.0,0.0,0.0,-8000000.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,15250394.0,15250394.0,0.0,0.0,-15250394.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,47,Equipos de Limpieza y Suministros,1.0,30000000.0,30000000.0,0.0,0.0,-30000000.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2024,51,Medicamentos y Productos Farmacéuticos,0.0,0.0,0.0,2.0,170283768.42000002,170283768.42000002,
+700220049,DNP,Departamento Nacional de Planeación,2024,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",0.0,0.0,0.0,1.0,2380000.0,2380000.0,
+700220049,DNP,Departamento Nacional de Planeación,2024,53,"Ropa, Maletas y Productos de Aseo Personal",2.0,159517808.0,159517808.0,2.0,107386450.0,-52131358.0,67.3194117612248
+700220049,DNP,Departamento Nacional de Planeación,2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,197474454.0,197474454.0,2.0,80541340.0,-116933114.0,40.785700817787806
+700220049,DNP,Departamento Nacional de Planeación,2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",3.0,763310761.0,1238572282.0,2.0,7447620.0,-755863141.0,0.975699594519407
+700220049,DNP,Departamento Nacional de Planeación,2024,77,Servicios Medioambientales,1.0,96255579.0,96255579.0,1.0,52600000.0,-43655579.0,54.64618315786143
+700220049,DNP,Departamento Nacional de Planeación,2024,78,"Servicios de Transporte, Almacenaje y Correo",4.0,1576978029.0,2263132924.0,1.0,3668318.0,-1573309711.0,0.2326169377468226
+700220049,DNP,Departamento Nacional de Planeación,2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1214.0,146011489251.0,179945056997.0,1145.0,156280408291.67,10268919040.670013,107.03295274457294
+700220049,DNP,Departamento Nacional de Planeación,2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",187.0,35335070019.0,47303793794.0,228.0,48191436298.0,12856366279.0,136.38415396399952
+700220049,DNP,Departamento Nacional de Planeación,2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",4.0,34723263.0,34723263.0,5.0,58078200.0,23354937.0,167.2602024757869
+700220049,DNP,Departamento Nacional de Planeación,2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,0.0,0.0,0.0,1.0,56108499.87,56108499.87,
+700220049,DNP,Departamento Nacional de Planeación,2024,84,Servicios Financieros y de Seguros,17.0,1194455726.0,1194455726.0,16.0,1016629246.0,-177826480.0,85.1123422886919
+700220049,DNP,Departamento Nacional de Planeación,2024,85,Servicios de Salud,4.0,613422588.0,613422588.0,3.0,135829097.0,-477593491.0,22.142826113211207
+700220049,DNP,Departamento Nacional de Planeación,2024,86,Servicios Educativos y de Formación,1.0,942799000.0,942799000.0,1.0,778409152.0,-164389848.0,82.56363784857642
+700220049,DNP,Departamento Nacional de Planeación,2024,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",2.0,274039293.0,3647521493.0,2.0,113198950.0,-160840343.0,41.30756168605354
+700220049,DNP,Departamento Nacional de Planeación,2024,93,Servicios Políticos y de Asuntos Cívicos,106.0,11940385330.0,11940385330.0,103.0,11265801633.0,-674583697.0,94.35040261803678
+700220049,DNP,Departamento Nacional de Planeación,2025,14,Materiales y Productos de Papel,1.0,111467172.0,111467172.0,0.0,0.0,-111467172.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2025,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,25591750.0,25591750.0,0.0,0.0,-25591750.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2025,32,Componentes y Suministros Electrónicos,2.0,114975963.0,180400009.0,1.0,110729280.0,-4246683.0,96.30646015985097
+700220049,DNP,Departamento Nacional de Planeación,2025,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",1.0,6301645.0,6301645.0,1.0,3826725.0,-2474920.0,60.725810482818375
+700220049,DNP,Departamento Nacional de Planeación,2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,18.0,13461430291.0,13461430291.0,9.0,4291855040.0,-9169575251.0,31.882607919230058
+700220049,DNP,Departamento Nacional de Planeación,2025,44,"Equipos de Oficina, Accesorios y Suministros",0.0,0.0,0.0,2.0,78213657.0,78213657.0,
+700220049,DNP,Departamento Nacional de Planeación,2025,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,90000000.0,90000000.0,1.0,7276820.0,-82723180.0,8.085355555555555
+700220049,DNP,Departamento Nacional de Planeación,2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,21503917.0,21503917.0,0.0,0.0,-21503917.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2025,47,Equipos de Limpieza y Suministros,1.0,21502400.0,21502400.0,1.0,16080000.0,-5422400.0,74.78234987722301
+700220049,DNP,Departamento Nacional de Planeación,2025,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",0.0,0.0,0.0,1.0,16907600.0,16907600.0,
+700220049,DNP,Departamento Nacional de Planeación,2025,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,209000000.0,209000000.0,0.0,0.0,-209000000.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,3076158240.0,3076158240.0,3.0,3025554107.0,-50604133.0,98.35495676581318
+700220049,DNP,Departamento Nacional de Planeación,2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",4.0,1223155942.0,2471716954.0,3.0,105674738.0,-1117481204.0,8.639514747989509
+700220049,DNP,Departamento Nacional de Planeación,2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",3.0,80923075.0,158457497.0,0.0,0.0,-80923075.0,0.0
+700220049,DNP,Departamento Nacional de Planeación,2025,78,"Servicios de Transporte, Almacenaje y Correo",2.0,913128977.0,928446958.0,3.0,236870529.0,-676258448.0,25.94053359014145
+700220049,DNP,Departamento Nacional de Planeación,2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1606.0,155881953191.0,162842568347.0,1593.0,146934123321.7,-8947829869.299988,94.2598680051588
+700220049,DNP,Departamento Nacional de Planeación,2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",8.0,8414273285.0,8414273285.0,8.0,2276336307.7200003,-6137936977.28,27.053272821290356
+700220049,DNP,Departamento Nacional de Planeación,2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,19215240.0,19215240.0,3.0,19783140.0,567900.0,102.95546659838753
+700220049,DNP,Departamento Nacional de Planeación,2025,84,Servicios Financieros y de Seguros,2.0,701400000.0,701400000.0,2.0,658146237.0,-43253763.0,93.83322455089821
+700220049,DNP,Departamento Nacional de Planeación,2025,85,Servicios de Salud,4.0,416278183.0,416278183.0,4.0,373154104.0,-43124079.0,89.64056230638442
+700220049,DNP,Departamento Nacional de Planeación,2025,86,Servicios Educativos y de Formación,1.0,806938537.0,806938537.0,1.0,806938537.0,0.0,100.0
+700220049,DNP,Departamento Nacional de Planeación,2025,93,Servicios Políticos y de Asuntos Cívicos,1.0,567900.0,567900.0,2.0,4458038233.0,4457470333.0,785004.0910371544
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,14,Materiales y Productos de Papel,0.0,0.0,0.0,1.0,60000000.0,60000000.0,
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,12000000.0,120901000.0,0.0,0.0,-12000000.0,0.0
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2022,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,137000000.0,137000000.0,0.0,0.0,-137000000.0,0.0
@@ -183,11 +285,255 @@ codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_se
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",3.0,663317000.0,663317000.0,1.0,17376000.0,-645941000.0,2.6195619892148096
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,4050000000.0,4050000000.0,2.0,3215540000.0,-834460000.0,79.39604938271604
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,83,Servicios Públicos y Servicios Relacionados con el Sector Público,0.0,0.0,0.0,1.0,8683600.0,8683600.0,
-700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,84,Servicios Financieros y de Seguros,1.0,662000000.0,662000000.0,2.0,905573591.01,243573591.01,136.7935938081571
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,84,Servicios Financieros y de Seguros,1.0,662000000.0,662000000.0,1.0,905573591.0,243573591.0,136.79359380664653
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,85,Servicios de Salud,1.0,50000000.0,50000000.0,0.0,0.0,-50000000.0,0.0
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,86,Servicios Educativos y de Formación,0.0,0.0,0.0,1.0,22610000.0,22610000.0,
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",0.0,0.0,0.0,1.0,9926813650.0,9926813650.0,
 700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2025,93,Servicios Políticos y de Asuntos Cívicos,5.0,2015000000.0,2015000000.0,4.0,524200000.0,-1490800000.0,26.01488833746898
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,11,"Material Mineral, Textil y  Vegetal y Animal No Comestible",1.0,2600000.0,2600000.0,0.0,0.0,-2600000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,12,Material Químico incluyendo Bioquímicos y Materiales de Gas,1.0,11960352.0,11960352.0,1.0,8265200.0,-3695152.0,69.10498955214696
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,63012843.0,63012843.0,0.0,0.0,-63012843.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,23,Maquinaria y Accesorios para Manufactura y Procesamiento Industrial,4.0,300095485.0,300095485.0,0.0,0.0,-300095485.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",1.0,7000000.0,7000000.0,1.0,6995772.0,-4228.0,99.9396
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,559844618.0,559844618.0,0.0,0.0,-559844618.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,27,Herramientas y Maquinaria General,1.0,37000000.0,37000000.0,0.0,0.0,-37000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",1.0,10000000.0,10000000.0,1.0,10000000.0,0.0,100.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,31,Componentes y Suministros de Manufactura,2.0,63865193.0,63865193.0,1.0,46276911.0,-17588282.0,72.46030087155613
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,32,Componentes y Suministros Electrónicos,1.0,2162107776.0,2162107776.0,0.0,0.0,-2162107776.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",3.0,976458895.0,976458895.0,1.0,32010212.0,-944448683.0,3.278193497330986
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,2.0,18066732.0,18066732.0,1.0,15180000.0,-2886732.0,84.02183637859908
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",1.0,6500000.0,6500000.0,1.0,6403691.0,-96309.0,98.51832307692308
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,42,"Equipo Médico, Accesorios y Suministros",2.0,35340151.0,35340151.0,0.0,0.0,-35340151.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,25.0,1491929365.0,1491929365.0,7.0,525197105.0,-966732260.0,35.20254492745372
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,44,"Equipos de Oficina, Accesorios y Suministros",1.0,9439000.0,9439000.0,0.0,0.0,-9439000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",2.0,1240802334.0,1240802334.0,0.0,0.0,-1240802334.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",4.0,10614391351.0,10614391351.0,2.0,30926157.0,-10583465194.0,0.2913606251863551
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",1.0,2000000.0,2000000.0,4.0,3977919307.0,3975919307.0,198895.96535
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,53,"Ropa, Maletas y Productos de Aseo Personal",4.0,346803898.0,346803898.0,0.0,0.0,-346803898.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,68782661.0,68782661.0,1.0,8375704.0,-60406957.0,12.177057238306032
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,56,"Muebles, Mobiliario y Decoración",14.0,1204391078.0,1204391078.0,3.0,358720500.0,-845670578.0,29.784387027815562
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",6.0,49948000.0,49948000.0,8.0,3999561778.0,3949613778.0,8007.451305357572
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",39.0,19332340915.0,19332340915.0,20.0,8996504192.4,-10335836722.6,46.53603116123198
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,73,Servicios de Producción Industrial y Manufactura,3.0,215500000.0,31000000.0,2.0,20688059.0,-194811941.0,9.600027378190255
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,2726944616.0,2726944616.0,0.0,0.0,-2726944616.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,77,Servicios Medioambientales,2.0,2353292.0,2353292.0,0.0,0.0,-2353292.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,78,"Servicios de Transporte, Almacenaje y Correo",25.0,2823258033.0,2823258033.0,3.0,474217329.0,-2349040704.0,16.79681146593943
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",639.0,48486846437.0,48486846437.0,533.0,48422717340.0,-64129097.0,99.86773918760973
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",51.0,4749661808.0,4749661808.0,32.0,8809533469.07,4059871661.0699997,185.47706816160752
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",11.0,2851450147.0,2851450147.0,18.0,6681621052.0,3830170905.0,234.32361456607293
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,83,Servicios Públicos y Servicios Relacionados con el Sector Público,6.0,525840296.0,525840296.0,3.0,84517422.0,-441322874.0,16.072830979845637
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,84,Servicios Financieros y de Seguros,6.0,2013805719.0,2013805719.0,3.0,15210477691.82,13196671972.82,755.310085193973
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,85,Servicios de Salud,1.0,50000000.0,50000000.0,0.0,0.0,-50000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",7.0,1143153279.0,1143153279.0,1.0,1853610887.0,710457608.0,162.14893672189694
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",3.0,62659610.0,62659610.0,2.0,80000000.0,17340390.0,127.67395136994948
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2022,93,Servicios Políticos y de Asuntos Cívicos,225.0,152497815829.0,152497815829.0,140.0,96654426079.01,-55843389749.990005,63.3808592953169
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,00,Sin clasificar,0.0,0.0,0.0,1.0,5939924322.0,5939924322.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,12,Material Químico incluyendo Bioquímicos y Materiales de Gas,1.0,9773331.0,9773331.0,1.0,9222262.0,-551069.0,94.36150274660707
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,14,Materiales y Productos de Papel,2.0,56946680.0,56946680.0,2.0,52723926.0,-4222754.0,92.58472311291897
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",2.0,96951799.0,96951799.0,0.0,0.0,-96951799.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,23,Maquinaria y Accesorios para Manufactura y Procesamiento Industrial,2.0,251505916.0,251505916.0,0.0,0.0,-251505916.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",2.0,26000000.0,26000000.0,1.0,19463680.0,-6536320.0,74.86030769230769
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,372567938.0,372567938.0,0.0,0.0,-372567938.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,26,Maquinaria y Accesorios para Generación y Distribución de Energía,2.0,148411155.0,148411155.0,1.0,144352402.0,-4058753.0,97.26519681084619
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,27,Herramientas y Maquinaria General,1.0,44862629.0,44862629.0,0.0,0.0,-44862629.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",2.0,24668412.0,24668412.0,1.0,10793456.0,-13874956.0,43.75415815172862
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,31,Componentes y Suministros de Manufactura,3.0,161494084.0,161494084.0,0.0,0.0,-161494084.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,32,Componentes y Suministros Electrónicos,1.0,11155139.0,11155139.0,0.0,0.0,-11155139.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",6.0,1337392981.0,1337392981.0,1.0,67755545.0,-1269637436.0,5.066240511396852
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,4.0,67120874.0,67120874.0,2.0,40247400.0,-26873474.0,59.96256842543499
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,58.0,24599608930.0,24599608930.0,10.0,2975783840.0,-21623825090.0,12.096874582306622
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",3.0,171388063.0,171388063.0,1.0,46047932.0,-125340131.0,26.867642468192198
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",6.0,12560379224.0,12560379224.0,5.0,60698898917.5,48138519693.5,483.25689722423624
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,47,Equipos de Limpieza y Suministros,0.0,0.0,0.0,1.0,40733556.0,40733556.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",3.0,442192093.0,442192093.0,1.0,2122319.0,-440069774.0,0.4799540818564569
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,53,"Ropa, Maletas y Productos de Aseo Personal",2.0,88574663.0,88574663.0,0.0,0.0,-88574663.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,147282950.0,147282950.0,6.0,130130877.0,-17152073.0,88.3543390460335
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,56,"Muebles, Mobiliario y Decoración",14.0,1862955311.0,1862955311.0,4.0,553062775.0,-1309892536.0,29.687388190923706
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",1.0,67933425.0,67933425.0,4.0,48650000.0,-19283425.0,71.61423113879508
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",1.0,51000000.0,51000000.0,1.0,37529000.0,-13471000.0,73.58627450980393
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",38.0,49477136712.0,56729249415.0,27.0,21295259328.0,-28181877384.0,43.040605708363735
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,73,Servicios de Producción Industrial y Manufactura,2.0,44565588.0,44565588.0,2.0,85460200.0,40894612.0,191.76275650172056
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",7.0,3077023318.0,5574609386.0,2.0,98428570.0,-2978594748.0,3.198824312581956
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,78,"Servicios de Transporte, Almacenaje y Correo",32.0,2123717871.0,2123717871.0,4.0,2477463296.0,353745425.0,116.65689354647805
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",958.0,66176415167.0,66563635199.0,1175.0,76495238741.27,10318823574.270004,115.59290201536281
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",102.0,6818221813.0,7663293823.0,41.0,175183188504.0,168364966691.0,2569.338359892986
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",13.0,4793836382.0,4793836382.0,26.0,9921646763.0,5127810381.0,206.96673754352594
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,69150674.0,69150674.0,1.0,17960000.0,-51190674.0,25.972270349816114
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,84,Servicios Financieros y de Seguros,7.0,3844630553.0,4764497677.0,4.0,1032859734.0,-2811770819.0,26.86499313163004
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,85,Servicios de Salud,1.0,113000000.0,113000000.0,1.0,101005000.0,-11995000.0,89.38495575221239
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",5.0,562500000.0,562500000.0,0.0,0.0,-562500000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,17667335.0,17667335.0,1.0,66647502.0,48980167.0,377.235740421518
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,93,Servicios Políticos y de Asuntos Cívicos,255.0,229948660845.0,229948660845.0,226.0,152827120250.9,-77121540594.1,66.46140912032325
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2023,95,"Terrenos, Edificios, Estructuras y Vías",0.0,0.0,0.0,3.0,17647132528.0,17647132528.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,00,Sin clasificar,0.0,0.0,0.0,7.0,660186692.0,660186692.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,12,Material Químico incluyendo Bioquímicos y Materiales de Gas,1.0,26522873.0,26522873.0,1.0,11863348.0,-14659525.0,44.728744129642365
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,14,Materiales y Productos de Papel,3.0,139812908.0,139812908.0,4.0,159247183.0,19434275.0,113.90020083124227
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,20,Maquinaria y Accesorios de Minería y Perforación de Pozos,0.0,0.0,0.0,1.0,156939616.0,156939616.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,23,Maquinaria y Accesorios para Manufactura y Procesamiento Industrial,2.0,27100000.0,27100000.0,1.0,18186300.0,-8913700.0,67.1081180811808
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",2.0,58000000.0,58000000.0,2.0,54365955.0,-3634045.0,93.73440517241379
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,26,Maquinaria y Accesorios para Generación y Distribución de Energía,3.0,16705937.0,16705937.0,3.0,2868816007.6,2852110070.6,17172.434013129583
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",1.0,450689562.0,450689562.0,1.0,57302965.0,-393386597.0,12.71450901718465
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,31,Componentes y Suministros de Manufactura,2.0,86000000.0,86000000.0,0.0,0.0,-86000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,32,Componentes y Suministros Electrónicos,2.0,87945633.0,87945633.0,0.0,0.0,-87945633.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",3.0,5649272680.0,5649272680.0,2.0,165412355.2,-5483860324.8,2.9280292272951494
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,5.0,182244013.0,182244013.0,1.0,35457806.0,-146786207.0,19.45622542892534
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",0.0,0.0,0.0,1.0,13650966.0,13650966.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,34.0,8032913546.0,8032913546.0,18.0,6416634617.0,-1616278929.0,79.87929386088278
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,44,"Equipos de Oficina, Accesorios y Suministros",2.0,2947263930.0,2947263930.0,1.0,6995000.0,-2940268930.0,0.23733877135326661
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,301210525.0,301210525.0,2.0,6821793437.63,6520582912.63,2264.7925193284664
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",3.0,141319080.0,141319080.0,3.0,144228893.0,2909813.0,102.05903760483015
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,49,"Equipos, Suministros y Accesorios para Deportes y Recreación",1.0,79374588.0,79374588.0,0.0,0.0,-79374588.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",3.0,897408010.0,897408010.0,3.0,914457831.0,17049821.0,101.89989623560413
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",4.0,320878845.0,320878845.0,6.0,144913100.0,-175965745.0,45.16131314297145
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,56,"Muebles, Mobiliario y Decoración",3.0,710010762.0,710010762.0,2.0,55744800.0,-654265962.0,7.851261274262206
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",0.0,0.0,0.0,6.0,5299315187.0,5299315187.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",38.0,100924084436.0,114309481854.0,30.0,204903193390.0,103979108954.0,203.02705200158374
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,1.0,45411828.0,45411828.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,62198920.0,62198920.0,2.0,118114610.0,55915690.0,189.89816864987367
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,77,Servicios Medioambientales,3.0,448157496.0,448157496.0,1.0,383893526.0,-64263970.0,85.66040497512955
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,78,"Servicios de Transporte, Almacenaje y Correo",9.0,1224626928.0,1224626928.0,2.0,75500000.0,-1149126928.0,6.165142891582733
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",898.0,83198390210.0,84956049869.0,1041.0,110290367936.26,27091977726.259995,132.5631032738464
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",41.0,3521315448.0,3521315448.0,44.0,18199607427.6,14678291979.599998,516.8411548569675
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",18.0,5118143707.0,5118143707.0,22.0,103525178068.0,98407034361.0,2022.7094820805899
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,6.0,7003648234.0,7003648234.0,2.0,7377362446.0,373714212.0,105.33599346388876
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,84,Servicios Financieros y de Seguros,1.0,41877971.0,41877971.0,4.0,425578303.0,383700332.0,1016.2342941590938
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,85,Servicios de Salud,1.0,110000000.0,110000000.0,1.0,110000000.0,0.0,100.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,86,Servicios Educativos y de Formación,2.0,2287000000.0,2287000000.0,3.0,20220446054.0,17933446054.0,884.1471820725842
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",3.0,283400000.0,283400000.0,2.0,4088950320.0,3805550320.0,1442.8194495412845
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,20000000.0,20000000.0,0.0,0.0,-20000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2024,93,Servicios Políticos y de Asuntos Cívicos,224.0,425315735196.0,425315735196.0,189.0,262182586206.27,-163133148989.73,61.64422439848065
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,00,Sin clasificar,1.0,0.0,0.0,0.0,0.0,0.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,12,Material Químico incluyendo Bioquímicos y Materiales de Gas,2.0,20966664.0,20966664.0,0.0,0.0,-20966664.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,14,Materiales y Productos de Papel,3.0,35311392.0,35311392.0,2.0,34345567.0,-965825.0,97.26483453271963
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",2.0,112150319.0,112150319.0,0.0,0.0,-112150319.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,20,Maquinaria y Accesorios de Minería y Perforación de Pozos,1.0,5632816839.0,5632816839.0,0.0,0.0,-5632816839.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",3.0,1339430001.0,1339430001.0,2.0,32779850.0,-1306650151.0,2.4472984758835485
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,26,Maquinaria y Accesorios para Generación y Distribución de Energía,3.0,1116371155.0,1116371155.0,1.0,3605600.0,-1112765555.0,0.32297502348132595
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,31,Componentes y Suministros de Manufactura,7.0,594950676.0,594950676.0,0.0,0.0,-594950676.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,32,Componentes y Suministros Electrónicos,1.0,48000000.0,48000000.0,0.0,0.0,-48000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",4.0,699999775.0,699999775.0,0.0,0.0,-699999775.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,9.0,348106665.0,348106665.0,1.0,35271600.0,-312835065.0,10.132411569884765
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",0.0,0.0,0.0,1.0,5077100.0,5077100.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,42,"Equipo Médico, Accesorios y Suministros",1.0,0.0,0.0,1.0,155000000.0,155000000.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,35.0,4685132693.0,4685132693.0,13.0,2821264979.0,-1863867714.0,60.217397539566335
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,44,"Equipos de Oficina, Accesorios y Suministros",7.0,1350494521.0,1350494521.0,0.0,0.0,-1350494521.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",11.0,1532107000.0,1532107000.0,1.0,175000000.0,-1357107000.0,11.42217873816907
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",5.0,245992000.0,245992000.0,1.0,60600155.0,-185391845.0,24.635010488145955
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,47,Equipos de Limpieza y Suministros,1.0,4250008.0,4250008.0,1.0,4248000.0,-2008.0,99.95275303011195
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,50,"Alimentos, Bebidas y Tabaco",1.0,20000000.0,20000000.0,0.0,0.0,-20000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",4.0,766705360.0,766705360.0,1.0,667331816.0,-99373544.0,87.03888753301528
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,53,"Ropa, Maletas y Productos de Aseo Personal",3.0,370000000.0,370000000.0,0.0,0.0,-370000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",3.0,120929057.0,120929057.0,3.0,103769309.0,-17159748.0,85.81007044485595
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,56,"Muebles, Mobiliario y Decoración",4.0,78500000.0,78500000.0,2.0,511997800.0,433497800.0,652.2264968152866
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",2.0,764042942.0,764042942.0,12.0,459129150.0,-304913792.0,60.09206089884932
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",1.0,25000000.0,25000000.0,1.0,25000000.0,0.0,100.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,71,"Servicios de Minería, Petróleo y Gas",2.0,387996676.0,387996676.0,0.0,0.0,-387996676.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",111.0,95056522284.0,102523275793.0,34.0,45971419622.32,-49085102661.68,48.36219390077345
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,73,Servicios de Producción Industrial y Manufactura,1.0,0.0,0.0,1.0,53558677.0,53558677.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",4.0,1008471244.0,1008471244.0,0.0,0.0,-1008471244.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,77,Servicios Medioambientales,2.0,5000000.0,5000000.0,0.0,0.0,-5000000.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,78,"Servicios de Transporte, Almacenaje y Correo",22.0,3092319249.0,3143932769.0,3.0,1534130351.0,-1558188898.0,49.61099509683905
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1538.0,169900825908.0,170169771760.0,1127.0,104720784574.42,-65180041333.58,61.63641878417089
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",112.0,15563307208.0,15563307208.0,17.0,2125124052.0,-13438183156.0,13.65470734207202
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",19.0,4489878748.0,4489878748.0,25.0,91540950565.0,87051071817.0,2038.8290130502205
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,32982387.0,32982387.0,0.0,0.0,-32982387.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,84,Servicios Financieros y de Seguros,4.0,349402030.0,349402030.0,1.0,85569330.0,-263832700.0,24.49022119304802
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,86,Servicios Educativos y de Formación,0.0,0.0,0.0,3.0,53103876109.0,53103876109.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",23.0,2920850845.0,2920850845.0,0.0,0.0,-2920850845.0,0.0
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",4.0,566000398.0,566000398.0,1.0,206145315.0,-359855083.0,36.42140813476954
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,93,Servicios Políticos y de Asuntos Cívicos,780.0,363595192217.0,370329492217.0,84.0,213661861012.36,-149933331204.64,58.76366508301981
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,94,Organizaciones y Clubes,0.0,0.0,0.0,1.0,176000000.0,176000000.0,
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2025,95,"Terrenos, Edificios, Estructuras y Vías",2.0,149999994.0,149999994.0,1.0,3263200072.0,3113200078.0,2175.466801685339
+700066053,MinEducación,Ministerio de Educación Nacional,2022,14,Materiales y Productos de Papel,1.0,25500000.0,25500000.0,1.0,17756457.4,-7743542.6000000015,69.63316627450979
+700066053,MinEducación,Ministerio de Educación Nacional,2022,42,"Equipo Médico, Accesorios y Suministros",2.0,12575304081.0,13900562316.0,1.0,2243911346.0,-10331392735.0,17.84379392773747
+700066053,MinEducación,Ministerio de Educación Nacional,2022,43,Difusión de Tecnologías de Información y Telecomunicaciones,9.0,5194471418.0,5194471418.0,10.0,8260557664.0,3066086246.0,159.02595277308347
+700066053,MinEducación,Ministerio de Educación Nacional,2022,44,"Equipos de Oficina, Accesorios y Suministros",1.0,91348650.0,91348650.0,1.0,61784000.0,-29564650.0,67.63537282707517
+700066053,MinEducación,Ministerio de Educación Nacional,2022,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",1.0,402683021.0,402683021.0,1.0,195500000.0,-207183021.0,48.54935266813745
+700066053,MinEducación,Ministerio de Educación Nacional,2022,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,39286266.0,39286266.0,1.0,36894879.0,-2391387.0,93.91291857566713
+700066053,MinEducación,Ministerio de Educación Nacional,2022,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,31279142.0,31279142.0,2.0,31268300.0,-10842.0,99.96533792391108
+700066053,MinEducación,Ministerio de Educación Nacional,2022,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",1.0,4495005783.0,4495005783.0,1.0,1331574688.0,-3163431095.0,29.62342547001791
+700066053,MinEducación,Ministerio de Educación Nacional,2022,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",5.0,10194167.0,266892179.0,3.0,207757335.14,197563168.14,2038.0020764815802
+700066053,MinEducación,Ministerio de Educación Nacional,2022,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,1.0,43722762.0,43722762.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2022,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",4.0,493336904.0,977116422.0,1.0,2633316.0,-490703588.0,0.5337764068831956
+700066053,MinEducación,Ministerio de Educación Nacional,2022,78,"Servicios de Transporte, Almacenaje y Correo",7.0,5700586786.0,17552585305.0,3.0,5534130951.0,-166455835.0,97.08002278978023
+700066053,MinEducación,Ministerio de Educación Nacional,2022,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",835.0,146368660571.19,224108514111.19,820.0,130824686455.8,-15543974115.39,89.3802580041854
+700066053,MinEducación,Ministerio de Educación Nacional,2022,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",18.0,14896658459.0,16716530470.0,15.0,91565889139.45,76669230680.45,614.6740182804509
+700066053,MinEducación,Ministerio de Educación Nacional,2022,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,3905000000.0,3905000000.0,1.0,351380000.0,-3553620000.0,8.99820742637644
+700066053,MinEducación,Ministerio de Educación Nacional,2022,83,Servicios Públicos y Servicios Relacionados con el Sector Público,6.0,2905590190.0,6908979071.0,1.0,1853940550.0,-1051649640.0,63.80598875851794
+700066053,MinEducación,Ministerio de Educación Nacional,2022,84,Servicios Financieros y de Seguros,4.0,630809176.0,9672532482.0,5.0,1246099472.4,615290296.4000001,197.53984561568905
+700066053,MinEducación,Ministerio de Educación Nacional,2022,85,Servicios de Salud,2.0,4928731520.0,4928731520.0,2.0,4922507040.0,-6224480.0,99.87371030508069
+700066053,MinEducación,Ministerio de Educación Nacional,2022,86,Servicios Educativos y de Formación,24.0,30500911833.0,30500911833.0,17.0,24098730351.0,-6402181482.0,79.00986856703328
+700066053,MinEducación,Ministerio de Educación Nacional,2022,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",1.0,0.0,0.0,0.0,0.0,0.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2022,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,12212328.0,2233771999.0,1.0,37339807.0,25127479.0,305.7550288528117
+700066053,MinEducación,Ministerio de Educación Nacional,2022,93,Servicios Políticos y de Asuntos Cívicos,7.0,3894721159.0,3894721159.0,2.0,132641922.0,-3762079237.0,3.4056846840880604
+700066053,MinEducación,Ministerio de Educación Nacional,2023,32,Componentes y Suministros Electrónicos,1.0,25139000.0,25139000.0,1.0,9672000.0,-15467000.0,38.474084092446
+700066053,MinEducación,Ministerio de Educación Nacional,2023,42,"Equipo Médico, Accesorios y Suministros",3.0,26543591601.0,26543591601.0,3.0,31006272724.0,4462681123.0,116.81264988582733
+700066053,MinEducación,Ministerio de Educación Nacional,2023,43,Difusión de Tecnologías de Información y Telecomunicaciones,13.0,11487720516.0,11487720516.0,7.0,7725136275.02,-3762584240.9799995,67.24690302362853
+700066053,MinEducación,Ministerio de Educación Nacional,2023,44,"Equipos de Oficina, Accesorios y Suministros",1.0,115171524.0,115171524.0,0.0,0.0,-115171524.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2023,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,63780624.0,63780624.0,1.0,54990000.0,-8790624.0,86.21740671587033
+700066053,MinEducación,Ministerio de Educación Nacional,2023,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,45015896.0,45015896.0,1.0,31998000.0,-13017896.0,71.08155750137685
+700066053,MinEducación,Ministerio de Educación Nacional,2023,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",0.0,0.0,0.0,1.0,60175100.0,60175100.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2023,56,"Muebles, Mobiliario y Decoración",2.0,814028711.0,814028711.0,0.0,0.0,-814028711.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2023,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",0.0,0.0,0.0,1.0,1300791549.0,1300791549.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2023,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",7.0,393237929534.0,394145721680.0,6.0,850915457509.0,457677527975.0,216.38692343776782
+700066053,MinEducación,Ministerio de Educación Nacional,2023,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,669319376.0,1539732287.0,1.0,2740886.0,-666578490.0,0.40950345952632333
+700066053,MinEducación,Ministerio de Educación Nacional,2023,78,"Servicios de Transporte, Almacenaje y Correo",4.0,6782158055.0,6969158055.0,3.0,8766053855.630001,1983895800.630001,129.25168927856845
+700066053,MinEducación,Ministerio de Educación Nacional,2023,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1166.0,833325595228.0,855389431548.0,1134.0,673589315198.29,-159736280029.70996,80.8314684026949
+700066053,MinEducación,Ministerio de Educación Nacional,2023,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",19.0,12954083866.0,12954083866.0,21.0,12524151960.15,-429931905.8500004,96.68110913672234
+700066053,MinEducación,Ministerio de Educación Nacional,2023,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",2.0,25142188045.0,25142188045.0,2.0,25119611781.0,-22576264.0,99.91020565131566
+700066053,MinEducación,Ministerio de Educación Nacional,2023,83,Servicios Públicos y Servicios Relacionados con el Sector Público,1.0,2188280564.0,2188280564.0,1.0,3042777165.0,854496601.0,139.04876801711612
+700066053,MinEducación,Ministerio de Educación Nacional,2023,84,Servicios Financieros y de Seguros,5.0,16716418494.0,16716418494.0,6.0,2578659676.8199997,-14137758817.18,15.425910028189078
+700066053,MinEducación,Ministerio de Educación Nacional,2023,85,Servicios de Salud,2.0,5419507520.0,5419507520.0,2.0,5412941432.0,-6566088.0,99.87884345624083
+700066053,MinEducación,Ministerio de Educación Nacional,2023,86,Servicios Educativos y de Formación,15.0,26042611789.0,26042611789.0,11.0,27963971577.0,1921359788.0,107.37775382733138
+700066053,MinEducación,Ministerio de Educación Nacional,2023,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",1.0,0.0,0.0,0.0,0.0,0.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2023,93,Servicios Políticos y de Asuntos Cívicos,8.0,3222807858.0,5311351700.0,4.0,7577001345.2,4354193487.2,235.10558739614441
+700066053,MinEducación,Ministerio de Educación Nacional,2024,00,Sin clasificar,0.0,0.0,0.0,6.0,8960984946.0,8960984946.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2024,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,14025000.0,309949299.0,0.0,0.0,-14025000.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,400000000.0,400000000.0,0.0,0.0,-400000000.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,32,Componentes y Suministros Electrónicos,0.0,0.0,0.0,1.0,25950000.0,25950000.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2024,40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,1.0,1049431375.0,1049431375.0,0.0,0.0,-1049431375.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,42,"Equipo Médico, Accesorios y Suministros",1.0,18000000000.0,18000000000.0,1.0,20079506154.0,2079506154.0,111.55281196666667
+700066053,MinEducación,Ministerio de Educación Nacional,2024,43,Difusión de Tecnologías de Información y Telecomunicaciones,4.0,5973023824.0,5973023824.0,4.0,3823370083.0,-2149653741.0,64.01062837950603
+700066053,MinEducación,Ministerio de Educación Nacional,2024,44,"Equipos de Oficina, Accesorios y Suministros",1.0,126188246.0,126188246.0,1.0,126188246.0,0.0,100.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",1.0,68901683.0,68901683.0,0.0,0.0,-68901683.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",0.0,0.0,0.0,1.0,3533215287.07,3533215287.07,
+700066053,MinEducación,Ministerio de Educación Nacional,2024,53,"Ropa, Maletas y Productos de Aseo Personal",1.0,56061857.0,56061857.0,1.0,41509050.0,-14552807.0,74.04151810383306
+700066053,MinEducación,Ministerio de Educación Nacional,2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",1.0,79296250.0,79296250.0,2.0,119734040.0,40437790.0,150.99584154357868
+700066053,MinEducación,Ministerio de Educación Nacional,2024,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",0.0,0.0,0.0,1.0,4590744326.0,4590744326.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",4.0,8148153.0,234087538.0,5.0,69623427998.7,69615279845.7,854468.8348230574
+700066053,MinEducación,Ministerio de Educación Nacional,2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",3.0,50629738.0,1146329738.0,1.0,711100.0,-49918638.0,1.4045105269950242
+700066053,MinEducación,Ministerio de Educación Nacional,2024,78,"Servicios de Transporte, Almacenaje y Correo",5.0,7843364671.51,9470494445.51,0.0,0.0,-7843364671.51,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1184.0,1311962851708.4502,1335740674032.4502,1041.0,378469374782.28,-933493476926.1702,28.84756792385041
+700066053,MinEducación,Ministerio de Educación Nacional,2024,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",14.0,11127693022.0,15683955975.0,17.0,15265025693.68,4137332671.6800003,137.1805068984226
+700066053,MinEducación,Ministerio de Educación Nacional,2024,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",3.0,10704537187.0,10704537187.0,1.0,8684916740.0,-2019620447.0,81.13304282362898
+700066053,MinEducación,Ministerio de Educación Nacional,2024,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,2747894057.0,3891955777.0,3.0,6266739275.0,3518845218.0,228.05607294197077
+700066053,MinEducación,Ministerio de Educación Nacional,2024,84,Servicios Financieros y de Seguros,4.0,864146032.0,864146032.0,3.0,826180300.0,-37965732.0,95.60656062816939
+700066053,MinEducación,Ministerio de Educación Nacional,2024,85,Servicios de Salud,2.0,6025653501.0,6025653501.0,1.0,6003172032.0,-22481469.0,99.62690405287545
+700066053,MinEducación,Ministerio de Educación Nacional,2024,86,Servicios Educativos y de Formación,22.0,17642670357.0,17642670357.0,8.0,13476895479.0,-4165774878.0,76.38807054881482
+700066053,MinEducación,Ministerio de Educación Nacional,2024,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",3.0,5416988782.0,8146856287.0,0.0,0.0,-5416988782.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2024,93,Servicios Políticos y de Asuntos Cívicos,5.0,13896953600.0,13896953600.0,4.0,670008963.0,-13226944637.0,4.8212650217095065
+700066053,MinEducación,Ministerio de Educación Nacional,2025,14,Materiales y Productos de Papel,0.0,0.0,0.0,1.0,7370211316.0,7370211316.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2025,25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",1.0,938062294.0,938062294.0,0.0,0.0,-938062294.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2025,42,"Equipo Médico, Accesorios y Suministros",1.0,2000000000.0,2000000000.0,1.0,1882104000.0,-117896000.0,94.1052
+700066053,MinEducación,Ministerio de Educación Nacional,2025,43,Difusión de Tecnologías de Información y Telecomunicaciones,9.0,11975945728.0,11975945728.0,8.0,11350953215.0,-624992513.0,94.7812679917315
+700066053,MinEducación,Ministerio de Educación Nacional,2025,53,"Ropa, Maletas y Productos de Aseo Personal",2.0,7445361384.0,7445361384.0,1.0,42779000.0,-7402582384.0,0.5745725129196765
+700066053,MinEducación,Ministerio de Educación Nacional,2025,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,9504788914.0,9504788914.0,1.0,88980000.0,-9415808914.0,0.9361596644080927
+700066053,MinEducación,Ministerio de Educación Nacional,2025,70,"Servicios de Contratación Agrícola, Pesquera, Forestal y de Fauna",1.0,85000000.0,85000000.0,1.0,44325120.0,-40674880.0,52.1472
+700066053,MinEducación,Ministerio de Educación Nacional,2025,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",1.0,471038986.0,471038986.0,1.0,695035084.0,223996098.0,147.55362181422495
+700066053,MinEducación,Ministerio de Educación Nacional,2025,73,Servicios de Producción Industrial y Manufactura,1.0,30000000000.0,30000000000.0,0.0,0.0,-30000000000.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2025,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",2.0,101759313.0,1229014224.0,1.0,4000000.0,-97759313.0,3.930844147896321
+700066053,MinEducación,Ministerio de Educación Nacional,2025,77,Servicios Medioambientales,0.0,0.0,0.0,2.0,13694162500.0,13694162500.0,
+700066053,MinEducación,Ministerio de Educación Nacional,2025,78,"Servicios de Transporte, Almacenaje y Correo",4.0,8537800799.0,15319037564.0,2.0,9008605271.0,470804472.0,105.51435297079247
+700066053,MinEducación,Ministerio de Educación Nacional,2025,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",1153.0,721508594155.0,721508594155.0,1129.0,603744458857.98,-117764135297.02002,83.67806894456464
+700066053,MinEducación,Ministerio de Educación Nacional,2025,81,"Servicios Basados en Ingeniería, Investigación y Tecnología",22.0,17050076566.0,17057852286.0,20.0,21073853221.309998,4023776655.3099976,123.59975710216995
+700066053,MinEducación,Ministerio de Educación Nacional,2025,82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",4.0,5986264869.0,5986264869.0,5.0,13504265717.0,7518000848.0,225.58750761150125
+700066053,MinEducación,Ministerio de Educación Nacional,2025,83,Servicios Públicos y Servicios Relacionados con el Sector Público,2.0,4096638976.0,7816185751.0,0.0,0.0,-4096638976.0,0.0
+700066053,MinEducación,Ministerio de Educación Nacional,2025,84,Servicios Financieros y de Seguros,6.0,13094024603.0,13179024603.0,8.0,13060746114.0,-33278489.0,99.74584980547253
+700066053,MinEducación,Ministerio de Educación Nacional,2025,85,Servicios de Salud,1.0,35200000.0,35200000.0,1.0,10920000.0,-24280000.0,31.022727272727273
+700066053,MinEducación,Ministerio de Educación Nacional,2025,86,Servicios Educativos y de Formación,17.0,111403262788.0,111403262788.0,18.0,327197726951.0,215794464163.0,293.70569475479016
+700066053,MinEducación,Ministerio de Educación Nacional,2025,90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",1.0,1731103587.0,1731103587.0,2.0,6935268596.0,5204165009.0,400.6270132002216
+700066053,MinEducación,Ministerio de Educación Nacional,2025,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",1.0,4669669.0,131956885.0,1.0,521268517.0,516598848.0,11162.857945605994
+700066053,MinEducación,Ministerio de Educación Nacional,2025,93,Servicios Políticos y de Asuntos Cívicos,6.0,25051001899.0,25051001899.0,9.0,14631066274.0,-10419935625.0,58.40511422652541
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",1.0,10000000.0,10000000.0,0.0,0.0,-10000000.0,0.0
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",3.0,105000000.0,785000000.0,1.0,52500000.0,-52500000.0,50.0
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2022,31,Componentes y Suministros de Manufactura,0.0,0.0,0.0,1.0,1178441681.27,1178441681.27,
@@ -262,7 +608,7 @@ codigo_entidad,sigla_entidad,nombre_entidad_corto,anio,codigo_segmento,nombre_se
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",2.0,17462450.0,17462450.0,1.0,22727800.0,5265350.0,130.15241274849748
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",11.0,2400259735.0,3957780472.0,8.0,23783804640.85,21383544905.85,990.8846236113693
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,73,Servicios de Producción Industrial y Manufactura,0.0,0.0,0.0,3.0,109192318.0,109192318.0,
-700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,0.0,0.0,1.0,0.1,0.1,
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",1.0,0.0,0.0,0.0,0.0,0.0,
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,77,Servicios Medioambientales,2.0,109236692.0,167275603.0,2.0,111332100.0,2095408.0,101.91822725646068
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,78,"Servicios de Transporte, Almacenaje y Correo",3.0,351661350.0,1895552756.0,3.0,83536699.0,-268124651.0,23.754870701599707
 700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2024,80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",457.0,28194521186.0,42283895482.0,379.0,42529845703.14,14335324517.14,150.8443623588054

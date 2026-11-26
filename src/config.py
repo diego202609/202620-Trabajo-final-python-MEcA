@@ -81,8 +81,8 @@ ENTIDADES_ESCALA = {
 
 ENTIDADES_COMPLETO = {**ENTIDADES_PILOTO, **ENTIDADES_ESCALA}
 
-# Modo activo por defecto para Fase 3 (cambiar a "completo" en Fase 4 para escalar a 6 entidades)
-MODO_MUESTRA_DEFECTO = "piloto"
+# Modo activo por defecto (Fase 4+: muestra definitiva de 6 entidades nacionales)
+MODO_MUESTRA_DEFECTO = "completo"
 
 # Selección estricta de columnas analíticas (excluye datos personales sensibles y cuentas bancarias)
 COLUMNAS_PAA_ENCABEZADO = [
@@ -177,8 +177,22 @@ ARCHIVO_CRUCE_SEGMENTO = PROCESSED_DIR / "cruce_entidad_anio_segmento.csv"
 ARCHIVO_AUDITORIA_CALIDAD = PROCESSED_DIR / "auditoria_calidad.json"
 ARCHIVO_HALLAZGOS_PILOTO_MD = PROJECT_ROOT / "docs" / "hallazgos_piloto.md"
 
-# Umbral para marcar posibles registros duplicados administrativos gigantes en PAA (50 mil millones COP)
+# Archivos machine-readable finales para Notebook y Streamlit en data/dashboard_data/
+ARCHIVO_DASH_RESUMEN_ANUAL = DASHBOARD_DATA_DIR / "resumen_entidad_anio.csv"
+ARCHIVO_DASH_MODALIDADES = DASHBOARD_DATA_DIR / "modalidades_entidad_anio.csv"
+ARCHIVO_DASH_CONCENTRACION = DASHBOARD_DATA_DIR / "concentracion_proveedores.csv"
+ARCHIVO_DASH_TOP_PROVEEDORES = DASHBOARD_DATA_DIR / "top_proveedores_entidad.csv"
+ARCHIVO_DASH_SEGMENTOS_UNSPSC = DASHBOARD_DATA_DIR / "brechas_segmento_unspsc.csv"
+ARCHIVO_DASH_FRANJAS_CUANTIA = DASHBOARD_DATA_DIR / "distribucion_franjas_cuantia.csv"
+ARCHIVO_DASH_README = DASHBOARD_DATA_DIR / "README.md"
+
+# Archivos de la Cartilla interna del equipo (excluidos del .zip final de entrega)
+ARCHIVO_CARTILLA_MD = PROJECT_ROOT / "docs" / "cartilla_equipo.md"
+ARCHIVO_CARTILLA_HTML = PROJECT_ROOT / "docs" / "cartilla_interactiva.html"
+
+# Umbrales metodológicos explícitos
 UMBRAL_DUPLICADO_ATIPICO_PAA_COP = 50_000_000_000
+UMBRAL_CUANTIA_SIMBOLICA_COP = 1_000
 
 
 def obtener_entidades(modo: str = MODO_MUESTRA_DEFECTO) -> dict:

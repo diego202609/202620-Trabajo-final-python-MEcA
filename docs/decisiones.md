@@ -31,9 +31,9 @@
 | **Piloto 1** | **ANCP (Colombia Compra Eficiente)** | `700037070` | `900514813` | Rectoría de compras públicas | `2.315` | `2.072` |
 | **Piloto 2** | **MinHacienda** | `700065089` | `899999090` | Hacienda y política fiscal | `2.155` | `2.395` |
 | **Piloto 3** | **MinAmbiente** | `700209018` | `830115395` | Ambiente y desarrollo sostenible | `4.820` | `5.410` |
-| **Escala 4** | **MinEducación (MEN)** | `700066053` | `899999001` | Educación | `4.484` | `[Fase 4]` |
-| **Escala 5** | **MinCulturas** | `700637010` | `830034348` | Cultura | `5.159` | `[Fase 4]` |
-| **Escala 6** | **DNP** | `700220049` | `899999011` | Planeación nacional | `6.384` | `[Fase 4]` |
+| **Escala 4** | **MinEducación (MEN)** | `700066053` | `899999001` | Educación | `4.484` | `4.688` |
+| **Escala 5** | **MinCulturas** | `700637010` | `830034348` | Cultura | `5.159` | `6.706` |
+| **Escala 6** | **DNP** | `700220049` | `899999011` | Planeación nacional | `6.384` | `5.889` |
 
 ---
 
@@ -90,10 +90,10 @@
 | Código | Recomendación registrada (`3.75` + correo `4.3`) | Evidencia en el repositorio / notebook | Estado |
 |---|---|---|---|
 | **R1** | Reformular la pregunta hacia el fenómeno (no la herramienta) | Sección 1 de este documento y del notebook | `DEFINIDA` |
-| **R2** | Cruzar PAA con contratos ejecutados de SECOP II | `src/limpieza_cruce.py` + `tests/test_limpieza_cruce.py` | `PILOTO OK` |
-| **R3** | Descargar datos desde `datos.gov.co` vía API (`requests`/SODA) | `src/ingesta.py` + `tests/test_ingesta.py` (5/5 OK) | `IMPLEMENTADO` |
-| **R4** | Fijar muestra concreta (5–10 entidades nacionales, 2022–2025) | `src/config.py` (3 piloto cargadas → 6 definitivas en Fase 4) | `PILOTO OK` |
-| **R5** | Definir indicadores concretos desde el inicio | Sección 5 de este documento + `src/indicadores.py` *(Fase 4)* | `DEFINIDOS` |
-| **R6** | Explicar método exacto de cruce UNSPSC (código y nivel) | Sección 3 (`Clase 6d` / `Segmento 2d`, 99,99% PAA y 99,67% Contratos) | `VERIFICADO` |
+| **R2** | Cruzar PAA con contratos ejecutados de SECOP II | `src/limpieza_cruce.py` + `tests/test_limpieza_cruce.py` | `COMPLETADO (6 ENT.)` |
+| **R3** | Descargar datos desde `datos.gov.co` vía API (`requests`/SODA) | `src/ingesta.py` + `tests/test_ingesta.py` | `COMPLETADO (6 ENT.)` |
+| **R4** | Fijar muestra concreta (5–10 entidades nacionales, 2022–2025) | `src/config.py` (6 entidades: `27.160` PAA y `25.317` contratos) | `COMPLETADO (6 ENT.)` |
+| **R5** | Definir indicadores concretos desde el inicio | `src/indicadores.py` + `data/dashboard_data/*.csv` | `COMPLETADO (6 ENT.)` |
+| **R6** | Explicar método exacto de cruce UNSPSC (código y nivel) | `Clase 6d` / `Segmento 2d` (`99,99%` PAA y `99,80%` Contratos) | `COMPLETADO (6 ENT.)` |
 | **R7** | Especificar qué se calcula en cada paso de la secuencia | `docs/plan.md` + módulos `# %%` en `src/` | `EN CURSO` |
 | **R8** | Análisis económico sustantivo con Streamlit como resultado | `A_contraluz_tutorial.ipynb` + `app_streamlit.py` *(Fase 6)* | `PENDIENTE` |

@@ -59,8 +59,13 @@ Este archivo mantiene la memoria operativa del proyecto entre conversaciones y e
 
 ---
 
-## Fase 4 — Escalamiento (6 Entidades) e Indicadores R5 *(Pendiente — Jue 26 mañana)*
-- Correr `python -m src.ingesta --modo completo --actualizar-api`, re-ejecutar `src/limpieza_cruce.py` y generar `src/indicadores.py` + CSVs en `data/dashboard_data/`.
+## Fase 4 — Escalamiento (6 Entidades), Indicadores R5, Visualizaciones y Cartilla (Completada — 2026-11-25)
+- Descarga definitiva de las **6 entidades (`2022–2025`)** completada en `data/raw/`:
+  - `paa_encabezado.csv`: `24` filas | `paa_detalle.csv`: `27.160` filas | `contratos_secop2.csv`: `25.317` filas | `clasificador_unspsc.csv`: `49.022` filas.
+- Implementados `src/indicadores.py`, `src/visualizacion.py`, `src/generar_cartilla.py` y `tests/test_indicadores.py`.
+- Contratos CSV generados en `data/dashboard_data/` (`resumen_entidad_anio.csv`, `modalidades_entidad_anio.csv`, `concentracion_proveedores.csv`, `top_proveedores_entidad.csv`, `brechas_segmento_unspsc.csv`, `distribucion_franjas_cuantia.csv` + `README.md`).
+- **Cartilla Maestra del equipo generada en doble formato:** `docs/cartilla_equipo.md` + `docs/cartilla_interactiva.html` (con las 6 gráficas Plotly interactivas, respuestas jurídicas/económicas completas a las 5 dudas del grupo y el prompt listo para el Rubro 5).
+- **Verificación:** `15 passed` en `pytest` offline.
 
 ---
 

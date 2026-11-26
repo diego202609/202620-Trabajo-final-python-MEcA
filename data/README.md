@@ -6,11 +6,11 @@
 
 ## 1. Inventario de Fuentes Oficiales Verificadas
 
-| Fuente | Organismo | Endpoint / URL verificada | Dataset ID | Archivo congelado (`data/raw/`) | Filas piloto (3 ent.) |
+| Fuente | Organismo | Endpoint / URL verificada | Dataset ID | Archivo congelado (`data/raw/`) | Filas definitivas (6 ent.) |
 |---|---|---|---|---|---:|
-| **SECOP II — PAA Encabezado** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/b6m4-qgqv.json` | `b6m4-qgqv` | `paa_encabezado.csv` | `12` |
-| **SECOP II — PAA Detalle** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/9sue-ezhx.json` | `9sue-ezhx` | `paa_detalle.csv` | `9.877` |
-| **SECOP II — Contratos Electrónicos** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/jbjy-vk9h.json` | `jbjy-vk9h` | `contratos_secop2.csv` | `9.290` |
+| **SECOP II — PAA Encabezado** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/b6m4-qgqv.json` | `b6m4-qgqv` | `paa_encabezado.csv` | `24` |
+| **SECOP II — PAA Detalle** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/9sue-ezhx.json` | `9sue-ezhx` | `paa_detalle.csv` | `27.160` |
+| **SECOP II — Contratos Electrónicos** | Colombia Compra Eficiente (`datos.gov.co`) | `https://www.datos.gov.co/resource/jbjy-vk9h.json` | `jbjy-vk9h` | `contratos_secop2.csv` | `25.317` |
 | **Clasificador de Bienes y Servicios (UNSPSC v14.1)** | Colombia Compra Eficiente | `https://operaciones.colombiacompra.gov.co/sites/cce_public/files/cce_clasificador/clasificador_de_bienes_y_servicios_v14_1.xls` | N/A (`.xls` → `.csv`) | `clasificador_unspsc.csv` | `49.022` |
 
 *(Metadatos exactos de extracción y huellas SHA-256 en `data/raw/metadata_extraccion.json`.)*

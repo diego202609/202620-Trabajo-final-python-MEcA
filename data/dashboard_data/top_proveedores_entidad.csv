@@ -1,0 +1,61 @@
+codigo_entidad,sigla_entidad,nombre_entidad_corto,ranking_entidad,id_proveedor_limpio,nombre_proveedor,n_contratos,anios_activos,valor_total_cop,participacion_entidad_pct,modalidad_frecuente
+700037070,ANCP,ANCP (Colombia Compra Eficiente),1,505141019,"SIMPLIFAE PORTUGAL, S.A.",5,4,33805439798.46,19.4,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),2,0,COUPA SOFTWARE INC,4,4,19829783754.47,11.38,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),3,800153993,COMCEL S.A.,3,2,10456111937.369999,6.0,Selección abreviada
+700037070,ANCP,ANCP (Colombia Compra Eficiente),4,900789149,FUNDES COLOMBIA SAS,2,2,3267031852.99,1.87,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),5,901144049,CORPORACION AGENCIA NACIONAL DE GOBIERNO DIGITAL,1,1,2425875416.0,1.39,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),6,900139273,IMOBLEX SAS,2,1,1782937841.0,1.02,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),7,811021654,INTERNEXA S.A.,2,2,1456264763.49,0.84,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),8,800207646,MUKIS SAS,2,2,909879510.62,0.52,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),9,860078858,INVERSIONES MOLINA Y REYES LTDA,2,2,900901688.0,0.52,Contratación directa
+700037070,ANCP,ANCP (Colombia Compra Eficiente),10,830054060,INNPULSA COLOMBIA,1,1,834300000.4,0.48,Contratación directa
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,1,860002400,LA PREVISORA S.A. COMPAÑÍA DE SEGUROS,5,4,94879812466.0,12.8,Licitación pública y AMP
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,2,901750897,CONSORCIO PRAG FONPET 2023,1,1,62445225270.43,8.42,Selección abreviada
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,3,901927553,CONSORCIO PAC FONPET 2025,1,1,62371843380.0,8.41,Licitación pública y AMP
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,4,860005216,BANCO DE LA REPUBLICA,24,4,60269086033.34,8.13,Contratación directa
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,5,NoDefinido,UNION TEMPORAL ASEGURADORA SOLIDARIAAXA COLPATRIA MIN HACIENDA,13,4,41454750874.4,5.59,Selección abreviada
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,6,9004839910,AGENCIA NACIONAL INMOBILIARIA VIRGILIO BARCO VARGAS,2,2,23600387270.0,3.18,Contratación directa
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,7,901728718,CONSORCIO BONOS 2023 ASD - CROMASOFT,1,1,22437040537.0,3.03,Licitación pública y AMP
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,8,860509022,FINANCIERA DE DESARROLLO NACIONAL S.A.,1,1,18000000000.0,2.43,Contratación directa
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,9,901665234,CONSORCIO ASESOFTWARE TF W2D,1,1,15342602021.0,2.07,Concurso de méritos
+700065089,MinHacienda,Ministerio de Hacienda y Crédito Público,10,800015583,COLSOF S.A.S,5,3,13414230367.2,1.81,Selección abreviada
+700066053,MinEducación,Ministerio de Educación Nacional,1,800096329,FINANCIERA DE DESARROLLO TERRITORIAL S.A.,4,1,1248727409706.0,35.51,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,2,899999035,INSTITUTO COLOMBIANO DE CREDITO EDUCATIVO Y ESTUDIO TÉCNICOS EN EL EXTERIOR MARIANO OSPINA PEREZ.,5,2,307103986447.79004,8.73,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,3,9004839910,AGENCIA NACIONAL INMOBILIARIA VIRGILIO BARCO VARGAS,1,1,271315944244.0,7.72,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,4,817002466,CONSEJO REGIONAL INDIGENA DEL CAUCA,6,4,157414516269.0,4.48,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,5,890980040,UNIVERSIDAD DE ANTIOQUIA,12,2,112566537950.0,3.2,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,6,860024301,INSTITUTO COLOMBIANO PARA LA EVALUACIÓN DE LA EDUCACIÓN - ICFES,7,4,92829165500.0,2.64,Contratación directa
+700066053,MinEducación,Ministerio de Educación Nacional,7,805000867,CORREAGRO,6,4,83839665169.20999,2.38,Régimen especial
+700066053,MinEducación,Ministerio de Educación Nacional,8,802016680,FUNDACION PIES DESCALZOS,3,2,76763329593.0,2.18,Régimen especial
+700066053,MinEducación,Ministerio de Educación Nacional,9,802017459,RENTA Y CAMPO CORREDORES S.A.,2,2,55605454338.07,1.58,Régimen especial
+700066053,MinEducación,Ministerio de Educación Nacional,10,900068796,INFOTIC S.A,1,1,52859647645.0,1.5,Contratación directa
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,1,800091076,PROGRAMA DE LAS NACIONES UNIDAS PARA EL DESARROLLO PNUD,6,1,159698507602.0,25.14,Régimen especial
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,2,860403137,ORGANIZACION DE ESTADOS IBEROAMERICANOS OEI,1,1,15053278150.0,2.37,Contratación directa
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,3,NoDefinido,UNION TEMPORAL SA AMBIENTE 2022,6,3,14064290616.369999,2.21,Selección abreviada
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,4,800178148,FIDUCIARIA COLOMBIANA DE COMERCIO EXTERIOR S.A PROVEEDOR,1,1,11954164000.0,1.88,Régimen especial
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,5,890802221,ADESCUBRIR TRAVEL & ADVENTURE SAS,1,1,9926813650.0,1.56,Licitación pública y AMP
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,6,901285046,FONDO MUNDIAL PARA LA NATURALEZA COLOMBIA - WWF COLOMBIA,4,3,8553809224.0,1.35,Contratación directa
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,7,860521808,ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA - ONIC,4,4,7192000000.0,1.13,Contratación directa
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,8,860404135,FUNDACIÓN NATURA,1,1,5714285715.0,0.9,Régimen especial
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,9,800064773,PUBBLICA S.A.S.,1,1,5607764386.0,0.88,Licitación pública y AMP
+700209018,MinAmbiente,Ministerio de Ambiente y Desarrollo Sostenible,10,890399002,CVC,2,2,5305710000.0,0.84,Contratación directa
+700220049,DNP,Departamento Nacional de Planeación,1,901849060,UNIÓN TEMPORAL LOGÍSTICA Y PLANEACIÓN,1,1,41565868487.0,5.84,Licitación pública y AMP
+700220049,DNP,Departamento Nacional de Planeación,2,890807724,SOCIEDAD DE TELEVISIÓN DE CALDAS QUINDÍO Y RISARALDA LTDA,3,2,19464328864.0,2.74,Contratación directa
+700220049,DNP,Departamento Nacional de Planeación,3,NoDefinido,UNIÓN TEMPORAL MOBILE-OPTIM,14,4,16602857152.0,2.33,Concurso de méritos
+700220049,DNP,Departamento Nacional de Planeación,4,800075003,SUBATOURS SAS,2,2,13307951639.0,1.87,Selección abreviada
+700220049,DNP,Departamento Nacional de Planeación,5,901900261,UNIÓN TEMPORAL CENTRO DE SERVICIOS DNP 2025,1,1,10274619591.0,1.44,Licitación pública y AMP
+700220049,DNP,Departamento Nacional de Planeación,6,900062917,SERVICIOS POSTALES NACIONALES S.A.S,1,1,8601586034.0,1.21,Contratación directa
+700220049,DNP,Departamento Nacional de Planeación,7,900483711,"IDOM CONSULTING, ENGINEERING, ARCHITECTURE S.A.U., SUCURSAL COLOMBIA.",8,3,8525054931.0,1.2,Régimen especial
+700220049,DNP,Departamento Nacional de Planeación,8,900390198,WEXLER S.A.S,2,2,7949854052.0,1.12,Selección abreviada
+700220049,DNP,Departamento Nacional de Planeación,9,860007336,CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO,4,4,7541551999.0,1.06,Contratación directa
+700220049,DNP,Departamento Nacional de Planeación,10,A80480759,ARDANUY INGENIERIA SA,1,1,7361555688.0,1.03,Régimen especial
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",1,901781786,CONSORCIO CONSTRUCTOR H.M.I.,1,1,163414823878.0,8.16,Licitación pública y AMP
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",2,820000107,FONDO MIXTO PARA LA PROMOCION DE LA CULTURA Y LAS ARTES DE BOYACA,15,4,107877978893.0,5.39,Contratación directa
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",3,900347030,CORPOELITE,19,4,67633480271.0,3.38,Régimen especial
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",4,901706192,UNION TEMPORAL MINCULTURA - VPN-2023,1,1,59945569926.5,2.99,Selección abreviada
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",5,NoDefinido,UT AXA COLPATRIA - MAPRE SEGUROS GENERALES - MINCULTURA 2022,12,4,59638608662.82,2.98,Licitación pública y AMP
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",6,891800330,UPTC,3,3,51793743464.0,2.59,Contratación directa
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",7,830064690,TEATRO R101,14,4,48750258304.36,2.44,Régimen especial
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",8,890801063,UNIVERSIDAD DE CALDAS,4,4,48168997058.0,2.41,Contratación directa
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",9,800108032,FUNDACION PARA EL FOMENTO DE LA LECTURA,9,4,48110219315.0,2.4,Régimen especial
+700637010,MinCulturas,"Ministerio de las Culturas, las Artes y los Saberes",10,890980040,UNIVERSIDAD DE ANTIOQUIA,4,3,47340669459.0,2.36,Contratación directa
